@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Reflection;
+using System.Text.RegularExpressions;
 using dnlib.DotNet;
 using dnlib.DotNet.Writer;
 using UnityEditor;
@@ -16,7 +17,9 @@ namespace TarkovSdk.Editor
         private const string NewPrefix = "Tarkov.Assembly";
         private const string DefaultOutputRelPath = "Assets/Plugins/Tarkov.Assemblies";
         private const string EftDataPathKey = "TarkovSdk.Extractor.EftDataPath";
+        private const string SptPluginPathKey = "TarkovSdk.Extractor.SptPluginPath";
         private const string OutputPathKey = "TarkovSdk.Extractor.OutputPath";
+        private const string SptOutputFolderName = "SPT";
         private const string UnpackZipFileName = "unpack_after_setup.zip";
         private const string GeneratedMonoScriptTypesName =
             "UnitySourceGeneratedAssemblyMonoScriptTypes_v1";
@@ -89,6 +92,7 @@ namespace TarkovSdk.Editor
         };
 
         private string _eftDataPath = string.Empty;
+        private string _sptPluginPath = string.Empty;
         private string _outputPath = DefaultOutputRelPath;
         private Vector2 _logScroll;
         private readonly List<string> _log = new List<string>();
@@ -107,7 +111,13 @@ namespace TarkovSdk.Editor
         private void OnEnable()
         {
             _eftDataPath = EditorPrefs.GetString(EftDataPathKey, string.Empty);
+            _sptPluginPath = EditorPrefs.GetString(SptPluginPathKey, string.Empty);
             _outputPath = EditorPrefs.GetString(OutputPathKey, DefaultOutputRelPath);
+
+            if (string.IsNullOrEmpty(_sptPluginPath))
+            {
+                SetDetectedSptPluginPath();
+            }
         }
 
         private void OnGUI()
@@ -134,6 +144,7 @@ namespace TarkovSdk.Editor
                     {
                         _eftDataPath = picked.Replace('/', Path.DirectorySeparatorChar);
                         EditorPrefs.SetString(EftDataPathKey, _eftDataPath);
+                        SetDetectedSptPluginPath();
                         GUI.FocusControl(null);
                     }
                 }
@@ -147,6 +158,53 @@ namespace TarkovSdk.Editor
                         : "✗ no Managed subfolder here"
                 );
             EditorGUILayout.LabelField(managedHint, EditorStyles.miniLabel);
+
+            EditorGUILayout.Space(10f);
+            EditorGUILayout.LabelField("SPT plugin folder (optional)", EditorStyles.boldLabel);
+            using (new EditorGUILayout.HorizontalScope())
+            {
+                string newVal = EditorGUILayout.TextField(_sptPluginPath);
+                if (newVal != _sptPluginPath)
+                {
+                    _sptPluginPath = newVal;
+                    EditorPrefs.SetString(SptPluginPathKey, _sptPluginPath);
+                }
+                if (GUILayout.Button("Browse", GUILayout.Width(90f)))
+                {
+                    string start = Directory.Exists(_sptPluginPath)
+                        ? _sptPluginPath
+                        : GetDetectedSptPluginPath();
+                    string picked = EditorUtility.OpenFolderPanel(
+                        "Select BepInEx/plugins/spt folder",
+                        Directory.Exists(start) ? start : string.Empty,
+                        string.Empty
+                    );
+                    if (!string.IsNullOrEmpty(picked))
+                    {
+                        _sptPluginPath = picked.Replace('/', Path.DirectorySeparatorChar);
+                        EditorPrefs.SetString(SptPluginPathKey, _sptPluginPath);
+                        GUI.FocusControl(null);
+                    }
+                }
+            }
+
+            string[] sptAssemblies = FindSptAssemblyPaths(_sptPluginPath);
+            string sptHint;
+            if (string.IsNullOrWhiteSpace(_sptPluginPath))
+            {
+                sptHint = "(not selected; SPT assemblies will be skipped)";
+            }
+            else if (!Directory.Exists(_sptPluginPath))
+            {
+                sptHint = "✗ folder not found";
+            }
+            else
+            {
+                sptHint = sptAssemblies.Length > 0
+                    ? "✓ " + sptAssemblies.Length + " spt-*.dll assemblies found"
+                    : "✗ no spt-*.dll assemblies found";
+            }
+            EditorGUILayout.LabelField(sptHint, EditorStyles.miniLabel);
 
             EditorGUILayout.Space(10f);
             EditorGUILayout.LabelField(
@@ -169,7 +227,11 @@ namespace TarkovSdk.Editor
             {
                 if (
                     GUILayout.Button(
-                        "Extract & Rewrite (" + RequiredManagedDlls.Length + " DLLs)",
+                        "Extract & Rewrite ("
+                            + RequiredManagedDlls.Length
+                            + " game + "
+                            + sptAssemblies.Length
+                            + " SPT DLLs)",
                         GUILayout.Height(32f)
                     )
                 )
@@ -220,14 +282,24 @@ namespace TarkovSdk.Editor
 
             string managedDir = Path.Combine(_eftDataPath, "Managed");
             string absOutput = ResolveOutputAbsolute(_outputPath);
+            string absSptOutput = Path.Combine(absOutput, SptOutputFolderName);
+            string[] sptAssemblyPaths = FindSptAssemblyPaths(_sptPluginPath);
 
             Log("Source: " + managedDir);
+            if (sptAssemblyPaths.Length > 0)
+            {
+                Log("SPT source: " + _sptPluginPath);
+            }
             Log("Output: " + absOutput);
             Log(string.Empty);
 
             try
             {
                 Directory.CreateDirectory(absOutput);
+                if (sptAssemblyPaths.Length > 0)
+                {
+                    Directory.CreateDirectory(absSptOutput);
+                }
             }
             catch (Exception ex)
             {
@@ -244,6 +316,7 @@ namespace TarkovSdk.Editor
                 unpackOverwritten = 0,
                 unpackFailed = 0;
             int explicitlyReferenced = 0;
+            int updatedAsmdefs = 0;
             bool unpackAttempted = false;
             List<string> missingFiles = new List<string>();
             List<string> failedFiles = new List<string>();
@@ -328,6 +401,62 @@ namespace TarkovSdk.Editor
                     }
                 }
 
+                for (int i = 0; i < sptAssemblyPaths.Length; i++)
+                {
+                    string srcPath = sptAssemblyPaths[i];
+                    string src = Path.GetFileName(srcPath);
+                    float pct = (float)(RequiredManagedDlls.Length + i)
+                        / (RequiredManagedDlls.Length + sptAssemblyPaths.Length);
+
+                    if (
+                        EditorUtility.DisplayCancelableProgressBar(
+                            "Extracting SPT assemblies",
+                            src + "  (" + (i + 1) + "/" + sptAssemblyPaths.Length + ")",
+                            pct
+                        )
+                    )
+                    {
+                        Log("Cancelled by user.");
+                        return;
+                    }
+
+                    try
+                    {
+                        ProcessResult r = ProcessOne(
+                            srcPath,
+                            absSptOutput,
+                            out string outFileName,
+                            out int refChanges
+                        );
+                        if (r == ProcessResult.Rewritten)
+                        {
+                            Log(
+                                "SPT REWRITE: "
+                                    + src
+                                    + "  → "
+                                    + outFileName
+                                    + "  (refs updated: "
+                                    + refChanges
+                                    + ")"
+                            );
+                            rewritten++;
+                        }
+                        else
+                        {
+                            Log("SPT COPY:    " + src);
+                            copied++;
+                        }
+
+                        CopyDocumentationFile(srcPath, absSptOutput, outFileName);
+                    }
+                    catch (Exception ex)
+                    {
+                        Log("SPT FAILED:  " + src + "  -  " + ex.Message);
+                        failedFiles.Add(src);
+                        failed++;
+                    }
+                }
+
                 EditorUtility.DisplayProgressBar(
                     "Extracting Tarkov assemblies",
                     "Unpacking " + UnpackZipFileName,
@@ -347,7 +476,8 @@ namespace TarkovSdk.Editor
                     AssetDatabase.StopAssetEditing();
                     AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
                     explicitlyReferenced = ConfigureExplicitPluginReferences(absOutput);
-                    if (explicitlyReferenced > 0)
+                    updatedAsmdefs = SynchronizeAsmdefPrecompiledReferences(absOutput);
+                    if (explicitlyReferenced > 0 || updatedAsmdefs > 0)
                     {
                         AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
                     }
@@ -371,6 +501,14 @@ namespace TarkovSdk.Editor
                     "Isolated "
                         + explicitlyReferenced
                         + " managed plug-ins; reference them from an asmdef via Override References."
+                );
+            }
+            if (updatedAsmdefs > 0)
+            {
+                Log(
+                    "Updated "
+                        + updatedAsmdefs
+                        + " SDK/mod asmdef file(s) with generated assembly references."
                 );
             }
             if (unpackAttempted)
@@ -677,6 +815,177 @@ namespace TarkovSdk.Editor
             return changes;
         }
 
+        private string GetDetectedSptPluginPath()
+        {
+            if (string.IsNullOrWhiteSpace(_eftDataPath))
+            {
+                return string.Empty;
+            }
+
+            DirectoryInfo dataDirectory = new DirectoryInfo(_eftDataPath);
+            if (dataDirectory.Parent == null)
+            {
+                return string.Empty;
+            }
+
+            return Path.Combine(dataDirectory.Parent.FullName, "BepInEx", "plugins", "spt");
+        }
+
+        private void SetDetectedSptPluginPath()
+        {
+            string detected = GetDetectedSptPluginPath();
+            if (!Directory.Exists(detected))
+            {
+                return;
+            }
+
+            _sptPluginPath = detected;
+            EditorPrefs.SetString(SptPluginPathKey, _sptPluginPath);
+        }
+
+        private static string[] FindSptAssemblyPaths(string sourceDirectory)
+        {
+            if (string.IsNullOrWhiteSpace(sourceDirectory) || !Directory.Exists(sourceDirectory))
+            {
+                return new string[0];
+            }
+
+            string[] paths = Directory.GetFiles(
+                sourceDirectory,
+                "spt-*.dll",
+                SearchOption.AllDirectories
+            );
+            Array.Sort(paths, StringComparer.OrdinalIgnoreCase);
+            return paths;
+        }
+
+        private static void CopyDocumentationFile(
+            string sourceAssemblyPath,
+            string outputDirectory,
+            string outputAssemblyName
+        )
+        {
+            string sourceXml = Path.ChangeExtension(sourceAssemblyPath, ".xml");
+            if (!File.Exists(sourceXml))
+            {
+                return;
+            }
+
+            string outputXmlName = Path.ChangeExtension(outputAssemblyName, ".xml");
+            File.Copy(sourceXml, Path.Combine(outputDirectory, outputXmlName), true);
+        }
+
+        private static int SynchronizeAsmdefPrecompiledReferences(string sptOutputDirectory)
+        {
+            if (!Directory.Exists(sptOutputDirectory))
+            {
+                return 0;
+            }
+
+            HashSet<string> sptDllNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            foreach (
+                string dllPath in Directory.GetFiles(
+                    sptOutputDirectory,
+                    "spt-*.dll",
+                    SearchOption.AllDirectories
+                )
+            )
+            {
+                sptDllNames.Add(Path.GetFileName(dllPath));
+            }
+            if (sptDllNames.Count == 0)
+            {
+                return 0;
+            }
+
+            List<string> asmdefPaths = new List<string>();
+            string commonAsmdef = Path.Combine(
+                Application.dataPath,
+                "CJ.ModSdk",
+                "CJ.ModSdk.asmdef"
+            );
+            if (File.Exists(commonAsmdef))
+            {
+                asmdefPaths.Add(commonAsmdef);
+            }
+
+            string modsDirectory = Path.Combine(Application.dataPath, "Mods");
+            if (Directory.Exists(modsDirectory))
+            {
+                asmdefPaths.AddRange(
+                    Directory.GetFiles(modsDirectory, "*.asmdef", SearchOption.AllDirectories)
+                );
+            }
+
+            List<string> sortedDllNames = new List<string>(sptDllNames);
+            sortedDllNames.Sort(StringComparer.OrdinalIgnoreCase);
+            int updated = 0;
+            foreach (string asmdefPath in asmdefPaths)
+            {
+                string json = File.ReadAllText(asmdefPath);
+                if (
+                    !Regex.IsMatch(
+                        json,
+                        "\\\"overrideReferences\\\"\\s*:\\s*true",
+                        RegexOptions.IgnoreCase,
+                        TimeSpan.FromSeconds(1)
+                    )
+                )
+                {
+                    continue;
+                }
+
+                Match match = Regex.Match(
+                    json,
+                    "(\\\"precompiledReferences\\\"\\s*:\\s*\\[)(?<items>.*?)(\\])",
+                    RegexOptions.Singleline,
+                    TimeSpan.FromSeconds(1)
+                );
+                if (!match.Success)
+                {
+                    continue;
+                }
+
+                string existingItems = match.Groups["items"].Value;
+                List<string> missing = new List<string>();
+                foreach (string dllName in sortedDllNames)
+                {
+                    if (
+                        !Regex.IsMatch(
+                            existingItems,
+                            "\\\"" + Regex.Escape(dllName) + "\\\"",
+                            RegexOptions.IgnoreCase,
+                            TimeSpan.FromSeconds(1)
+                        )
+                    )
+                    {
+                        missing.Add("\"" + dllName + "\"");
+                    }
+                }
+                if (missing.Count == 0)
+                {
+                    continue;
+                }
+
+                string existingTrimmed = existingItems.Trim();
+                string replacementItems = string.IsNullOrEmpty(existingTrimmed)
+                    ? "\n        " + string.Join(",\n        ", missing.ToArray()) + "\n    "
+                    : "\n        "
+                        + existingTrimmed
+                        + ",\n        "
+                        + string.Join(",\n        ", missing.ToArray())
+                        + "\n    ";
+                Group itemsGroup = match.Groups["items"];
+                string updatedJson = json.Substring(0, itemsGroup.Index)
+                    + replacementItems
+                    + json.Substring(itemsGroup.Index + itemsGroup.Length);
+                File.WriteAllText(asmdefPath, updatedJson);
+                updated++;
+            }
+
+            return updated;
+        }
+
         private static int ConfigureExplicitPluginReferences(string absOutput)
         {
             // Unity 2022.3 keeps this importer flag internal even though it is serialized in meta files.
@@ -694,7 +1003,13 @@ namespace TarkovSdk.Editor
                 );
             }
 
-            foreach (string dllPath in Directory.GetFiles(absOutput, "*.dll"))
+            foreach (
+                string dllPath in Directory.GetFiles(
+                    absOutput,
+                    "*.dll",
+                    SearchOption.AllDirectories
+                )
+            )
             {
                 string normalizedDllPath = Path.GetFullPath(dllPath).Replace('\\', '/');
                 if (

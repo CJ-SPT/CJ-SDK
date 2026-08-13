@@ -75,7 +75,13 @@
         "Unity.Recorder.dll",
         "Unity.ScriptableBuildPipeline.dll",
         "websocket-sharp.dll",
-        "where-allocations.dll"
+        "where-allocations.dll",
+        "spt-common.dll",
+        "spt-core.dll",
+        "spt-custom.dll",
+        "spt-debugging.dll",
+        "spt-reflection.dll",
+        "spt-singleplayer.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],

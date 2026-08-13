@@ -10,10 +10,11 @@ namespace CJ.ModSdk.Utils;
 [AttributeUsage(AttributeTargets.Assembly)]
 public class VersionChecker : Attribute
 {
+    public const int TarkovVersion = 40743;
+
     public static bool CheckEftVersion(
         ManualLogSource logger,
         ConfigFile configFile,
-        int buildVersion,
         string modName
     )
     {
@@ -21,13 +22,13 @@ public class VersionChecker : Attribute
             .GetVersionInfo(BepInEx.Paths.ExecutablePath)
             .FilePrivatePart;
 
-        if (currentVersion == buildVersion)
+        if (currentVersion == TarkovVersion)
         {
             return true;
         }
 
         string errorMessage =
-            $"ERROR: {modName} was built for Tarkov {buildVersion}, but you are running {currentVersion}. Please download the correct plugin version.";
+            $"ERROR: {modName} was built for Tarkov {TarkovVersion}, but you are running {currentVersion}. Please download the correct plugin version.";
         logger.LogError(errorMessage);
         Chainloader.DependencyErrors.Add(errorMessage);
 

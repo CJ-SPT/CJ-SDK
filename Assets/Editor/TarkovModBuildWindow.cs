@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Text.RegularExpressions;
 using dnlib.DotNet;
@@ -71,7 +72,7 @@ namespace TarkovSdk.Editor
             EditorGUILayout.HelpBox(
                 "Each asmdef below is a separate mod project. It gets its own compiled DLL, "
                     + "AssetBundle selection, and output directory. SDK assembly aliases are remapped "
-                    + "to the names used by EFT.",
+                    + "to the names used by EFT. CJ.ModSdk.dll is shared at the output root.",
                 MessageType.Info
             );
 
@@ -183,10 +184,15 @@ namespace TarkovSdk.Editor
                 }
             }
 
+            string resolvedOutput = ResolveOutputPath(_outputPath);
             string preview = CurrentProject == null
-                ? ResolveOutputPath(_outputPath)
-                : Path.Combine(ResolveOutputPath(_outputPath), CurrentProject.AssemblyName);
-            EditorGUILayout.LabelField("→ " + preview, EditorStyles.miniLabel);
+                ? resolvedOutput
+                : Path.Combine(resolvedOutput, CurrentProject.AssemblyName);
+            EditorGUILayout.LabelField("Mod → " + preview, EditorStyles.miniLabel);
+            EditorGUILayout.LabelField(
+                "Shared → " + Path.Combine(resolvedOutput, CommonAssemblyName + ".dll"),
+                EditorStyles.miniLabel
+            );
         }
 
         private void DrawBundleSelector()
@@ -479,15 +485,14 @@ namespace TarkovSdk.Editor
         {
             _log.Clear();
             SaveBundleSelection();
-            string projectOutput = Path.Combine(
-                ResolveOutputPath(_outputPath),
-                project.AssemblyName
-            );
+            string pluginsOutput = ResolveOutputPath(_outputPath);
+            string projectOutput = Path.Combine(pluginsOutput, project.AssemblyName);
             string bundleOutput = Path.Combine(projectOutput, "AssetBundles");
             string managedOutput = Path.Combine(projectOutput, "Managed");
 
             try
             {
+                Directory.CreateDirectory(pluginsOutput);
                 Directory.CreateDirectory(bundleOutput);
                 Directory.CreateDirectory(managedOutput);
 
@@ -585,7 +590,7 @@ namespace TarkovSdk.Editor
                     "ScriptAssemblies",
                     commonDllName
                 );
-                string commonRuntimePath = Path.Combine(managedOutput, commonDllName);
+                string commonRuntimePath = Path.Combine(pluginsOutput, commonDllName);
                 int commonManagedReferences = RewriteManagedAssemblyForRuntime(
                     commonSourcePath,
                     commonRuntimePath
@@ -599,14 +604,27 @@ namespace TarkovSdk.Editor
                 );
 
                 string commonSourcePdb = Path.ChangeExtension(commonSourcePath, ".pdb");
+                string commonRuntimePdb = Path.ChangeExtension(commonRuntimePath, ".pdb");
                 if (File.Exists(commonSourcePdb))
                 {
-                    File.Copy(
-                        commonSourcePdb,
-                        Path.Combine(managedOutput, CommonAssemblyName + ".pdb"),
-                        true
-                    );
+                    File.Copy(commonSourcePdb, commonRuntimePdb, true);
                 }
+                else
+                {
+                    DeleteOutputFile(commonRuntimePdb);
+                }
+
+                DeleteOutputFile(Path.Combine(managedOutput, commonDllName));
+                DeleteOutputFile(
+                    Path.Combine(managedOutput, CommonAssemblyName + ".pdb")
+                );
+
+                string deploymentZipPath = CreateDeploymentZip(
+                    pluginsOutput,
+                    projectOutput,
+                    project.AssemblyName,
+                    commonRuntimePath
+                );
 
                 Log(
                     "DONE: "
@@ -621,8 +639,10 @@ namespace TarkovSdk.Editor
                         + commonManagedReferences
                         + " shared DLL reference(s) remapped."
                 );
-                Log("Output: " + projectOutput);
-                EditorUtility.RevealInFinder(projectOutput);
+                Log("Mod output: " + projectOutput);
+                Log("Shared output: " + commonRuntimePath);
+                Log("Deployment ZIP: " + deploymentZipPath);
+                EditorUtility.RevealInFinder(deploymentZipPath);
             }
             catch (Exception ex)
             {
@@ -698,6 +718,101 @@ namespace TarkovSdk.Editor
                     MetadataFlags.PreserveAll | MetadataFlags.KeepOldMaxStack;
                 module.Write(outputPath, writerOptions);
                 return changes;
+            }
+        }
+
+        private static void DeleteOutputFile(string path)
+        {
+            if (File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        }
+
+        private static string CreateDeploymentZip(
+            string pluginsOutput,
+            string projectOutput,
+            string projectAssemblyName,
+            string commonRuntimePath
+        )
+        {
+            string zipPath = Path.Combine(pluginsOutput, projectAssemblyName + ".zip");
+            DeleteOutputFile(zipPath);
+
+            using (ZipArchive archive = ZipFile.Open(zipPath, ZipArchiveMode.Create))
+            {
+                const string pluginEntryRoot = "BepInEx/plugins/";
+                AddFileToZip(
+                    archive,
+                    commonRuntimePath,
+                    pluginEntryRoot + Path.GetFileName(commonRuntimePath)
+                );
+
+                string commonRuntimePdb = Path.ChangeExtension(commonRuntimePath, ".pdb");
+                if (File.Exists(commonRuntimePdb))
+                {
+                    AddFileToZip(
+                        archive,
+                        commonRuntimePdb,
+                        pluginEntryRoot + Path.GetFileName(commonRuntimePdb)
+                    );
+                }
+
+                string normalizedProjectRoot =
+                    Path.GetFullPath(projectOutput).TrimEnd(
+                        Path.DirectorySeparatorChar,
+                        Path.AltDirectorySeparatorChar
+                    ) + Path.DirectorySeparatorChar;
+                foreach (
+                    string filePath in Directory
+                        .GetFiles(projectOutput, "*", SearchOption.AllDirectories)
+                        .OrderBy(path => path, StringComparer.OrdinalIgnoreCase)
+                )
+                {
+                    string normalizedFilePath = Path.GetFullPath(filePath);
+                    if (
+                        !normalizedFilePath.StartsWith(
+                            normalizedProjectRoot,
+                            StringComparison.OrdinalIgnoreCase
+                        )
+                    )
+                    {
+                        throw new InvalidOperationException(
+                            "Cannot package a file outside the selected mod output: " + filePath
+                        );
+                    }
+
+                    string relativePath = normalizedFilePath.Substring(normalizedProjectRoot.Length);
+                    string entryPath = pluginEntryRoot
+                        + projectAssemblyName
+                        + "/"
+                        + relativePath.Replace('\\', '/');
+                    AddFileToZip(archive, normalizedFilePath, entryPath);
+                }
+            }
+
+            return zipPath;
+        }
+
+        private static void AddFileToZip(
+            ZipArchive archive,
+            string sourcePath,
+            string entryPath
+        )
+        {
+            if (!File.Exists(sourcePath))
+            {
+                throw new FileNotFoundException("A deployment file was not found.", sourcePath);
+            }
+
+            ZipArchiveEntry entry = archive.CreateEntry(
+                entryPath,
+                System.IO.Compression.CompressionLevel.Optimal
+            );
+            using (Stream source = File.OpenRead(sourcePath))
+            using (Stream destination = entry.Open())
+            {
+                source.CopyTo(destination);
             }
         }
 

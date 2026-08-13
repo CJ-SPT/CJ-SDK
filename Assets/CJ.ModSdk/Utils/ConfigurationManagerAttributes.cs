@@ -1,6 +1,6 @@
 namespace CJ.ModSdk.Utils;
 
-internal sealed class ConfigurationManagerAttributes
+public sealed class ConfigurationManagerAttributes
 {
     public bool? ShowRangeAsPercent;
     public System.Action<BepInEx.Configuration.ConfigEntryBase> CustomDrawer;
