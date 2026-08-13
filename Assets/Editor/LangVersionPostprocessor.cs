@@ -25,7 +25,7 @@ internal sealed class LangVersionPostprocessor : AssetPostprocessor
         EditorApplication.delayCall += SyncRiderProjectsOnce;
     }
 
-    [MenuItem("EFT/Tools/Regenerate Rider Project Files")]
+    [MenuItem("Mod Tools/Regenerate Project Files")]
     private static void RegenerateRiderProjectFiles()
     {
         SyncRiderProjects();

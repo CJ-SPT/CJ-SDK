@@ -98,7 +98,7 @@ namespace TarkovSdk.Editor
         private readonly List<string> _log = new List<string>();
         private bool _lastRunHadFailures;
 
-        [MenuItem("EFT/Assemblies/Assembly Import")]
+        [MenuItem("Mod Tools/Assembly Import")]
         public static void ShowWindow()
         {
             TarkovAssemblyExtractorWindow win = GetWindow<TarkovAssemblyExtractorWindow>(
@@ -200,9 +200,10 @@ namespace TarkovSdk.Editor
             }
             else
             {
-                sptHint = sptAssemblies.Length > 0
-                    ? "✓ " + sptAssemblies.Length + " spt-*.dll assemblies found"
-                    : "✗ no spt-*.dll assemblies found";
+                sptHint =
+                    sptAssemblies.Length > 0
+                        ? "✓ " + sptAssemblies.Length + " spt-*.dll assemblies found"
+                        : "✗ no spt-*.dll assemblies found";
             }
             EditorGUILayout.LabelField(sptHint, EditorStyles.miniLabel);
 
@@ -405,7 +406,8 @@ namespace TarkovSdk.Editor
                 {
                     string srcPath = sptAssemblyPaths[i];
                     string src = Path.GetFileName(srcPath);
-                    float pct = (float)(RequiredManagedDlls.Length + i)
+                    float pct =
+                        (float)(RequiredManagedDlls.Length + i)
                         / (RequiredManagedDlls.Length + sptAssemblyPaths.Length);
 
                     if (
@@ -976,7 +978,8 @@ namespace TarkovSdk.Editor
                         + string.Join(",\n        ", missing.ToArray())
                         + "\n    ";
                 Group itemsGroup = match.Groups["items"];
-                string updatedJson = json.Substring(0, itemsGroup.Index)
+                string updatedJson =
+                    json.Substring(0, itemsGroup.Index)
                     + replacementItems
                     + json.Substring(itemsGroup.Index + itemsGroup.Length);
                 File.WriteAllText(asmdefPath, updatedJson);
@@ -1024,10 +1027,7 @@ namespace TarkovSdk.Editor
 
                 string assetPath = "Assets" + normalizedDllPath.Substring(dataPath.Length);
                 PluginImporter importer = AssetImporter.GetAtPath(assetPath) as PluginImporter;
-                if (
-                    importer == null
-                    || (bool)explicitlyReferencedProperty.GetValue(importer, null)
-                )
+                if (importer == null || (bool)explicitlyReferencedProperty.GetValue(importer, null))
                 {
                     continue;
                 }

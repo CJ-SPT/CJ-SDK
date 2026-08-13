@@ -49,12 +49,10 @@ namespace TarkovSdk.Editor
         );
         private int _selectedProjectIndex;
 
-        [MenuItem("EFT/Build/Tarkov Mod Export")]
+        [MenuItem("Mod Tools/Mod Export")]
         public static void ShowWindow()
         {
-            TarkovModBuildWindow window = GetWindow<TarkovModBuildWindow>(
-                "Tarkov Mod Export"
-            );
+            TarkovModBuildWindow window = GetWindow<TarkovModBuildWindow>("Tarkov Mod Export");
             window.minSize = new Vector2(650f, 520f);
             window.Show();
         }
@@ -68,7 +66,10 @@ namespace TarkovSdk.Editor
         private void OnGUI()
         {
             EditorGUILayout.Space(6f);
-            EditorGUILayout.LabelField("Runtime-ready Tarkov project export", EditorStyles.boldLabel);
+            EditorGUILayout.LabelField(
+                "Runtime-ready Tarkov project export",
+                EditorStyles.boldLabel
+            );
             EditorGUILayout.HelpBox(
                 "Each asmdef below is a separate mod project. It gets its own compiled DLL, "
                     + "AssetBundle selection, and output directory. SDK assembly aliases are remapped "
@@ -84,8 +85,8 @@ namespace TarkovSdk.Editor
             using (
                 new EditorGUI.DisabledScope(
                     EditorApplication.isCompiling
-                    || string.IsNullOrWhiteSpace(_outputPath)
-                    || CurrentProject == null
+                        || string.IsNullOrWhiteSpace(_outputPath)
+                        || CurrentProject == null
                 )
             )
             {
@@ -148,10 +149,7 @@ namespace TarkovSdk.Editor
 
             if (CurrentProject != null)
             {
-                EditorGUILayout.LabelField(
-                    CurrentProject.AsmdefAssetPath,
-                    EditorStyles.miniLabel
-                );
+                EditorGUILayout.LabelField(CurrentProject.AsmdefAssetPath, EditorStyles.miniLabel);
             }
         }
 
@@ -185,9 +183,10 @@ namespace TarkovSdk.Editor
             }
 
             string resolvedOutput = ResolveOutputPath(_outputPath);
-            string preview = CurrentProject == null
-                ? resolvedOutput
-                : Path.Combine(resolvedOutput, CurrentProject.AssemblyName);
+            string preview =
+                CurrentProject == null
+                    ? resolvedOutput
+                    : Path.Combine(resolvedOutput, CurrentProject.AssemblyName);
             EditorGUILayout.LabelField("Mod → " + preview, EditorStyles.miniLabel);
             EditorGUILayout.LabelField(
                 "Shared → " + Path.Combine(resolvedOutput, CommonAssemblyName + ".dll"),
@@ -202,7 +201,11 @@ namespace TarkovSdk.Editor
             using (new EditorGUILayout.HorizontalScope())
             {
                 EditorGUILayout.LabelField(
-                    "Project AssetBundles (" + _selectedBundles.Count + "/" + bundleNames.Length + ")",
+                    "Project AssetBundles ("
+                        + _selectedBundles.Count
+                        + "/"
+                        + bundleNames.Length
+                        + ")",
                     EditorStyles.boldLabel
                 );
                 GUILayout.FlexibleSpace();
@@ -274,9 +277,10 @@ namespace TarkovSdk.Editor
 
         private void RefreshProjects()
         {
-            string previousName = CurrentProject != null
-                ? CurrentProject.AssemblyName
-                : EditorPrefs.GetString(SelectedProjectKey, string.Empty);
+            string previousName =
+                CurrentProject != null
+                    ? CurrentProject.AssemblyName
+                    : EditorPrefs.GetString(SelectedProjectKey, string.Empty);
 
             _projects.Clear();
             string modsRoot = Path.Combine(Application.dataPath, "Mods");
@@ -295,7 +299,11 @@ namespace TarkovSdk.Editor
                         AssemblyDefinitionData data = JsonUtility.FromJson<AssemblyDefinitionData>(
                             File.ReadAllText(asmdefPath)
                         );
-                        if (data == null || string.IsNullOrWhiteSpace(data.name) || IsEditorOnly(data))
+                        if (
+                            data == null
+                            || string.IsNullOrWhiteSpace(data.name)
+                            || IsEditorOnly(data)
+                        )
                         {
                             continue;
                         }
@@ -310,7 +318,9 @@ namespace TarkovSdk.Editor
                     }
                     catch (Exception ex)
                     {
-                        Debug.LogWarning("Could not read mod asmdef " + asmdefPath + ": " + ex.Message);
+                        Debug.LogWarning(
+                            "Could not read mod asmdef " + asmdefPath + ": " + ex.Message
+                        );
                     }
                 }
             }
@@ -388,7 +398,9 @@ namespace TarkovSdk.Editor
                 return;
             }
 
-            string[] selected = _selectedBundles.OrderBy(name => name, StringComparer.Ordinal).ToArray();
+            string[] selected = _selectedBundles
+                .OrderBy(name => name, StringComparer.Ordinal)
+                .ToArray();
             EditorPrefs.SetString(
                 BundleSelectionKeyPrefix + CurrentProject.AssemblyName,
                 string.Join("|", selected)
@@ -439,9 +451,7 @@ namespace TarkovSdk.Editor
                 return;
             }
 
-            string template = File.ReadAllText(
-                AssetPathToAbsolute(CurrentProject.AsmdefAssetPath)
-            );
+            string template = File.ReadAllText(AssetPathToAbsolute(CurrentProject.AsmdefAssetPath));
             template = Regex.Replace(
                 template,
                 "(\"name\"\\s*:\\s*)\"[^\"]*\"",
@@ -506,14 +516,11 @@ namespace TarkovSdk.Editor
                 if (bundleNames.Length > 0)
                 {
                     AssetBundleBuild[] buildMap = bundleNames
-                        .Select(
-                            bundleName =>
-                                new AssetBundleBuild
-                                {
-                                    assetBundleName = bundleName,
-                                    assetNames = AssetDatabase.GetAssetPathsFromAssetBundle(bundleName),
-                                }
-                        )
+                        .Select(bundleName => new AssetBundleBuild
+                        {
+                            assetBundleName = bundleName,
+                            assetNames = AssetDatabase.GetAssetPathsFromAssetBundle(bundleName),
+                        })
                         .ToArray();
 
                     Log("Building " + bundleNames.Length + " Windows AssetBundle(s)...");
@@ -615,9 +622,7 @@ namespace TarkovSdk.Editor
                 }
 
                 DeleteOutputFile(Path.Combine(managedOutput, commonDllName));
-                DeleteOutputFile(
-                    Path.Combine(managedOutput, CommonAssemblyName + ".pdb")
-                );
+                DeleteOutputFile(Path.Combine(managedOutput, CommonAssemblyName + ".pdb"));
 
                 string deploymentZipPath = CreateDeploymentZip(
                     pluginsOutput,
@@ -669,8 +674,7 @@ namespace TarkovSdk.Editor
                 return asmdefJson;
             }
 
-            const string referencesPattern =
-                "(\"references\"\\s*:\\s*\\[)(?<items>.*?)(\\])";
+            const string referencesPattern = "(\"references\"\\s*:\\s*\\[)(?<items>.*?)(\\])";
             return Regex.Replace(
                 asmdefJson,
                 referencesPattern,
@@ -680,9 +684,7 @@ namespace TarkovSdk.Editor
                     string replacementItems = string.IsNullOrEmpty(items)
                         ? "\n        \"" + commonReference + "\"\n    "
                         : "\n        \"" + commonReference + "\",\n        " + items + "\n    ";
-                    return match.Groups[1].Value
-                        + replacementItems
-                        + match.Groups[3].Value;
+                    return match.Groups[1].Value + replacementItems + match.Groups[3].Value;
                 },
                 RegexOptions.Singleline,
                 TimeSpan.FromSeconds(1)
@@ -708,7 +710,8 @@ namespace TarkovSdk.Editor
                     string name = assemblyRef.Name;
                     if (name.StartsWith(SdkAssemblyPrefix, StringComparison.Ordinal))
                     {
-                        assemblyRef.Name = GameAssemblyPrefix + name.Substring(SdkAssemblyPrefix.Length);
+                        assemblyRef.Name =
+                            GameAssemblyPrefix + name.Substring(SdkAssemblyPrefix.Length);
                         changes++;
                     }
                 }
@@ -759,10 +762,9 @@ namespace TarkovSdk.Editor
                 }
 
                 string normalizedProjectRoot =
-                    Path.GetFullPath(projectOutput).TrimEnd(
-                        Path.DirectorySeparatorChar,
-                        Path.AltDirectorySeparatorChar
-                    ) + Path.DirectorySeparatorChar;
+                    Path.GetFullPath(projectOutput)
+                        .TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar)
+                    + Path.DirectorySeparatorChar;
                 foreach (
                     string filePath in Directory
                         .GetFiles(projectOutput, "*", SearchOption.AllDirectories)
@@ -782,8 +784,11 @@ namespace TarkovSdk.Editor
                         );
                     }
 
-                    string relativePath = normalizedFilePath.Substring(normalizedProjectRoot.Length);
-                    string entryPath = pluginEntryRoot
+                    string relativePath = normalizedFilePath.Substring(
+                        normalizedProjectRoot.Length
+                    );
+                    string entryPath =
+                        pluginEntryRoot
                         + projectAssemblyName
                         + "/"
                         + relativePath.Replace('\\', '/');
@@ -794,11 +799,7 @@ namespace TarkovSdk.Editor
             return zipPath;
         }
 
-        private static void AddFileToZip(
-            ZipArchive archive,
-            string sourcePath,
-            string entryPath
-        )
+        private static void AddFileToZip(ZipArchive archive, string sourcePath, string entryPath)
         {
             if (!File.Exists(sourcePath))
             {
@@ -820,7 +821,9 @@ namespace TarkovSdk.Editor
         {
             if (oldValue.Length != newValue.Length)
             {
-                throw new ArgumentException("Bundle remapping requires equal-length assembly names.");
+                throw new ArgumentException(
+                    "Bundle remapping requires equal-length assembly names."
+                );
             }
             if (!File.Exists(path))
             {

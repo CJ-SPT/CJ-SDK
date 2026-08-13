@@ -29,7 +29,7 @@ namespace TarkovSdk.Editor
         private string _search = string.Empty;
         private string _loadMessage = string.Empty;
 
-        [MenuItem("EFT/Components/Tarkov Component Browser")]
+        [MenuItem("Mod Tools/Assembly-CSharp Component Browser")]
         public static void ShowWindow()
         {
             TarkovComponentBrowserWindow window = GetWindow<TarkovComponentBrowserWindow>(
@@ -82,7 +82,8 @@ namespace TarkovSdk.Editor
             }
 
             int shown = Math.Min(_filtered.Count, MaxVisibleResults);
-            string resultLabel = _filtered.Count + " matching / " + _components.Count + " attachable";
+            string resultLabel =
+                _filtered.Count + " matching / " + _components.Count + " attachable";
             if (_filtered.Count > MaxVisibleResults)
             {
                 resultLabel += " (showing first " + MaxVisibleResults + "; refine the search)";
@@ -146,7 +147,9 @@ namespace TarkovSdk.Editor
                 Debug.LogException(ex);
                 EditorUtility.DisplayDialog(
                     "Cannot add Tarkov component",
-                    componentType.FullName + " could not be added.\n\n" + ex.GetBaseException().Message,
+                    componentType.FullName
+                        + " could not be added.\n\n"
+                        + ex.GetBaseException().Message,
                     "OK"
                 );
             }
@@ -157,12 +160,14 @@ namespace TarkovSdk.Editor
             _components.Clear();
             _loadMessage = string.Empty;
 
-            List<Assembly> assemblies = AppDomain.CurrentDomain
-                .GetAssemblies()
+            List<Assembly> assemblies = AppDomain
+                .CurrentDomain.GetAssemblies()
                 .Where(IsTarkovAssembly)
                 .ToList();
 
-            foreach (string assemblyName in new[] { "Tarkov.Assembly", "Tarkov.Assembly-firstpass" })
+            foreach (
+                string assemblyName in new[] { "Tarkov.Assembly", "Tarkov.Assembly-firstpass" }
+            )
             {
                 if (assemblies.Any(a => a.GetName().Name == assemblyName))
                 {
@@ -205,7 +210,11 @@ namespace TarkovSdk.Editor
 
             _components.Sort(
                 (left, right) =>
-                    string.Compare(left.FullName, right.FullName, StringComparison.OrdinalIgnoreCase)
+                    string.Compare(
+                        left.FullName,
+                        right.FullName,
+                        StringComparison.OrdinalIgnoreCase
+                    )
             );
             ApplyFilter();
             Repaint();
@@ -214,8 +223,10 @@ namespace TarkovSdk.Editor
         private void ApplyFilter()
         {
             _filtered.Clear();
-            string[] terms = (_search ?? string.Empty)
-                .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            string[] terms = (_search ?? string.Empty).Split(
+                new[] { ' ' },
+                StringSplitOptions.RemoveEmptyEntries
+            );
 
             foreach (ComponentEntry entry in _components)
             {
