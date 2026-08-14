@@ -317,6 +317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1263808208}
+  - component: {fileID: 1263808209}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -339,6 +340,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1263808209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263808207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -154921966, guid: 676866eee9b557b40a0c27a0f505e3ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 0
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _commonIconBorder: {fileID: 0}
+  _rareIconBorder: {fileID: 0}
+  _legendaryIconBorder: {fileID: 0}
+  _commonIconBackground: {fileID: 0}
+  _rareIconBackground: {fileID: 0}
+  _legendaryIconBackground: {fileID: 0}
+  _iconHoverTrigger: {fileID: 0}
+  _iconImage: {fileID: 0}
+  _iconBorder: {fileID: 0}
+  _iconBackground: {fileID: 0}
+  _iconCanvasGroup: {fileID: 0}
+  _notCompletedAlpha: 0.25
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

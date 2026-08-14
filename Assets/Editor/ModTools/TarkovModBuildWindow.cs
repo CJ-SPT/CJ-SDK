@@ -49,7 +49,7 @@ namespace TarkovSdk.Editor
         );
         private int _selectedProjectIndex;
 
-        [MenuItem("Mod Tools/Mod Export")]
+        [MenuItem("SDK/Mod Tools/Mod Export")]
         public static void ShowWindow()
         {
             TarkovModBuildWindow window = GetWindow<TarkovModBuildWindow>("Tarkov Mod Export");

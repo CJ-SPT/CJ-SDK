@@ -4,13 +4,19 @@ using System.IO;
 using System.IO.Compression;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using System.Xml.Linq;
 using dnlib.DotNet;
 using dnlib.DotNet.Writer;
+using Unity.CodeEditor;
 using UnityEditor;
+using UnityEditor.Compilation;
 using UnityEngine;
 
 namespace TarkovSdk.Editor
 {
+    /// <summary>
+    ///     Credits: SSH for the initial code
+    /// </summary>
     public class TarkovAssemblyExtractorWindow : EditorWindow
     {
         private const string OldPrefix = "Assembly-CSharp";
@@ -98,7 +104,7 @@ namespace TarkovSdk.Editor
         private readonly List<string> _log = new List<string>();
         private bool _lastRunHadFailures;
 
-        [MenuItem("Mod Tools/Assembly Import")]
+        [MenuItem("SDK/Mod Tools/Assembly Import")]
         public static void ShowWindow()
         {
             TarkovAssemblyExtractorWindow win = GetWindow<TarkovAssemblyExtractorWindow>(
@@ -318,6 +324,9 @@ namespace TarkovSdk.Editor
                 unpackFailed = 0;
             int explicitlyReferenced = 0;
             int updatedAsmdefs = 0;
+            int updatedEditorProjects = 0;
+            int updatedEditorProjectReferences = 0;
+            bool synchronizedEditorProjects = false;
             bool unpackAttempted = false;
             List<string> missingFiles = new List<string>();
             List<string> failedFiles = new List<string>();
@@ -483,6 +492,11 @@ namespace TarkovSdk.Editor
                     {
                         AssetDatabase.Refresh(ImportAssetOptions.ForceSynchronousImport);
                     }
+                    synchronizedEditorProjects = SynchronizeCodeEditorProjects();
+                    updatedEditorProjects = UpdateEditorProjectReferences(
+                        absOutput,
+                        out updatedEditorProjectReferences
+                    );
                 }
             }
 
@@ -510,7 +524,21 @@ namespace TarkovSdk.Editor
                 Log(
                     "Updated "
                         + updatedAsmdefs
-                        + " SDK/mod asmdef file(s) with generated assembly references."
+                        + " project asmdef file(s) with imported assembly references."
+                );
+            }
+            if (synchronizedEditorProjects)
+            {
+                Log("Regenerated the current code editor project files.");
+            }
+            if (updatedEditorProjects > 0)
+            {
+                Log(
+                    "Updated "
+                        + updatedEditorProjects
+                        + " Editor .csproj file(s) with "
+                        + updatedEditorProjectReferences
+                        + " imported assembly reference(s)."
                 );
             }
             if (unpackAttempted)
@@ -536,6 +564,154 @@ namespace TarkovSdk.Editor
             {
                 Log("Failed: " + string.Join(", ", failedFiles));
             }
+        }
+
+        private bool SynchronizeCodeEditorProjects()
+        {
+            try
+            {
+                CodeEditor.CurrentEditor.SyncAll();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log("Could not regenerate code editor project files: " + ex.Message);
+                return false;
+            }
+        }
+
+        private int UpdateEditorProjectReferences(
+            string importedAssemblyDirectory,
+            out int updatedReferences
+        )
+        {
+            updatedReferences = 0;
+            if (!Directory.Exists(importedAssemblyDirectory))
+            {
+                return 0;
+            }
+
+            string[] importedAssemblyPaths = Directory.GetFiles(
+                importedAssemblyDirectory,
+                "*.dll",
+                SearchOption.AllDirectories
+            );
+            Array.Sort(importedAssemblyPaths, StringComparer.OrdinalIgnoreCase);
+
+            string projectRoot = Path.GetDirectoryName(Application.dataPath);
+            string[] projectPaths = Directory.GetFiles(
+                projectRoot,
+                "*.csproj",
+                SearchOption.TopDirectoryOnly
+            );
+            Array.Sort(projectPaths, StringComparer.OrdinalIgnoreCase);
+
+            int updatedProjects = 0;
+            foreach (string projectPath in projectPaths)
+            {
+                string projectName = Path.GetFileNameWithoutExtension(projectPath);
+                if (projectName.IndexOf("Editor", StringComparison.OrdinalIgnoreCase) < 0)
+                {
+                    continue;
+                }
+
+                try
+                {
+                    XDocument project = XDocument.Load(projectPath);
+                    XElement root = project.Root;
+                    if (root == null)
+                    {
+                        continue;
+                    }
+
+                    XNamespace xmlNamespace = root.Name.Namespace;
+                    Dictionary<string, XElement> existingReferences = new Dictionary<
+                        string,
+                        XElement
+                    >(StringComparer.OrdinalIgnoreCase);
+                    XElement referenceGroup = null;
+                    foreach (XElement itemGroup in root.Elements(xmlNamespace + "ItemGroup"))
+                    {
+                        foreach (
+                            XElement reference in itemGroup.Elements(xmlNamespace + "Reference")
+                        )
+                        {
+                            referenceGroup = referenceGroup ?? itemGroup;
+                            XAttribute include = reference.Attribute("Include");
+                            if (include == null)
+                            {
+                                continue;
+                            }
+
+                            string assemblyName = include.Value.Split(',')[0].Trim();
+                            if (!existingReferences.ContainsKey(assemblyName))
+                            {
+                                existingReferences.Add(assemblyName, reference);
+                            }
+                        }
+                    }
+
+                    if (referenceGroup == null)
+                    {
+                        referenceGroup = new XElement(xmlNamespace + "ItemGroup");
+                        root.Add(referenceGroup);
+                    }
+
+                    bool projectChanged = false;
+                    foreach (string assemblyPath in importedAssemblyPaths)
+                    {
+                        string assemblyName = Path.GetFileNameWithoutExtension(assemblyPath);
+                        string fullAssemblyPath = Path.GetFullPath(assemblyPath);
+                        if (existingReferences.TryGetValue(assemblyName, out XElement reference))
+                        {
+                            XElement hintPath = reference.Element(xmlNamespace + "HintPath");
+                            if (hintPath == null)
+                            {
+                                reference.Add(
+                                    new XElement(xmlNamespace + "HintPath", fullAssemblyPath)
+                                );
+                                projectChanged = true;
+                                updatedReferences++;
+                            }
+                            else if (
+                                !string.Equals(
+                                    hintPath.Value,
+                                    fullAssemblyPath,
+                                    StringComparison.OrdinalIgnoreCase
+                                )
+                            )
+                            {
+                                hintPath.Value = fullAssemblyPath;
+                                projectChanged = true;
+                                updatedReferences++;
+                            }
+                            continue;
+                        }
+
+                        referenceGroup.Add(
+                            new XElement(
+                                xmlNamespace + "Reference",
+                                new XAttribute("Include", assemblyName),
+                                new XElement(xmlNamespace + "HintPath", fullAssemblyPath)
+                            )
+                        );
+                        projectChanged = true;
+                        updatedReferences++;
+                    }
+
+                    if (projectChanged)
+                    {
+                        project.Save(projectPath);
+                        updatedProjects++;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Log("Could not update Editor project " + projectName + ": " + ex.Message);
+                }
+            }
+
+            return updatedProjects;
         }
 
         private enum ProcessResult
@@ -877,17 +1053,70 @@ namespace TarkovSdk.Editor
             File.Copy(sourceXml, Path.Combine(outputDirectory, outputXmlName), true);
         }
 
-        private static int SynchronizeAsmdefPrecompiledReferences(string sptOutputDirectory)
+        private static int SynchronizeAsmdefPrecompiledReferences(string outputDirectory)
         {
-            if (!Directory.Exists(sptOutputDirectory))
+            if (!Directory.Exists(outputDirectory))
             {
                 return 0;
+            }
+
+            int updated = 0;
+            HashSet<string> importedDllNames = new HashSet<string>(
+                StringComparer.OrdinalIgnoreCase
+            );
+            foreach (
+                string dllPath in Directory.GetFiles(
+                    outputDirectory,
+                    "*.dll",
+                    SearchOption.AllDirectories
+                )
+            )
+            {
+                importedDllNames.Add(Path.GetFileName(dllPath));
+            }
+
+            string currentAssemblyName = typeof(TarkovAssemblyExtractorWindow)
+                .Assembly.GetName()
+                .Name;
+            string currentAsmdefAssetPath =
+                CompilationPipeline.GetAssemblyDefinitionFilePathFromAssemblyName(
+                    currentAssemblyName
+                );
+            string currentAsmdefPath = string.IsNullOrEmpty(currentAsmdefAssetPath)
+                ? string.Empty
+                : Path.GetFullPath(FileUtil.GetPhysicalPath(currentAsmdefAssetPath));
+
+            foreach (
+                string asmdefPath in Directory.GetFiles(
+                    Application.dataPath,
+                    "*.asmdef",
+                    SearchOption.AllDirectories
+                )
+            )
+            {
+                if (
+                    !string.IsNullOrEmpty(currentAsmdefPath)
+                    && string.Equals(
+                        Path.GetFullPath(asmdefPath),
+                        currentAsmdefPath,
+                        StringComparison.OrdinalIgnoreCase
+                    )
+                )
+                {
+                    continue;
+                }
+
+                string json = File.ReadAllText(asmdefPath);
+                if (IsEditorAssemblyDefinition(json))
+                {
+                    updated += AddMissingPrecompiledReferences(asmdefPath, importedDllNames);
+                }
             }
 
             HashSet<string> sptDllNames = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             foreach (
                 string dllPath in Directory.GetFiles(
-                    sptOutputDirectory,
+                    outputDirectory,
                     "spt-*.dll",
                     SearchOption.AllDirectories
                 )
@@ -897,7 +1126,7 @@ namespace TarkovSdk.Editor
             }
             if (sptDllNames.Count == 0)
             {
-                return 0;
+                return updated;
             }
 
             List<string> asmdefPaths = new List<string>();
@@ -919,74 +1148,94 @@ namespace TarkovSdk.Editor
                 );
             }
 
-            List<string> sortedDllNames = new List<string>(sptDllNames);
-            sortedDllNames.Sort(StringComparer.OrdinalIgnoreCase);
-            int updated = 0;
             foreach (string asmdefPath in asmdefPaths)
             {
-                string json = File.ReadAllText(asmdefPath);
+                updated += AddMissingPrecompiledReferences(asmdefPath, sptDllNames);
+            }
+
+            return updated;
+        }
+
+        private static bool IsEditorAssemblyDefinition(string json)
+        {
+            Match name = Regex.Match(
+                json,
+                "\\\"name\\\"\\s*:\\s*\\\"(?<name>[^\\\"]+)\\\"",
+                RegexOptions.IgnoreCase,
+                TimeSpan.FromSeconds(1)
+            );
+            return name.Success
+                && name.Groups["name"].Value.IndexOf("Editor", StringComparison.OrdinalIgnoreCase)
+                    >= 0;
+        }
+
+        private static int AddMissingPrecompiledReferences(
+            string asmdefPath,
+            IEnumerable<string> dllNames
+        )
+        {
+            string json = File.ReadAllText(asmdefPath);
+            if (
+                !Regex.IsMatch(
+                    json,
+                    "\\\"overrideReferences\\\"\\s*:\\s*true",
+                    RegexOptions.IgnoreCase,
+                    TimeSpan.FromSeconds(1)
+                )
+            )
+            {
+                return 0;
+            }
+
+            Match match = Regex.Match(
+                json,
+                "(\\\"precompiledReferences\\\"\\s*:\\s*\\[)(?<items>.*?)(\\])",
+                RegexOptions.Singleline,
+                TimeSpan.FromSeconds(1)
+            );
+            if (!match.Success)
+            {
+                return 0;
+            }
+
+            string existingItems = match.Groups["items"].Value;
+            List<string> sortedDllNames = new List<string>(dllNames);
+            sortedDllNames.Sort(StringComparer.OrdinalIgnoreCase);
+            List<string> missing = new List<string>();
+            foreach (string dllName in sortedDllNames)
+            {
                 if (
                     !Regex.IsMatch(
-                        json,
-                        "\\\"overrideReferences\\\"\\s*:\\s*true",
+                        existingItems,
+                        "\\\"" + Regex.Escape(dllName) + "\\\"",
                         RegexOptions.IgnoreCase,
                         TimeSpan.FromSeconds(1)
                     )
                 )
                 {
-                    continue;
+                    missing.Add("\"" + dllName + "\"");
                 }
-
-                Match match = Regex.Match(
-                    json,
-                    "(\\\"precompiledReferences\\\"\\s*:\\s*\\[)(?<items>.*?)(\\])",
-                    RegexOptions.Singleline,
-                    TimeSpan.FromSeconds(1)
-                );
-                if (!match.Success)
-                {
-                    continue;
-                }
-
-                string existingItems = match.Groups["items"].Value;
-                List<string> missing = new List<string>();
-                foreach (string dllName in sortedDllNames)
-                {
-                    if (
-                        !Regex.IsMatch(
-                            existingItems,
-                            "\\\"" + Regex.Escape(dllName) + "\\\"",
-                            RegexOptions.IgnoreCase,
-                            TimeSpan.FromSeconds(1)
-                        )
-                    )
-                    {
-                        missing.Add("\"" + dllName + "\"");
-                    }
-                }
-                if (missing.Count == 0)
-                {
-                    continue;
-                }
-
-                string existingTrimmed = existingItems.Trim();
-                string replacementItems = string.IsNullOrEmpty(existingTrimmed)
-                    ? "\n        " + string.Join(",\n        ", missing.ToArray()) + "\n    "
-                    : "\n        "
-                        + existingTrimmed
-                        + ",\n        "
-                        + string.Join(",\n        ", missing.ToArray())
-                        + "\n    ";
-                Group itemsGroup = match.Groups["items"];
-                string updatedJson =
-                    json.Substring(0, itemsGroup.Index)
-                    + replacementItems
-                    + json.Substring(itemsGroup.Index + itemsGroup.Length);
-                File.WriteAllText(asmdefPath, updatedJson);
-                updated++;
+            }
+            if (missing.Count == 0)
+            {
+                return 0;
             }
 
-            return updated;
+            string existingTrimmed = existingItems.Trim();
+            string replacementItems = string.IsNullOrEmpty(existingTrimmed)
+                ? "\n        " + string.Join(",\n        ", missing.ToArray()) + "\n    "
+                : "\n        "
+                    + existingTrimmed
+                    + ",\n        "
+                    + string.Join(",\n        ", missing.ToArray())
+                    + "\n    ";
+            Group itemsGroup = match.Groups["items"];
+            string updatedJson =
+                json.Substring(0, itemsGroup.Index)
+                + replacementItems
+                + json.Substring(itemsGroup.Index + itemsGroup.Length);
+            File.WriteAllText(asmdefPath, updatedJson);
+            return 1;
         }
 
         private static int ConfigureExplicitPluginReferences(string absOutput)

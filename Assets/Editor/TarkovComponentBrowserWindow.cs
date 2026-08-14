@@ -29,7 +29,7 @@ namespace TarkovSdk.Editor
         private string _search = string.Empty;
         private string _loadMessage = string.Empty;
 
-        [MenuItem("Mod Tools/Assembly-CSharp Component Browser")]
+        [MenuItem("SDK/Component Browser")]
         public static void ShowWindow()
         {
             TarkovComponentBrowserWindow window = GetWindow<TarkovComponentBrowserWindow>(
