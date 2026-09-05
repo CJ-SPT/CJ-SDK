@@ -1,0 +1,277 @@
+{
+  "icons": [
+    {
+      "perkId": "69c41a19cd28c936320a7523",
+      "asset": "Icons/6a60d391ad4b72034b029c61.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d391ad4b72034b029c61.png",
+      "sha256": "3e259b34184931fb0d608b2d01240bb774d02a05c153ace78d50b62f8c84d344",
+      "size": 53837
+    },
+    {
+      "perkId": "69c41a86383fc5c9ad03f3d5",
+      "asset": "Icons/6a60d38cdbd6b04ab5082d64.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d38cdbd6b04ab5082d64.png",
+      "sha256": "4c626176aec2b488ecdb5a8220a98ab7af40b8268970c90083ad317af3af835d",
+      "size": 44135
+    },
+    {
+      "perkId": "69c41adf883efd5e3b09ccae",
+      "asset": "Icons/6a60d395a51799c4240d7af6.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d395a51799c4240d7af6.png",
+      "sha256": "07a715a58e8d666beacab96279b2ca78c7057a50502623179c1db974594ae3cf",
+      "size": 64697
+    },
+    {
+      "perkId": "69ce5d9296f3b267fa08f137",
+      "asset": "Icons/6a60d3718f05da0353066306.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d3718f05da0353066306.png",
+      "sha256": "4dd653fbb6d6c2f363925e2ca2e72b7ed9502236e25816534fc34aeac3c89c22",
+      "size": 55715
+    },
+    {
+      "perkId": "69ce5e104e0a1c7ca20781c9",
+      "asset": "Icons/6a60d37b9e94cffce502d320.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d37b9e94cffce502d320.png",
+      "sha256": "7d994d0058a7e7a219190c0212f4d53488873513ab0e65e24dba770464da67a8",
+      "size": 45348
+    },
+    {
+      "perkId": "69ce5eb3e4b79de94a0d78c8",
+      "asset": "Icons/6a60d36ba51799c4240d7af5.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d36ba51799c4240d7af5.png",
+      "sha256": "ea3831f5eced369728d240a8cc26c76d3945548fbc1ff99698f8a6c4901aba0e",
+      "size": 51101
+    },
+    {
+      "perkId": "69c3cd003ffdba4e68086bd7",
+      "asset": "Icons/6a60d3fcf23eae53e50f3456.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d3fcf23eae53e50f3456.png",
+      "sha256": "db084b955bb57197ca8b9819e5afa684c278569e6c3c9c15a6abd6b41a9a927e",
+      "size": 36895
+    },
+    {
+      "perkId": "69c3cddcfb79911cf20022d6",
+      "asset": "Icons/6a60d411dbd6b04ab5082d68.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d411dbd6b04ab5082d68.png",
+      "sha256": "3a90af62bf95e960c9b2ef8490e60621892bd749e0e25027df410e5d7c21ea75",
+      "size": 47326
+    },
+    {
+      "perkId": "69c3d036042c81ad9209eeae",
+      "asset": "Icons/6a60d3a8f9e99c65c201ce72.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d3a8f9e99c65c201ce72.png",
+      "sha256": "d3ad3bcce3f6b68c9d68c723efdf86a6126c764a87374a0d9794dbc988dd1830",
+      "size": 40936
+    },
+    {
+      "perkId": "69c3d21749d7d7c520026425",
+      "asset": "Icons/6a60d40c8f05da035306632b.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d40c8f05da035306632b.png",
+      "sha256": "61769ddd0c2a0801fe5114ed5a030372497543aaa77301424a3d908f2ce94987",
+      "size": 62560
+    },
+    {
+      "perkId": "69c3d2acfe3c5632e4045fe8",
+      "asset": "Icons/6a60d4153d109aeba509fbc4.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d4153d109aeba509fbc4.png",
+      "sha256": "b2b2e4a83f72c969c08153b684ef3a694e0f57854dc89ff623e771eea5a35ce6",
+      "size": 46263
+    },
+    {
+      "perkId": "69c3d35feaf97663fb0bb367",
+      "asset": "Icons/6a60d3b417dbbfbaa50a145f.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d3b417dbbfbaa50a145f.png",
+      "sha256": "eeef9a1ed6a1023b50f6b3c2e88f0397f661653beebe69d442bedc534fa536d6",
+      "size": 37195
+    },
+    {
+      "perkId": "69c3d43030f896ebef0ed357",
+      "asset": "Icons/6a60d3daf9e99c65c201ce74.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d3daf9e99c65c201ce74.png",
+      "sha256": "124def97c21341274ccc89434a6b73357b6234059e9f30793c5856becbcccf26",
+      "size": 58358
+    },
+    {
+      "perkId": "69c3d4e949d7d7c52002642a",
+      "asset": "Icons/6a60d3d6f23eae53e50f3455.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d3d6f23eae53e50f3455.png",
+      "sha256": "ce93fbc4571374a70d4fd58aebcca47252a1e2ac6fc5bf783c94d2b42d4058dd",
+      "size": 38104
+    },
+    {
+      "perkId": "69c3d6a9af28f094100fe128",
+      "asset": "Icons/6a60d3acb39f93e78f0c894c.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d3acb39f93e78f0c894c.png",
+      "sha256": "21c41e7475dde3999d39e82109c24a7502290a54273ac3affcd8773471945076",
+      "size": 57314
+    },
+    {
+      "perkId": "69c3da8fc0e4deb02605f3c9",
+      "asset": "Icons/6a60d3e80ee20df6890d022b.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d3e80ee20df6890d022b.png",
+      "sha256": "472e9b6acc72263dfc11cf2e3135bf0713addfdfcd9e6727b81f5157ed9456d4",
+      "size": 49116
+    },
+    {
+      "perkId": "69c3e8d8af28f094100fe130",
+      "asset": "Icons/6a60d773a51799c4240d7b65.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d773a51799c4240d7b65.png",
+      "sha256": "aa7105bfe603431227e622cbbc08873ddb50fe18337a70b55cf425f53d6d8578",
+      "size": 41056
+    },
+    {
+      "perkId": "69c405a9d7a7b2ca660e0c56",
+      "asset": "Icons/6a60d755dbd6b04ab5082d90.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d755dbd6b04ab5082d90.png",
+      "sha256": "ce67462d299186abfc50cf6b7d503f5d5ddd6f8158124777f11e946114dea4ce",
+      "size": 65240
+    },
+    {
+      "perkId": "69c406731d8aec4a2b0551bd",
+      "asset": "Icons/6a60d790f9e99c65c201cec1.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d790f9e99c65c201cec1.png",
+      "sha256": "3d7ccff065220b512e473d71b56818128ed39c657bf9e5d2b497caab5a389acc",
+      "size": 46185
+    },
+    {
+      "perkId": "69c40cb782362c4aff041510",
+      "asset": "Icons/6a60d75917dbbfbaa50a14ac.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d75917dbbfbaa50a14ac.png",
+      "sha256": "8a649bc9c0add19568ea1100cfccbc83143cac2fc701fe771697227718db7ae8",
+      "size": 58197
+    },
+    {
+      "perkId": "69c40e131f8903ce7a06984c",
+      "asset": "Icons/6a60d78b0ee20df6890d0258.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d78b0ee20df6890d0258.png",
+      "sha256": "63606b4110d0b50ca1c16e7f1931bd16844116c7f261d968331d758efdcce7d7",
+      "size": 56858
+    },
+    {
+      "perkId": "69c40f9f9b5263783d0fe51d",
+      "asset": "Icons/6a60d75d9e94cffce502d34b.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d75d9e94cffce502d34b.png",
+      "sha256": "bc85a5d1c79dc92f12d68d7099823c49f7cbd7159e1c6a33c5967078be150dac",
+      "size": 47418
+    },
+    {
+      "perkId": "69c4116a383fc5c9ad03f3d1",
+      "asset": "Icons/6a60d7932fa684a5ee01c7c7.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d7932fa684a5ee01c7c7.png",
+      "sha256": "29579a71a037a060912af30cb90d2a741cef235ec9d692ad3c1d36311363f88f",
+      "size": 60577
+    },
+    {
+      "perkId": "69c411d8883efd5e3b09ccab",
+      "asset": "Icons/6a60d768f9e99c65c201cec0.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d768f9e99c65c201cec0.png",
+      "sha256": "dacbf67069dcc12596395b5b6d9048972e93d259e0a4620f5b13871eff9e044c",
+      "size": 37623
+    },
+    {
+      "perkId": "69c412519b5263783d0fe520",
+      "asset": "Icons/6a60d77cdbd6b04ab5082d91.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d77cdbd6b04ab5082d91.png",
+      "sha256": "d4e9f5cc6bf1c1d5b87d91ea9b02de3aff5fff050edfc04f246ae367a5eab0b3",
+      "size": 43491
+    },
+    {
+      "perkId": "69c41632d7a7b2ca660e0c59",
+      "asset": "Icons/6a60d7874b0691f8c10498ba.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d7874b0691f8c10498ba.png",
+      "sha256": "d89494832f63ced1f412f83465b4238f17cdcaf0fde06f7f6302c6cf8aa3402a",
+      "size": 41995
+    },
+    {
+      "perkId": "69ce62886e199f4bbe0ab19b",
+      "asset": "Icons/6a60d3f22fa684a5ee01c7c0.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d3f22fa684a5ee01c7c0.png",
+      "sha256": "1d6279db3d92a58d7a1b1be4e69e8a356e24a6de17cc98b4a62320a8e8698a3a",
+      "size": 44941
+    },
+    {
+      "perkId": "69ce64fe6e199f4bbe0ab1a1",
+      "asset": "Icons/6a60d76d2fa684a5ee01c7c6.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d76d2fa684a5ee01c7c6.png",
+      "sha256": "003b116f61e07286a8dca01af9b6e8042af7fb3a561bfd9fad218d279c43d916",
+      "size": 53371
+    },
+    {
+      "perkId": "6a578102e7737aa469066518",
+      "asset": "Icons/6a60d48b17dbbfbaa50a1486.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d48b17dbbfbaa50a1486.png",
+      "sha256": "41defd4d2399e6033119be12f5e131989401e8247bb35aba9428c858cbf3f6c7",
+      "size": 45678
+    },
+    {
+      "perkId": "6a5789f713792e2c7c0d2a5b",
+      "asset": "Icons/6a60d4232fa684a5ee01c7c1.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d4232fa684a5ee01c7c1.png",
+      "sha256": "67605d154417dab4e6e7dd280032aea600aebe41cdd5a8b6a336da30ad15faef",
+      "size": 54129
+    },
+    {
+      "perkId": "6a578ac032cea863f505beed",
+      "asset": "Icons/6a60d3a2e46631bbe50437c4.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d3a2e46631bbe50437c4.png",
+      "sha256": "f69e4f126f7423ee1a9c8cc070274d82696024e2e3a275fa099b57fc18b337b9",
+      "size": 57192
+    },
+    {
+      "perkId": "69c3ce913ffdba4e68086bdb",
+      "asset": "Icons/6a60d3dfb39f93e78f0c894e.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d3dfb39f93e78f0c894e.png",
+      "sha256": "6099a6cf0f2151da13db66f9d2a98b532a44760a9e64b38e5879a3286f2c9c8e",
+      "size": 39672
+    },
+    {
+      "perkId": "69c405332f253132020be099",
+      "asset": "Icons/6a60d750a51799c4240d7b64.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d750a51799c4240d7b64.png",
+      "sha256": "c2f8678026c7cfcd2c9d6ee3d6a37a6da98ec5fac3c1eb3aa6cf3026cbc64907",
+      "size": 36200
+    },
+    {
+      "perkId": "69c40ae21d8aec4a2b0551c2",
+      "asset": "Icons/6a60d495f23eae53e50f347b.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d495f23eae53e50f347b.png",
+      "sha256": "10f043cf8271b5977a177c88a52a296577a72f8bd12608bdc70cef6073f11364",
+      "size": 37820
+    },
+    {
+      "perkId": "69c40c0f5e9ce5a8970f6be9",
+      "asset": "Icons/6a60d48fdbd6b04ab5082d69.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d48fdbd6b04ab5082d69.png",
+      "sha256": "e57589afacd803c5bd871628b65b54249f1ce153fd1184b4b0663f16ce353077",
+      "size": 45837
+    },
+    {
+      "perkId": "69c410831f8903ce7a06984f",
+      "asset": "Icons/6a60d7630ee20df6890d0257.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d7630ee20df6890d0257.png",
+      "sha256": "864b15fed877c97912420422cd50e44386faed2a7c7d8b506113c271cf0fb969",
+      "size": 60150
+    },
+    {
+      "perkId": "69c41111cd28c936320a7520",
+      "asset": "Icons/6a60d783f23eae53e50f34a5.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d783f23eae53e50f34a5.png",
+      "sha256": "d8512fb14843d1c495b0bc697bed99f6941c837c9be9e422a799c93a4fc33ae6",
+      "size": 49543
+    },
+    {
+      "perkId": "69ce64064e0a1c7ca20781d3",
+      "asset": "Icons/6a60d74c2fa684a5ee01c7c5.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d74c2fa684a5ee01c7c5.png",
+      "sha256": "e28d340e0b3f8c0e53ceaed419dee6331a6cf96a4fc4350d45d1473492edec76",
+      "size": 52797
+    },
+    {
+      "perkId": "69c3da13eaf97663fb0bb36d",
+      "asset": "Icons/6a60d4194b0691f8c104986f.png",
+      "sourceUrl": "https://s3-prod.escapefromtarkov.com/pvp-season/files/seasonal-perks/6a60d4194b0691f8c104986f.png",
+      "sha256": "bdefba2c5abe964ae00d1a50680c089c49af1ef6247b7b87556f607a286407d0",
+      "size": 44109
+    }
+  ]
+}

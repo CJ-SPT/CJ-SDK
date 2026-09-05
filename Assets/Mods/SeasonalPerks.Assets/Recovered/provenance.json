@@ -1,0 +1,53 @@
+[
+  {
+    "source": "E:\\EscapeFromTarkov\\EscapeFromTarkov_Data\\level44",
+    "sha256": "392934e67d1ba87de58a560790ea9e99fb7d58074127970e9ca303509e3f2c1d",
+    "roots": [
+      5113,
+      6378
+    ]
+  },
+  {
+    "source": "E:\\EscapeFromTarkov\\EscapeFromTarkov_Data\\level47",
+    "sha256": "05572e88484d3651f2c82ae4e11533297c7c70d85a3e6561dd3dcf14280cc82a",
+    "roots": [
+      58,
+      82,
+      155,
+      312,
+      357,
+      466
+    ]
+  },
+  {
+    "source": "E:\\EscapeFromTarkov\\EscapeFromTarkov_Data\\level48",
+    "sha256": "8e09865815999414dc64e6db70b58cc2a77010a6b63b3ea012a930aaed47d8ff",
+    "roots": [
+      1976
+    ]
+  },
+  {
+    "source": "E:\\EscapeFromTarkov\\EscapeFromTarkov_Data\\level49",
+    "sha256": "5399de25ae2cea636dd281bee015c1689dfb6535b5b69ec6b6f7ee5f34f3b40b",
+    "roots": [
+      794,
+      2761
+    ]
+  },
+  {
+    "source": "E:\\EscapeFromTarkov\\EscapeFromTarkov_Data\\level50",
+    "sha256": "0cec1c30c6021b06b504bc8458e83431579ffaaf870361cf798187390465a1d7",
+    "roots": [
+      213,
+      681
+    ]
+  },
+  {
+    "source": "E:\\EscapeFromTarkov\\EscapeFromTarkov_Data\\sharedassets44.assets",
+    "sha256": "e3f273b20f1e593e061676cc76ab44aaaa6297f9fc947fa9d5bface7806190bb",
+    "roots": [
+      1471,
+      3075
+    ]
+  }
+]

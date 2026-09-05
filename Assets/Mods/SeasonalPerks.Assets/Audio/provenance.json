@@ -1,0 +1,57 @@
+[
+  {
+    "file": "profile-hover-normal.wav",
+    "source": "resources.assets",
+    "sourceSha256": "f73a8c8d655d0112bad919016491278fc05f88ca8f610eba90638e5cbb3d206b",
+    "wrapperId": 46348,
+    "soundType": 70,
+    "objectId": 4016,
+    "name": "profile_choose_hover_button",
+    "duration": 0.5894331336021423,
+    "sha256": "a3cafdc7b6d16fc3cae19167a323c4637bd0f485bc39bd53429f5eeb31df5c3e"
+  },
+  {
+    "file": "profile-hover-seasonal.wav",
+    "source": "resources.assets",
+    "sourceSha256": "f73a8c8d655d0112bad919016491278fc05f88ca8f610eba90638e5cbb3d206b",
+    "wrapperId": 46348,
+    "soundType": 82,
+    "objectId": 4241,
+    "name": "profile_choose_hover_button_season",
+    "duration": 0.5906575918197632,
+    "sha256": "68db9884d06a6e513056814ddf77642ea7f1dc2a8360923352e65090bc367086"
+  },
+  {
+    "file": "perk-off.wav",
+    "source": "resources.assets",
+    "sourceSha256": "f73a8c8d655d0112bad919016491278fc05f88ca8f610eba90638e5cbb3d206b",
+    "wrapperId": 46348,
+    "soundType": 61,
+    "objectId": 4354,
+    "name": "modificator_off_click_button",
+    "duration": 0.2321995496749878,
+    "sha256": "a091b360401dd709930d3e53d1ec7b5b8cef91f7ab756f61708c8ef95766d15b"
+  },
+  {
+    "file": "perk-on.wav",
+    "source": "resources.assets",
+    "sourceSha256": "f73a8c8d655d0112bad919016491278fc05f88ca8f610eba90638e5cbb3d206b",
+    "wrapperId": 46348,
+    "soundType": 62,
+    "objectId": 4004,
+    "name": "modificator_on_click_button",
+    "duration": 0.3715192675590515,
+    "sha256": "f336a131798088bebcca5a6056874c0a40a7c0a40e57324cc31bcb294364fff8"
+  },
+  {
+    "file": "perk-reset.wav",
+    "source": "resources.assets",
+    "sourceSha256": "f73a8c8d655d0112bad919016491278fc05f88ca8f610eba90638e5cbb3d206b",
+    "wrapperId": 46348,
+    "soundType": 63,
+    "objectId": 3941,
+    "name": "modificator_reset_click_button",
+    "duration": 0.4492517113685608,
+    "sha256": "8500ba3c89b51c7eecc591379baf235d3457ea79307aba09f1df1bd919c55bec"
+  }
+]

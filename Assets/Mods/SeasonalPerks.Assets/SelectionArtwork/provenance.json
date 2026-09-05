@@ -1,0 +1,610 @@
+[
+  {
+    "file": "background.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 44,
+    "name": "Background",
+    "width": 2560,
+    "height": 1649,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "ad7d7cd9cd368522b2e153d5146402d61073c280a313930da8ad4a6c94f6ec95"
+  },
+  {
+    "file": "normal-glow.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 40,
+    "name": "glow_pve_regular_idle",
+    "width": 402,
+    "height": 812,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "6a493cd44491255757ebd42be16149c63ba7f35dffeff28da7364e4fc1794d38"
+  },
+  {
+    "file": "normal-hover.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 69,
+    "name": "glow_pve_regular_hove",
+    "width": 402,
+    "height": 812,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "551a8de117b2188e65b6add711176bf8f0e4f7039c5a067146c89f4a9ae2e40f"
+  },
+  {
+    "file": "normal-card.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 66,
+    "name": "PVE_card",
+    "width": 780,
+    "height": 1600,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "65a8b8695d69dc854eccaa1cc97fd116fb5ee078b9b63b222e272dc9ca224e64"
+  },
+  {
+    "file": "seasonal-card.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 70,
+    "name": "Season_card",
+    "width": 780,
+    "height": 1600,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "9d1ce44c670eabdee5b384bd19ee59fdc7433504f03275e58329277e8bfcd0da"
+  },
+  {
+    "file": "bear.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 36,
+    "name": "BEAR",
+    "width": 772,
+    "height": 1183,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "ebf76c17a9271519c70c545b505866c703179408080f436b00c45c199897944a"
+  },
+  {
+    "file": "usec.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 65,
+    "name": "USEC",
+    "width": 772,
+    "height": 1233,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "e3c604e238f71aa5df50357d473db513890537a765af3274ab5d83882b11407a"
+  },
+  {
+    "file": "normal-badge.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 59,
+    "name": "CharacterSelectionView_GameMode_Icons_0",
+    "width": 187,
+    "height": 187,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "1a6308df86f9df834ae822136bad02740a43dea0686d6cba1f1135065415b7c1"
+  },
+  {
+    "file": "seasonal-empty.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 60,
+    "name": "Season_Idle",
+    "width": 350,
+    "height": 891,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "78101905fe499e8edaa71db354703ab8522139c8e39839392c68a05abd0bd703"
+  },
+  {
+    "file": "seasonal-empty-hover.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 71,
+    "name": "Season_Hover",
+    "width": 350,
+    "height": 891,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "3c3220d6fd7a7d429e89573f99bfa5a2e19941e4d9e5c48a13789adbd827dac0"
+  },
+  {
+    "file": "normal-empty.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 38,
+    "name": "PVE_Idle",
+    "width": 429,
+    "height": 920,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "fcec13ff619880f465557db88b193b7c957c0882b855922de278b23bd3380bd8"
+  },
+  {
+    "file": "normal-empty-hover.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 81,
+    "name": "CharacterSelectionView_CoolGuys_2",
+    "width": 362,
+    "height": 894,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "5414d7371475677f630fe0f11dbfc5a5bd85542e21097093a32f0e5ba81b0c85"
+  },
+  {
+    "file": "info-gradient.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 68,
+    "name": "Info_Card_0",
+    "width": 402,
+    "height": 233,
+    "border": [
+      27.0,
+      27.0,
+      27.0,
+      75.0
+    ],
+    "sha256": "76ca0528adfd43847d78af458c814e1238d8c498968bcfbb6a4af6fcc182b586"
+  },
+  {
+    "file": "footer-gradient.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 58,
+    "name": "Info_Card_no_head_0",
+    "width": 400,
+    "height": 193,
+    "border": [
+      27.0,
+      27.0,
+      27.0,
+      27.0
+    ],
+    "sha256": "ca4b3624095b6a142a2a00342ebf9551e61a3e24a5105c7874d2ba172d7dd3f3"
+  },
+  {
+    "file": "seasonal-glow-1.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 76,
+    "name": "Frame 1",
+    "width": 664,
+    "height": 1016,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "14eaa246d0f4fababded6cc4d8d98c72b23c3d4f6baa3a54ba6889287ad7d3bb"
+  },
+  {
+    "file": "seasonal-glow-2.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 78,
+    "name": "Frame 2",
+    "width": 664,
+    "height": 1016,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "a22377dfdcaaf111c466a0f325f303ab53fb78e550b055d29c061375f6e3f87b"
+  },
+  {
+    "file": "seasonal-glow-3.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 62,
+    "name": "Frame 3",
+    "width": 664,
+    "height": 1016,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "8fe76b6f7e3bcfc4f61e67df6173597785325ecd3f2ee1516c8aad3c787faf67"
+  },
+  {
+    "file": "seasonal-hover-1.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 77,
+    "name": "Frame 1",
+    "width": 664,
+    "height": 1016,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "53532713af7ed89f8a0d01416d1d12fe86182aa5917f6c22c327a3755ccda2d6"
+  },
+  {
+    "file": "seasonal-hover-2.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 79,
+    "name": "Frame 2",
+    "width": 664,
+    "height": 1016,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "2abe48ccbced842da3c2a7458e9d84264349345803ae605ad97c5ac77f79d933"
+  },
+  {
+    "file": "seasonal-hover-3.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 63,
+    "name": "Frame 3",
+    "width": 664,
+    "height": 1016,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "dffb8b3ec39c36b49bc24aa04b0f4c53b6580eff514aad36e2f1cc38e8dd5002"
+  },
+  {
+    "file": "season-stats-divider.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 53,
+    "name": "SeasonalCharacter_Info_Separator",
+    "width": 389,
+    "height": 12,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "ac8e4b02df199b57770835c51dc8884195308c12b849e2e9958709f9c24a0f61"
+  },
+  {
+    "file": "season-stat-rewards.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 74,
+    "name": "CharacterSlot_StatsIcons_0",
+    "width": 34,
+    "height": 36,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "f2bc0855dbc968906215418c5870eaa187e44cc1ae5f53719643dee94d343b53"
+  },
+  {
+    "file": "season-stat-story.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 75,
+    "name": "CharacterSlot_StatsIcons_1",
+    "width": 34,
+    "height": 36,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "c3817c99d9c2eaa893fc3731852d9f8741ccad653c7742ea88f60ff594d84197"
+  },
+  {
+    "file": "season-stat-kd.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 64,
+    "name": "CharacterSlot_StatsIcons_2",
+    "width": 30,
+    "height": 36,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "6261fdbf60e964c6061ea4c9ee7d471b2868a211fffb9421ec88433b533e76f1"
+  },
+  {
+    "file": "season-stat-survivals.png",
+    "source": "sharedassets47.assets",
+    "sourceSha256": "b86ca2f679470409c4b060463da31d26db73ff47c25396f16ae35158a30a1fc4",
+    "objectId": 37,
+    "name": "CharacterSlot_StatsIcons_3",
+    "width": 33,
+    "height": 34,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "df28868b86c130314ee3c45bb439ca9451a09ecc1b90270c6ab9f3701dbb768e"
+  },
+  {
+    "file": "top-glow-seasonal.png",
+    "source": "sharedassets45.assets",
+    "sourceSha256": "fe362859491c7eb842437c0eede3bdbb6e3104a081db1040869a2a9e6f871edb",
+    "objectId": 6,
+    "name": "glow_top_pvp_season",
+    "width": 1024,
+    "height": 512,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "5f5ed0ab70d1adbf1e689262041a796ab1f1745cb65b1290b45629eed99aec13"
+  },
+  {
+    "file": "seasonal-badge.png",
+    "source": "sharedassets44.assets",
+    "sourceSha256": "e3f273b20f1e593e061676cc76ab44aaaa6297f9fc947fa9d5bface7806190bb",
+    "objectId": 499,
+    "name": "CharacterSelectionView_GameMode_Icons_2",
+    "width": 187,
+    "height": 187,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "e64cdd6c5c3c8ce6e4fb99f864420478804d2b75b7ac5952e76fe4049527e006"
+  },
+  {
+    "file": "season-banner.png",
+    "source": "sharedassets44.assets",
+    "sourceSha256": "e3f273b20f1e593e061676cc76ab44aaaa6297f9fc947fa9d5bface7806190bb",
+    "objectId": 643,
+    "name": "S1_CORDBreach_Logotype",
+    "width": 1173,
+    "height": 366,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "41433bfc719a4f890b1ae67c79153b495d8a95e8ebec2f5a7f45ff97bddb03da"
+  },
+  {
+    "file": "info-icon.png",
+    "source": "sharedassets44.assets",
+    "sourceSha256": "e3f273b20f1e593e061676cc76ab44aaaa6297f9fc947fa9d5bface7806190bb",
+    "objectId": 677,
+    "name": "SeasonalCharacter_InfoButton_Icon",
+    "width": 40,
+    "height": 40,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "da94af6443d3b637d04fba75480b556bc0d9eae9d9686ae17ae833557a927c18"
+  },
+  {
+    "file": "footer-glow.png",
+    "source": "sharedassets44.assets",
+    "sourceSha256": "e3f273b20f1e593e061676cc76ab44aaaa6297f9fc947fa9d5bface7806190bb",
+    "objectId": 784,
+    "name": "glow_top_regular",
+    "width": 1024,
+    "height": 507,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "6e8c7a7970dbdcae5fefc1899d890e25155a22794c587c6834076b4e06c3c402"
+  },
+  {
+    "file": "modifier-gradient.png",
+    "source": "sharedassets44.assets",
+    "sourceSha256": "e3f273b20f1e593e061676cc76ab44aaaa6297f9fc947fa9d5bface7806190bb",
+    "objectId": 630,
+    "name": "Sesons_PerkTemplate_Background-Gradient",
+    "width": 1560,
+    "height": 272,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "a243a9794c513a1b2dc5e2065d98b21cfe9eb44a89efa6a35ddd8f6daaa7e8d7"
+  },
+  {
+    "file": "modifier-tint.png",
+    "source": "sharedassets44.assets",
+    "sourceSha256": "e3f273b20f1e593e061676cc76ab44aaaa6297f9fc947fa9d5bface7806190bb",
+    "objectId": 676,
+    "name": "Sesons_PerkTemplate_Background-GradientWhite",
+    "width": 1560,
+    "height": 272,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "39960ef0780c0f0c860802a3115e7b8016e4e0ffebfe6a8766b7475fe1bf1f68"
+  },
+  {
+    "file": "modifier-grid.png",
+    "source": "sharedassets44.assets",
+    "sourceSha256": "e3f273b20f1e593e061676cc76ab44aaaa6297f9fc947fa9d5bface7806190bb",
+    "objectId": 908,
+    "name": "Sesons_PerkTemplate_Background-Grid",
+    "width": 48,
+    "height": 48,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "c6d38c2800ae023a05727a22352ddb8692cd13431ebdb923b55e3fe40ce2739b"
+  },
+  {
+    "file": "modifier-shadow.png",
+    "source": "sharedassets44.assets",
+    "sourceSha256": "e3f273b20f1e593e061676cc76ab44aaaa6297f9fc947fa9d5bface7806190bb",
+    "objectId": 749,
+    "name": "Sesons_PerkTemplate_Background-Shadow",
+    "width": 800,
+    "height": 272,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "23838da232544b0130a3a464bcb60d38e0c198220a690a8da45b7ad7946378d1"
+  },
+  {
+    "file": "modifiers-tab-normal.png",
+    "source": "sharedassets44.assets",
+    "sourceSha256": "e3f273b20f1e593e061676cc76ab44aaaa6297f9fc947fa9d5bface7806190bb",
+    "objectId": 511,
+    "name": "Seasons_Perks_Icon_1",
+    "width": 44,
+    "height": 52,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "ca50ebd123d5f61a1fb573681d96e63ad0d671a09863ec3ac0fe28f6f3d5e279"
+  },
+  {
+    "file": "modifiers-tab-selected.png",
+    "source": "sharedassets44.assets",
+    "sourceSha256": "e3f273b20f1e593e061676cc76ab44aaaa6297f9fc947fa9d5bface7806190bb",
+    "objectId": 492,
+    "name": "Seasons_Perks_Icon_0",
+    "width": 44,
+    "height": 52,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "fbcdcb2ac55bb9339582e6ede831a974923936d92595d5f49d51e161450b182f"
+  },
+  {
+    "file": "profile-icon.png",
+    "source": "resources.assets",
+    "sourceSha256": "f73a8c8d655d0112bad919016491278fc05f88ca8f610eba90638e5cbb3d206b",
+    "objectId": 5032,
+    "name": "icon_profile_big",
+    "width": 30,
+    "height": 30,
+    "border": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "sha256": "217f0b652b6e6de222434f01b2de11b3dbecf7291b825f42ceb963b0236039d6"
+  },
+  {
+    "file": "confirmation-border.png",
+    "source": "resources.assets",
+    "sourceSha256": "f73a8c8d655d0112bad919016491278fc05f88ca8f610eba90638e5cbb3d206b",
+    "objectId": 5972,
+    "name": "Allscreens_Borders_Default",
+    "width": 3,
+    "height": 3,
+    "border": [
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "sha256": "53bf243ddb778b08622b3793410b7b5848de3629fbc0f635dfa139c5cd14dde0"
+  }
+]
