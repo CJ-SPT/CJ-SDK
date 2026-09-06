@@ -1,0 +1,5920 @@
+{
+  "id": 8659,
+  "name": "SeasonsIntroScreen",
+  "active": false,
+  "components": [
+    {
+      "id": 36772,
+      "type": "UnityEngine.UI.GraphicRaycaster",
+      "fields": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 8659
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 7538
+        },
+        "m_Name": "",
+        "m_IgnoreReversedGraphics": 1,
+        "m_BlockingObjects": 0,
+        "m_BlockingMask": {
+          "m_Bits": 4294967095
+        }
+      }
+    },
+    {
+      "id": 40490,
+      "type": "EFT.UI.SeasonsIntroScreen",
+      "fields": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 8659
+        },
+        "m_Enabled": 1,
+        "m_Script": {
+          "m_FileID": 1,
+          "m_PathID": 1051
+        },
+        "m_Name": "",
+        "serializationData": {
+          "SerializedFormat": 0,
+          "SerializedBytes": [],
+          "ReferencedUnityObjects": [],
+          "SerializedBytesString": "",
+          "Prefab": {
+            "m_FileID": 0,
+            "m_PathID": 0
+          },
+          "PrefabModificationsReferencedUnityObjects": [],
+          "PrefabModifications": "",
+          "SerializationNodes": []
+        },
+        "_children": [
+          {
+            "m_FileID": 0,
+            "m_PathID": 30274
+          },
+          {
+            "m_FileID": 0,
+            "m_PathID": 30273
+          }
+        ],
+        "_carousel": {
+          "m_FileID": 0,
+          "m_PathID": 42225
+        },
+        "_carouselData": {
+          "m_FileID": 6,
+          "m_PathID": 2693
+        },
+        "_closeButton": {
+          "m_FileID": 0,
+          "m_PathID": 32315
+        },
+        "_showSound": 84
+      }
+    },
+    {
+      "id": 28453,
+      "type": "CanvasGroup",
+      "fields": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 8659
+        },
+        "m_Enabled": 1,
+        "m_Alpha": 1.0,
+        "m_Interactable": true,
+        "m_BlocksRaycasts": true,
+        "m_IgnoreParentGroups": false
+      }
+    }
+  ],
+  "children": [
+    {
+      "id": 5266,
+      "name": "Firewall",
+      "active": true,
+      "components": [
+        {
+          "id": 37243,
+          "type": "UnityEngine.UI.Image",
+          "fields": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 5266
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": 8670
+            },
+            "m_Name": "",
+            "m_Material": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "m_Color": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "m_RaycastTarget": 1,
+            "m_RaycastPadding": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 0.0
+            },
+            "m_Maskable": 1,
+            "m_OnCullStateChanged": {
+              "m_PersistentCalls": {
+                "m_Calls": []
+              }
+            },
+            "m_Sprite": {
+              "m_FileID": 6,
+              "m_PathID": 437
+            },
+            "m_Type": 0,
+            "m_PreserveAspect": 0,
+            "m_FillCenter": 1,
+            "m_FillMethod": 4,
+            "m_FillAmount": 1.0,
+            "m_FillClockwise": 1,
+            "m_FillOrigin": 0,
+            "m_UseSpriteMesh": 0,
+            "m_PixelsPerUnitMultiplier": 1.0
+          },
+          "artwork": "sharedassets48-437"
+        }
+      ],
+      "children": [],
+      "rect": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 5266
+        },
+        "m_LocalRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_Children": [],
+        "m_Father": {
+          "m_FileID": 0,
+          "m_PathID": 22133
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      }
+    },
+    {
+      "id": 1934,
+      "name": "SeasonInfoCarousel",
+      "active": true,
+      "components": [
+        {
+          "id": 41626,
+          "type": "UnityEngine.UI.HorizontalLayoutGroup",
+          "fields": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 1934
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": 1872
+            },
+            "m_Name": "",
+            "m_Padding": {
+              "m_Left": 0,
+              "m_Right": 0,
+              "m_Top": 0,
+              "m_Bottom": 0
+            },
+            "m_ChildAlignment": 4,
+            "m_Spacing": 14.0,
+            "m_ChildForceExpandWidth": 0,
+            "m_ChildForceExpandHeight": 0,
+            "m_ChildControlWidth": 1,
+            "m_ChildControlHeight": 1,
+            "m_ChildScaleWidth": 0,
+            "m_ChildScaleHeight": 0,
+            "m_ReverseArrangement": 0
+          }
+        },
+        {
+          "id": 42225,
+          "type": "EFT.UI.CarouselView",
+          "fields": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 1934
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": 5708
+            },
+            "m_Name": "",
+            "serializationData": {
+              "SerializedFormat": 0,
+              "SerializedBytes": [],
+              "ReferencedUnityObjects": [],
+              "SerializedBytesString": "",
+              "Prefab": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "PrefabModificationsReferencedUnityObjects": [],
+              "PrefabModifications": "",
+              "SerializationNodes": []
+            },
+            "_activePageCanvasGroup": {
+              "m_FileID": 0,
+              "m_PathID": 28378
+            },
+            "_activeBackground": {
+              "m_FileID": 0,
+              "m_PathID": 32811
+            },
+            "_body": {
+              "m_FileID": 0,
+              "m_PathID": 28807
+            },
+            "_incomingPageCanvasGroup": {
+              "m_FileID": 0,
+              "m_PathID": 28330
+            },
+            "_incomingBackground": {
+              "m_FileID": 0,
+              "m_PathID": 32326
+            },
+            "_incomingBody": {
+              "m_FileID": 0,
+              "m_PathID": 28806
+            },
+            "_pageCounter": {
+              "m_FileID": 0,
+              "m_PathID": 28808
+            },
+            "_previousPageButton": {
+              "m_FileID": 0,
+              "m_PathID": 32319
+            },
+            "_nextPageButton": {
+              "m_FileID": 0,
+              "m_PathID": 32323
+            },
+            "_previousPageShortcut": {
+              "m_FileID": 0,
+              "m_PathID": 30274
+            },
+            "_nextPageShortcut": {
+              "m_FileID": 0,
+              "m_PathID": 30273
+            },
+            "_loop": 1,
+            "_animationType": 1,
+            "_switchDuration": 0.15000000596046448,
+            "_switchEase": 1
+          }
+        }
+      ],
+      "children": [
+        {
+          "id": 1935,
+          "name": "Content",
+          "active": true,
+          "components": [
+            {
+              "id": 32321,
+              "type": "UnityEngine.UI.Image",
+              "fields": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 1935
+                },
+                "m_Enabled": 1,
+                "m_Script": {
+                  "m_FileID": 1,
+                  "m_PathID": 8670
+                },
+                "m_Name": "",
+                "m_Material": {
+                  "m_FileID": 0,
+                  "m_PathID": 0
+                },
+                "m_Color": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "m_RaycastTarget": 0,
+                "m_RaycastPadding": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "m_Maskable": 1,
+                "m_OnCullStateChanged": {
+                  "m_PersistentCalls": {
+                    "m_Calls": []
+                  }
+                },
+                "m_Sprite": {
+                  "m_FileID": 6,
+                  "m_PathID": 362
+                },
+                "m_Type": 1,
+                "m_PreserveAspect": 0,
+                "m_FillCenter": 1,
+                "m_FillMethod": 4,
+                "m_FillAmount": 1.0,
+                "m_FillClockwise": 1,
+                "m_FillOrigin": 0,
+                "m_UseSpriteMesh": 0,
+                "m_PixelsPerUnitMultiplier": 1.0
+              },
+              "artwork": "sharedassets48-362"
+            },
+            {
+              "id": 37916,
+              "type": "UnityEngine.UI.LayoutElement",
+              "fields": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 1935
+                },
+                "m_Enabled": 1,
+                "m_Script": {
+                  "m_FileID": 1,
+                  "m_PathID": 1874
+                },
+                "m_Name": "",
+                "m_IgnoreLayout": 0,
+                "m_MinWidth": -1.0,
+                "m_MinHeight": -1.0,
+                "m_PreferredWidth": 1050.0,
+                "m_PreferredHeight": 677.0,
+                "m_FlexibleWidth": -1.0,
+                "m_FlexibleHeight": -1.0,
+                "m_LayoutPriority": 1
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": 6710,
+              "name": "ActivePage",
+              "active": true,
+              "components": [
+                {
+                  "id": 28378,
+                  "type": "CanvasGroup",
+                  "fields": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 6710
+                    },
+                    "m_Enabled": 1,
+                    "m_Alpha": 1.0,
+                    "m_Interactable": false,
+                    "m_BlocksRaycasts": false,
+                    "m_IgnoreParentGroups": false
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "id": 1830,
+                  "name": "Background",
+                  "active": true,
+                  "components": [
+                    {
+                      "id": 32811,
+                      "type": "UnityEngine.UI.Image",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1830
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 8670
+                        },
+                        "m_Name": "",
+                        "m_Material": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Color": {
+                          "r": 1.0,
+                          "g": 1.0,
+                          "b": 1.0,
+                          "a": 1.0
+                        },
+                        "m_RaycastTarget": 0,
+                        "m_RaycastPadding": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_Maskable": 1,
+                        "m_OnCullStateChanged": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        },
+                        "m_Sprite": {
+                          "m_FileID": 6,
+                          "m_PathID": 389
+                        },
+                        "m_Type": 0,
+                        "m_PreserveAspect": 1,
+                        "m_FillCenter": 1,
+                        "m_FillMethod": 4,
+                        "m_FillAmount": 1.0,
+                        "m_FillClockwise": 1,
+                        "m_FillOrigin": 0,
+                        "m_UseSpriteMesh": 0,
+                        "m_PixelsPerUnitMultiplier": 1.0
+                      },
+                      "artwork": "sharedassets48-389"
+                    }
+                  ],
+                  "children": [],
+                  "rect": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1830
+                    },
+                    "m_LocalRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "m_LocalPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "m_LocalScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "m_Children": [],
+                    "m_Father": {
+                      "m_FileID": 0,
+                      "m_PathID": 20458
+                    },
+                    "m_AnchorMin": {
+                      "x": 0.5,
+                      "y": 0.0
+                    },
+                    "m_AnchorMax": {
+                      "x": 0.5,
+                      "y": 0.0
+                    },
+                    "m_AnchoredPosition": {
+                      "x": 0.0,
+                      "y": 56.0
+                    },
+                    "m_SizeDelta": {
+                      "x": 1050.0,
+                      "y": 621.0
+                    },
+                    "m_Pivot": {
+                      "x": 0.5,
+                      "y": 0.0
+                    }
+                  }
+                },
+                {
+                  "id": 1926,
+                  "name": "Body",
+                  "active": true,
+                  "components": [
+                    {
+                      "id": 28807,
+                      "type": "TMPro.TextMeshProUGUI",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1926
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 8328
+                        },
+                        "m_Name": "",
+                        "m_Material": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Color": {
+                          "r": 0.3921568691730499,
+                          "g": 0.8549019694328308,
+                          "b": 0.6549019813537598,
+                          "a": 0.949999988079071
+                        },
+                        "m_RaycastTarget": 0,
+                        "m_RaycastPadding": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_Maskable": 1,
+                        "m_OnCullStateChanged": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        },
+                        "m_text": "ABOUT",
+                        "m_isRightToLeft": 0,
+                        "m_fontAsset": {
+                          "m_FileID": 2,
+                          "m_PathID": 46394
+                        },
+                        "m_sharedMaterial": {
+                          "m_FileID": 2,
+                          "m_PathID": 283
+                        },
+                        "m_fontSharedMaterials": [],
+                        "m_fontMaterial": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_fontMaterials": [],
+                        "m_fontColor32": {
+                          "rgba": 4288192663
+                        },
+                        "m_fontColor": {
+                          "r": 0.5921568870544434,
+                          "g": 0.6274510025978088,
+                          "b": 0.5960784554481506,
+                          "a": 1.0
+                        },
+                        "m_enableVertexGradient": 0,
+                        "m_colorMode": 3,
+                        "m_fontColorGradient": {
+                          "topLeft": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "topRight": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "bottomLeft": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "bottomRight": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          }
+                        },
+                        "m_fontColorGradientPreset": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_spriteAsset": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_tintAllSprites": 0,
+                        "m_StyleSheet": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_TextStyleHashCode": -1183493901,
+                        "m_overrideHtmlColors": 0,
+                        "m_faceColor": {
+                          "rgba": 4294967295
+                        },
+                        "m_fontSize": 18.0,
+                        "m_fontSizeBase": 18.0,
+                        "m_fontWeight": 400,
+                        "m_enableAutoSizing": 0,
+                        "m_fontSizeMin": 18.0,
+                        "m_fontSizeMax": 30.0,
+                        "m_fontStyle": 0,
+                        "m_HorizontalAlignment": 2,
+                        "m_VerticalAlignment": 256,
+                        "m_textAlignment": 65535,
+                        "m_characterSpacing": -0.5,
+                        "m_wordSpacing": 0.0,
+                        "m_lineSpacing": 0.0,
+                        "m_lineSpacingMax": 0.0,
+                        "m_paragraphSpacing": 2.0,
+                        "m_charWidthMaxAdj": 0.0,
+                        "m_enableWordWrapping": 0,
+                        "m_wordWrappingRatios": 0.4000000059604645,
+                        "m_overflowMode": 0,
+                        "m_linkedTextComponent": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "parentLinkedComponent": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_enableKerning": 1,
+                        "m_enableExtraPadding": 0,
+                        "checkPaddingRequired": 0,
+                        "m_isRichText": 1,
+                        "m_parseCtrlCharacters": 1,
+                        "m_isOrthographic": 1,
+                        "m_isCullingEnabled": 0,
+                        "m_horizontalMapping": 0,
+                        "m_verticalMapping": 0,
+                        "m_uvLineOffset": 0.0,
+                        "m_geometrySortingOrder": 0,
+                        "m_IsTextObjectScaleStatic": 0,
+                        "m_VertexBufferAutoSizeReduction": 0,
+                        "m_useMaxVisibleDescender": 1,
+                        "m_pageToDisplay": 1,
+                        "m_margin": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_isUsingLegacyAnimationComponent": 0,
+                        "m_isVolumetricText": 0,
+                        "m_hasFontAssetChanged": 0,
+                        "m_baseMaterial": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_maskOffset": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        }
+                      }
+                    }
+                  ],
+                  "children": [],
+                  "rect": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1926
+                    },
+                    "m_LocalRotation": {
+                      "x": -0.0,
+                      "y": -0.0,
+                      "z": -0.0,
+                      "w": 1.0
+                    },
+                    "m_LocalPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "m_LocalScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "m_Children": [],
+                    "m_Father": {
+                      "m_FileID": 0,
+                      "m_PathID": 20458
+                    },
+                    "m_AnchorMin": {
+                      "x": 0.5,
+                      "y": 0.0
+                    },
+                    "m_AnchorMax": {
+                      "x": 0.5,
+                      "y": 0.0
+                    },
+                    "m_AnchoredPosition": {
+                      "x": 0.0,
+                      "y": 76.0
+                    },
+                    "m_SizeDelta": {
+                      "x": 840.0,
+                      "y": 106.0
+                    },
+                    "m_Pivot": {
+                      "x": 0.5,
+                      "y": 0.0
+                    }
+                  }
+                }
+              ],
+              "rect": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 6710
+                },
+                "m_LocalRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "m_LocalPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "m_LocalScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "m_Children": [
+                  {
+                    "m_FileID": 0,
+                    "m_PathID": 24549
+                  },
+                  {
+                    "m_FileID": 0,
+                    "m_PathID": 20147
+                  }
+                ],
+                "m_Father": {
+                  "m_FileID": 0,
+                  "m_PathID": 20149
+                },
+                "m_AnchorMin": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_AnchorMax": {
+                  "x": 1.0,
+                  "y": 1.0
+                },
+                "m_AnchoredPosition": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_SizeDelta": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_Pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            },
+            {
+              "id": 1925,
+              "name": "IncomingPage",
+              "active": true,
+              "components": [
+                {
+                  "id": 28330,
+                  "type": "CanvasGroup",
+                  "fields": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1925
+                    },
+                    "m_Enabled": 1,
+                    "m_Alpha": 0.0,
+                    "m_Interactable": false,
+                    "m_BlocksRaycasts": false,
+                    "m_IgnoreParentGroups": false
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "id": 1581,
+                  "name": "IncomingBackground",
+                  "active": true,
+                  "components": [
+                    {
+                      "id": 32326,
+                      "type": "UnityEngine.UI.Image",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1581
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 8670
+                        },
+                        "m_Name": "",
+                        "m_Material": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Color": {
+                          "r": 1.0,
+                          "g": 1.0,
+                          "b": 1.0,
+                          "a": 1.0
+                        },
+                        "m_RaycastTarget": 0,
+                        "m_RaycastPadding": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_Maskable": 1,
+                        "m_OnCullStateChanged": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        },
+                        "m_Sprite": {
+                          "m_FileID": 6,
+                          "m_PathID": 480
+                        },
+                        "m_Type": 0,
+                        "m_PreserveAspect": 1,
+                        "m_FillCenter": 1,
+                        "m_FillMethod": 4,
+                        "m_FillAmount": 1.0,
+                        "m_FillClockwise": 1,
+                        "m_FillOrigin": 0,
+                        "m_UseSpriteMesh": 0,
+                        "m_PixelsPerUnitMultiplier": 1.0
+                      },
+                      "artwork": "sharedassets48-480"
+                    }
+                  ],
+                  "children": [],
+                  "rect": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1581
+                    },
+                    "m_LocalRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "m_LocalPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "m_LocalScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "m_Children": [],
+                    "m_Father": {
+                      "m_FileID": 0,
+                      "m_PathID": 20150
+                    },
+                    "m_AnchorMin": {
+                      "x": 0.5,
+                      "y": 0.0
+                    },
+                    "m_AnchorMax": {
+                      "x": 0.5,
+                      "y": 0.0
+                    },
+                    "m_AnchoredPosition": {
+                      "x": 0.0,
+                      "y": 56.0
+                    },
+                    "m_SizeDelta": {
+                      "x": 1050.0,
+                      "y": 621.0
+                    },
+                    "m_Pivot": {
+                      "x": 0.5,
+                      "y": 0.0
+                    }
+                  }
+                },
+                {
+                  "id": 1927,
+                  "name": "IncomingBody",
+                  "active": true,
+                  "components": [
+                    {
+                      "id": 28806,
+                      "type": "TMPro.TextMeshProUGUI",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1927
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 8328
+                        },
+                        "m_Name": "",
+                        "m_Material": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Color": {
+                          "r": 0.3921568691730499,
+                          "g": 0.8549019694328308,
+                          "b": 0.6549019813537598,
+                          "a": 0.949999988079071
+                        },
+                        "m_RaycastTarget": 0,
+                        "m_RaycastPadding": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_Maskable": 1,
+                        "m_OnCullStateChanged": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        },
+                        "m_text": "ABOUT",
+                        "m_isRightToLeft": 0,
+                        "m_fontAsset": {
+                          "m_FileID": 2,
+                          "m_PathID": 46394
+                        },
+                        "m_sharedMaterial": {
+                          "m_FileID": 2,
+                          "m_PathID": 283
+                        },
+                        "m_fontSharedMaterials": [],
+                        "m_fontMaterial": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_fontMaterials": [],
+                        "m_fontColor32": {
+                          "rgba": 4288192663
+                        },
+                        "m_fontColor": {
+                          "r": 0.5921568870544434,
+                          "g": 0.6274510025978088,
+                          "b": 0.5960784554481506,
+                          "a": 1.0
+                        },
+                        "m_enableVertexGradient": 0,
+                        "m_colorMode": 3,
+                        "m_fontColorGradient": {
+                          "topLeft": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "topRight": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "bottomLeft": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "bottomRight": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          }
+                        },
+                        "m_fontColorGradientPreset": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_spriteAsset": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_tintAllSprites": 0,
+                        "m_StyleSheet": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_TextStyleHashCode": -1183493901,
+                        "m_overrideHtmlColors": 0,
+                        "m_faceColor": {
+                          "rgba": 4294967295
+                        },
+                        "m_fontSize": 18.0,
+                        "m_fontSizeBase": 18.0,
+                        "m_fontWeight": 400,
+                        "m_enableAutoSizing": 0,
+                        "m_fontSizeMin": 18.0,
+                        "m_fontSizeMax": 30.0,
+                        "m_fontStyle": 0,
+                        "m_HorizontalAlignment": 2,
+                        "m_VerticalAlignment": 256,
+                        "m_textAlignment": 65535,
+                        "m_characterSpacing": -0.5,
+                        "m_wordSpacing": 0.0,
+                        "m_lineSpacing": 0.0,
+                        "m_lineSpacingMax": 0.0,
+                        "m_paragraphSpacing": 2.0,
+                        "m_charWidthMaxAdj": 0.0,
+                        "m_enableWordWrapping": 0,
+                        "m_wordWrappingRatios": 0.4000000059604645,
+                        "m_overflowMode": 0,
+                        "m_linkedTextComponent": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "parentLinkedComponent": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_enableKerning": 1,
+                        "m_enableExtraPadding": 0,
+                        "checkPaddingRequired": 0,
+                        "m_isRichText": 1,
+                        "m_parseCtrlCharacters": 1,
+                        "m_isOrthographic": 1,
+                        "m_isCullingEnabled": 0,
+                        "m_horizontalMapping": 0,
+                        "m_verticalMapping": 0,
+                        "m_uvLineOffset": 0.0,
+                        "m_geometrySortingOrder": 0,
+                        "m_IsTextObjectScaleStatic": 0,
+                        "m_VertexBufferAutoSizeReduction": 0,
+                        "m_useMaxVisibleDescender": 1,
+                        "m_pageToDisplay": 1,
+                        "m_margin": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_isUsingLegacyAnimationComponent": 0,
+                        "m_isVolumetricText": 0,
+                        "m_hasFontAssetChanged": 0,
+                        "m_baseMaterial": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_maskOffset": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        }
+                      }
+                    }
+                  ],
+                  "children": [],
+                  "rect": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1927
+                    },
+                    "m_LocalRotation": {
+                      "x": -0.0,
+                      "y": -0.0,
+                      "z": -0.0,
+                      "w": 1.0
+                    },
+                    "m_LocalPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "m_LocalScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "m_Children": [],
+                    "m_Father": {
+                      "m_FileID": 0,
+                      "m_PathID": 20150
+                    },
+                    "m_AnchorMin": {
+                      "x": 0.5,
+                      "y": 0.0
+                    },
+                    "m_AnchorMax": {
+                      "x": 0.5,
+                      "y": 0.0
+                    },
+                    "m_AnchoredPosition": {
+                      "x": 0.0,
+                      "y": 76.0
+                    },
+                    "m_SizeDelta": {
+                      "x": 840.0,
+                      "y": 106.0
+                    },
+                    "m_Pivot": {
+                      "x": 0.5,
+                      "y": 0.0
+                    }
+                  }
+                }
+              ],
+              "rect": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 1925
+                },
+                "m_LocalRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "m_LocalPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "m_LocalScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "m_Children": [
+                  {
+                    "m_FileID": 0,
+                    "m_PathID": 23307
+                  },
+                  {
+                    "m_FileID": 0,
+                    "m_PathID": 20146
+                  }
+                ],
+                "m_Father": {
+                  "m_FileID": 0,
+                  "m_PathID": 20149
+                },
+                "m_AnchorMin": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_AnchorMax": {
+                  "x": 1.0,
+                  "y": 1.0
+                },
+                "m_AnchoredPosition": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_SizeDelta": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_Pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            },
+            {
+              "id": 1932,
+              "name": "Overlay",
+              "active": false,
+              "components": [
+                {
+                  "id": 32320,
+                  "type": "UnityEngine.UI.Image",
+                  "fields": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1932
+                    },
+                    "m_Enabled": 1,
+                    "m_Script": {
+                      "m_FileID": 1,
+                      "m_PathID": 8670
+                    },
+                    "m_Name": "",
+                    "m_Material": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "m_Color": {
+                      "r": 0.0,
+                      "g": 0.0,
+                      "b": 0.0,
+                      "a": 0.2980392277240753
+                    },
+                    "m_RaycastTarget": 0,
+                    "m_RaycastPadding": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 0.0
+                    },
+                    "m_Maskable": 1,
+                    "m_OnCullStateChanged": {
+                      "m_PersistentCalls": {
+                        "m_Calls": []
+                      }
+                    },
+                    "m_Sprite": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "m_Type": 0,
+                    "m_PreserveAspect": 0,
+                    "m_FillCenter": 1,
+                    "m_FillMethod": 4,
+                    "m_FillAmount": 1.0,
+                    "m_FillClockwise": 1,
+                    "m_FillOrigin": 0,
+                    "m_UseSpriteMesh": 0,
+                    "m_PixelsPerUnitMultiplier": 1.0
+                  },
+                  "artwork": null
+                }
+              ],
+              "children": [],
+              "rect": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 1932
+                },
+                "m_LocalRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "m_LocalPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "m_LocalScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "m_Children": [],
+                "m_Father": {
+                  "m_FileID": 0,
+                  "m_PathID": 20149
+                },
+                "m_AnchorMin": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_AnchorMax": {
+                  "x": 1.0,
+                  "y": 1.0
+                },
+                "m_AnchoredPosition": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_SizeDelta": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_Pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            },
+            {
+              "id": 1928,
+              "name": "Navigation",
+              "active": true,
+              "components": [
+                {
+                  "id": 32449,
+                  "type": "UnityEngine.UI.HorizontalLayoutGroup",
+                  "fields": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1928
+                    },
+                    "m_Enabled": 1,
+                    "m_Script": {
+                      "m_FileID": 1,
+                      "m_PathID": 1872
+                    },
+                    "m_Name": "",
+                    "m_Padding": {
+                      "m_Left": 0,
+                      "m_Right": 0,
+                      "m_Top": 0,
+                      "m_Bottom": 0
+                    },
+                    "m_ChildAlignment": 4,
+                    "m_Spacing": 0.0,
+                    "m_ChildForceExpandWidth": 0,
+                    "m_ChildForceExpandHeight": 0,
+                    "m_ChildControlWidth": 1,
+                    "m_ChildControlHeight": 1,
+                    "m_ChildScaleWidth": 0,
+                    "m_ChildScaleHeight": 0,
+                    "m_ReverseArrangement": 0
+                  }
+                },
+                {
+                  "id": 32543,
+                  "type": "UnityEngine.UI.Image",
+                  "fields": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1928
+                    },
+                    "m_Enabled": 1,
+                    "m_Script": {
+                      "m_FileID": 1,
+                      "m_PathID": 8670
+                    },
+                    "m_Name": "",
+                    "m_Material": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "m_Color": {
+                      "r": 0.23529411852359772,
+                      "g": 0.29411765933036804,
+                      "b": 0.2666666805744171,
+                      "a": 0.10196078568696976
+                    },
+                    "m_RaycastTarget": 1,
+                    "m_RaycastPadding": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 0.0
+                    },
+                    "m_Maskable": 1,
+                    "m_OnCullStateChanged": {
+                      "m_PersistentCalls": {
+                        "m_Calls": []
+                      }
+                    },
+                    "m_Sprite": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "m_Type": 0,
+                    "m_PreserveAspect": 0,
+                    "m_FillCenter": 1,
+                    "m_FillMethod": 4,
+                    "m_FillAmount": 1.0,
+                    "m_FillClockwise": 1,
+                    "m_FillOrigin": 0,
+                    "m_UseSpriteMesh": 0,
+                    "m_PixelsPerUnitMultiplier": 1.0
+                  },
+                  "artwork": null
+                }
+              ],
+              "children": [
+                {
+                  "id": 2438,
+                  "name": "Border",
+                  "active": true,
+                  "components": [
+                    {
+                      "id": 39947,
+                      "type": "UnityEngine.UI.Image",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 2438
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 8670
+                        },
+                        "m_Name": "",
+                        "m_Material": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Color": {
+                          "r": 0.16470588743686676,
+                          "g": 0.18431372940540314,
+                          "b": 0.20000000298023224,
+                          "a": 0.4000000059604645
+                        },
+                        "m_RaycastTarget": 0,
+                        "m_RaycastPadding": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_Maskable": 1,
+                        "m_OnCullStateChanged": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        },
+                        "m_Sprite": {
+                          "m_FileID": 2,
+                          "m_PathID": 5972
+                        },
+                        "m_Type": 1,
+                        "m_PreserveAspect": 0,
+                        "m_FillCenter": 1,
+                        "m_FillMethod": 4,
+                        "m_FillAmount": 1.0,
+                        "m_FillClockwise": 1,
+                        "m_FillOrigin": 0,
+                        "m_UseSpriteMesh": 0,
+                        "m_PixelsPerUnitMultiplier": 1.0
+                      },
+                      "artwork": "resources-5972"
+                    },
+                    {
+                      "id": 31990,
+                      "type": "UnityEngine.UI.LayoutElement",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 2438
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 1874
+                        },
+                        "m_Name": "",
+                        "m_IgnoreLayout": 1,
+                        "m_MinWidth": -1.0,
+                        "m_MinHeight": -1.0,
+                        "m_PreferredWidth": -1.0,
+                        "m_PreferredHeight": -1.0,
+                        "m_FlexibleWidth": -1.0,
+                        "m_FlexibleHeight": -1.0,
+                        "m_LayoutPriority": 1
+                      }
+                    },
+                    {
+                      "id": 33378,
+                      "type": "EFT.UI.PixelPerfectSpriteScaler",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 2438
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 4271
+                        },
+                        "m_Name": "",
+                        "_sidesToScale": 15
+                      }
+                    }
+                  ],
+                  "children": [],
+                  "rect": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 2438
+                    },
+                    "m_LocalRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "m_LocalPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "m_LocalScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "m_Children": [],
+                    "m_Father": {
+                      "m_FileID": 0,
+                      "m_PathID": 20145
+                    },
+                    "m_AnchorMin": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_AnchorMax": {
+                      "x": 1.0,
+                      "y": 1.0
+                    },
+                    "m_AnchoredPosition": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_SizeDelta": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_Pivot": {
+                      "x": 0.5,
+                      "y": 0.5
+                    }
+                  }
+                },
+                {
+                  "id": 1929,
+                  "name": "PreviousButton",
+                  "active": true,
+                  "components": [
+                    {
+                      "id": 32318,
+                      "type": "UnityEngine.UI.Image",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1929
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 8670
+                        },
+                        "m_Name": "",
+                        "m_Material": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Color": {
+                          "r": 1.0,
+                          "g": 1.0,
+                          "b": 1.0,
+                          "a": 1.0
+                        },
+                        "m_RaycastTarget": 1,
+                        "m_RaycastPadding": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_Maskable": 1,
+                        "m_OnCullStateChanged": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        },
+                        "m_Sprite": {
+                          "m_FileID": 6,
+                          "m_PathID": 536
+                        },
+                        "m_Type": 0,
+                        "m_PreserveAspect": 0,
+                        "m_FillCenter": 1,
+                        "m_FillMethod": 4,
+                        "m_FillAmount": 1.0,
+                        "m_FillClockwise": 1,
+                        "m_FillOrigin": 0,
+                        "m_UseSpriteMesh": 0,
+                        "m_PixelsPerUnitMultiplier": 1.0
+                      },
+                      "artwork": "sharedassets48-536"
+                    },
+                    {
+                      "id": 32319,
+                      "type": "UnityEngine.UI.Button",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1929
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 2847
+                        },
+                        "m_Name": "",
+                        "m_Navigation": {
+                          "m_Mode": 3,
+                          "m_WrapAround": 0,
+                          "m_SelectOnUp": {
+                            "m_FileID": 0,
+                            "m_PathID": 0
+                          },
+                          "m_SelectOnDown": {
+                            "m_FileID": 0,
+                            "m_PathID": 0
+                          },
+                          "m_SelectOnLeft": {
+                            "m_FileID": 0,
+                            "m_PathID": 0
+                          },
+                          "m_SelectOnRight": {
+                            "m_FileID": 0,
+                            "m_PathID": 32319
+                          }
+                        },
+                        "m_Transition": 2,
+                        "m_Colors": {
+                          "m_NormalColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "m_HighlightedColor": {
+                            "r": 0.9150943160057068,
+                            "g": 0.9150943160057068,
+                            "b": 0.9150943160057068,
+                            "a": 1.0
+                          },
+                          "m_PressedColor": {
+                            "r": 0.801886796951294,
+                            "g": 0.801886796951294,
+                            "b": 0.801886796951294,
+                            "a": 1.0
+                          },
+                          "m_SelectedColor": {
+                            "r": 0.800000011920929,
+                            "g": 0.800000011920929,
+                            "b": 0.800000011920929,
+                            "a": 1.0
+                          },
+                          "m_DisabledColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 0.800000011920929
+                          },
+                          "m_ColorMultiplier": 1.0,
+                          "m_FadeDuration": 0.10000000149011612
+                        },
+                        "m_SpriteState": {
+                          "m_HighlightedSprite": {
+                            "m_FileID": 6,
+                            "m_PathID": 288
+                          },
+                          "m_PressedSprite": {
+                            "m_FileID": 6,
+                            "m_PathID": 288
+                          },
+                          "m_SelectedSprite": {
+                            "m_FileID": 6,
+                            "m_PathID": 536
+                          },
+                          "m_DisabledSprite": {
+                            "m_FileID": 6,
+                            "m_PathID": 536
+                          }
+                        },
+                        "m_AnimationTriggers": {
+                          "m_NormalTrigger": "Normal",
+                          "m_HighlightedTrigger": "Highlighted",
+                          "m_PressedTrigger": "Pressed",
+                          "m_SelectedTrigger": "Highlighted",
+                          "m_DisabledTrigger": "Disabled"
+                        },
+                        "m_Interactable": 1,
+                        "m_TargetGraphic": {
+                          "m_FileID": 0,
+                          "m_PathID": 32318
+                        },
+                        "m_OnClick": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": 30274,
+                      "type": "EFT.UI.ButtonShortcutInputNode",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1929
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 2280
+                        },
+                        "m_Name": "",
+                        "serializationData": {
+                          "SerializedFormat": 0,
+                          "SerializedBytes": [],
+                          "ReferencedUnityObjects": [],
+                          "SerializedBytesString": "",
+                          "Prefab": {
+                            "m_FileID": 0,
+                            "m_PathID": 0
+                          },
+                          "PrefabModificationsReferencedUnityObjects": [],
+                          "PrefabModifications": "",
+                          "SerializationNodes": []
+                        },
+                        "_children": [],
+                        "_button": {
+                          "m_FileID": 0,
+                          "m_PathID": 32319
+                        },
+                        "_command": 151,
+                        "_keyLabel": {
+                          "m_FileID": 0,
+                          "m_PathID": 29394
+                        },
+                        "_key": 129
+                      }
+                    },
+                    {
+                      "id": 30272,
+                      "type": "EFT.UI.ButtonFeedback",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1929
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 5609
+                        },
+                        "m_Name": "",
+                        "serializationData": {
+                          "SerializedFormat": 0,
+                          "SerializedBytes": [],
+                          "ReferencedUnityObjects": [],
+                          "SerializedBytesString": "",
+                          "Prefab": {
+                            "m_FileID": 0,
+                            "m_PathID": 0
+                          },
+                          "PrefabModificationsReferencedUnityObjects": [],
+                          "PrefabModifications": "",
+                          "SerializationNodes": []
+                        },
+                        "_unavailable": 0,
+                        "_onPointerEnterSound": 1,
+                        "_hoverSound": 4,
+                        "_onPointerClickSound": 1,
+                        "_clickSound": 65
+                      }
+                    },
+                    {
+                      "id": 33985,
+                      "type": "UnityEngine.UI.LayoutElement",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1929
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 1874
+                        },
+                        "m_Name": "",
+                        "m_IgnoreLayout": 0,
+                        "m_MinWidth": -1.0,
+                        "m_MinHeight": -1.0,
+                        "m_PreferredWidth": 40.0,
+                        "m_PreferredHeight": 40.0,
+                        "m_FlexibleWidth": -1.0,
+                        "m_FlexibleHeight": -1.0,
+                        "m_LayoutPriority": 1
+                      }
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": 8900,
+                      "name": "Arrow",
+                      "active": false,
+                      "components": [
+                        {
+                          "id": 32536,
+                          "type": "UnityEngine.UI.Image",
+                          "fields": {
+                            "m_GameObject": {
+                              "m_FileID": 0,
+                              "m_PathID": 8900
+                            },
+                            "m_Enabled": 1,
+                            "m_Script": {
+                              "m_FileID": 1,
+                              "m_PathID": 8670
+                            },
+                            "m_Name": "",
+                            "m_Material": {
+                              "m_FileID": 0,
+                              "m_PathID": 0
+                            },
+                            "m_Color": {
+                              "r": 1.0,
+                              "g": 1.0,
+                              "b": 1.0,
+                              "a": 1.0
+                            },
+                            "m_RaycastTarget": 1,
+                            "m_RaycastPadding": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 0.0
+                            },
+                            "m_Maskable": 1,
+                            "m_OnCullStateChanged": {
+                              "m_PersistentCalls": {
+                                "m_Calls": []
+                              }
+                            },
+                            "m_Sprite": {
+                              "m_FileID": 2,
+                              "m_PathID": 4672
+                            },
+                            "m_Type": 0,
+                            "m_PreserveAspect": 1,
+                            "m_FillCenter": 1,
+                            "m_FillMethod": 4,
+                            "m_FillAmount": 1.0,
+                            "m_FillClockwise": 1,
+                            "m_FillOrigin": 0,
+                            "m_UseSpriteMesh": 0,
+                            "m_PixelsPerUnitMultiplier": 1.0
+                          },
+                          "artwork": "resources-4672"
+                        }
+                      ],
+                      "children": [],
+                      "rect": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 8900
+                        },
+                        "m_LocalRotation": {
+                          "x": -0.0,
+                          "y": -0.0,
+                          "z": -0.0,
+                          "w": 1.0
+                        },
+                        "m_LocalPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "m_LocalScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "m_Children": [],
+                        "m_Father": {
+                          "m_FileID": 0,
+                          "m_PathID": 20144
+                        },
+                        "m_AnchorMin": {
+                          "x": 0.0,
+                          "y": 0.0
+                        },
+                        "m_AnchorMax": {
+                          "x": 1.0,
+                          "y": 1.0
+                        },
+                        "m_AnchoredPosition": {
+                          "x": 0.0,
+                          "y": 0.0
+                        },
+                        "m_SizeDelta": {
+                          "x": -20.0,
+                          "y": -20.0
+                        },
+                        "m_Pivot": {
+                          "x": 0.5,
+                          "y": 0.5
+                        }
+                      }
+                    }
+                  ],
+                  "rect": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1929
+                    },
+                    "m_LocalRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "m_LocalPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "m_LocalScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "m_Children": [
+                      {
+                        "m_FileID": 0,
+                        "m_PathID": 19942
+                      }
+                    ],
+                    "m_Father": {
+                      "m_FileID": 0,
+                      "m_PathID": 20145
+                    },
+                    "m_AnchorMin": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_AnchorMax": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_AnchoredPosition": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_SizeDelta": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_Pivot": {
+                      "x": 0.0,
+                      "y": 0.5
+                    }
+                  }
+                },
+                {
+                  "id": 1930,
+                  "name": "PageCounter",
+                  "active": true,
+                  "components": [
+                    {
+                      "id": 28808,
+                      "type": "TMPro.TextMeshProUGUI",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1930
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 8328
+                        },
+                        "m_Name": "",
+                        "m_Material": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Color": {
+                          "r": 0.3921568691730499,
+                          "g": 0.8549019694328308,
+                          "b": 0.6549019813537598,
+                          "a": 0.800000011920929
+                        },
+                        "m_RaycastTarget": 0,
+                        "m_RaycastPadding": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_Maskable": 1,
+                        "m_OnCullStateChanged": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        },
+                        "m_text": "1/5",
+                        "m_isRightToLeft": 0,
+                        "m_fontAsset": {
+                          "m_FileID": 2,
+                          "m_PathID": 46394
+                        },
+                        "m_sharedMaterial": {
+                          "m_FileID": 2,
+                          "m_PathID": 283
+                        },
+                        "m_fontSharedMaterials": [],
+                        "m_fontMaterial": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_fontMaterials": [],
+                        "m_fontColor32": {
+                          "rgba": 4284506207
+                        },
+                        "m_fontColor": {
+                          "r": 0.37254902720451355,
+                          "g": 0.3764705955982208,
+                          "b": 0.3764705955982208,
+                          "a": 1.0
+                        },
+                        "m_enableVertexGradient": 0,
+                        "m_colorMode": 3,
+                        "m_fontColorGradient": {
+                          "topLeft": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "topRight": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "bottomLeft": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "bottomRight": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          }
+                        },
+                        "m_fontColorGradientPreset": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_spriteAsset": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_tintAllSprites": 0,
+                        "m_StyleSheet": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_TextStyleHashCode": -1183493901,
+                        "m_overrideHtmlColors": 0,
+                        "m_faceColor": {
+                          "rgba": 4294967295
+                        },
+                        "m_fontSize": 16.0,
+                        "m_fontSizeBase": 16.0,
+                        "m_fontWeight": 400,
+                        "m_enableAutoSizing": 0,
+                        "m_fontSizeMin": 18.0,
+                        "m_fontSizeMax": 72.0,
+                        "m_fontStyle": 0,
+                        "m_HorizontalAlignment": 2,
+                        "m_VerticalAlignment": 512,
+                        "m_textAlignment": 65535,
+                        "m_characterSpacing": 16.0,
+                        "m_wordSpacing": 0.0,
+                        "m_lineSpacing": 0.0,
+                        "m_lineSpacingMax": 0.0,
+                        "m_paragraphSpacing": 0.0,
+                        "m_charWidthMaxAdj": 0.0,
+                        "m_enableWordWrapping": 0,
+                        "m_wordWrappingRatios": 0.4000000059604645,
+                        "m_overflowMode": 0,
+                        "m_linkedTextComponent": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "parentLinkedComponent": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_enableKerning": 1,
+                        "m_enableExtraPadding": 0,
+                        "checkPaddingRequired": 0,
+                        "m_isRichText": 1,
+                        "m_parseCtrlCharacters": 1,
+                        "m_isOrthographic": 1,
+                        "m_isCullingEnabled": 0,
+                        "m_horizontalMapping": 0,
+                        "m_verticalMapping": 0,
+                        "m_uvLineOffset": 0.0,
+                        "m_geometrySortingOrder": 0,
+                        "m_IsTextObjectScaleStatic": 0,
+                        "m_VertexBufferAutoSizeReduction": 0,
+                        "m_useMaxVisibleDescender": 1,
+                        "m_pageToDisplay": 1,
+                        "m_margin": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_isUsingLegacyAnimationComponent": 0,
+                        "m_isVolumetricText": 0,
+                        "m_hasFontAssetChanged": 0,
+                        "m_baseMaterial": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_maskOffset": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        }
+                      }
+                    },
+                    {
+                      "id": 41885,
+                      "type": "UnityEngine.UI.LayoutElement",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1930
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 1874
+                        },
+                        "m_Name": "",
+                        "m_IgnoreLayout": 0,
+                        "m_MinWidth": -1.0,
+                        "m_MinHeight": -1.0,
+                        "m_PreferredWidth": 85.0,
+                        "m_PreferredHeight": 20.0,
+                        "m_FlexibleWidth": -1.0,
+                        "m_FlexibleHeight": -1.0,
+                        "m_LayoutPriority": 1
+                      }
+                    }
+                  ],
+                  "children": [],
+                  "rect": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1930
+                    },
+                    "m_LocalRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "m_LocalPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "m_LocalScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "m_Children": [],
+                    "m_Father": {
+                      "m_FileID": 0,
+                      "m_PathID": 20145
+                    },
+                    "m_AnchorMin": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_AnchorMax": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_AnchoredPosition": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_SizeDelta": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_Pivot": {
+                      "x": 0.5,
+                      "y": 0.5
+                    }
+                  }
+                },
+                {
+                  "id": 1931,
+                  "name": "NextButton",
+                  "active": true,
+                  "components": [
+                    {
+                      "id": 32322,
+                      "type": "UnityEngine.UI.Image",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1931
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 8670
+                        },
+                        "m_Name": "",
+                        "m_Material": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Color": {
+                          "r": 1.0,
+                          "g": 1.0,
+                          "b": 1.0,
+                          "a": 1.0
+                        },
+                        "m_RaycastTarget": 1,
+                        "m_RaycastPadding": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_Maskable": 1,
+                        "m_OnCullStateChanged": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        },
+                        "m_Sprite": {
+                          "m_FileID": 6,
+                          "m_PathID": 536
+                        },
+                        "m_Type": 0,
+                        "m_PreserveAspect": 0,
+                        "m_FillCenter": 1,
+                        "m_FillMethod": 4,
+                        "m_FillAmount": 1.0,
+                        "m_FillClockwise": 1,
+                        "m_FillOrigin": 0,
+                        "m_UseSpriteMesh": 0,
+                        "m_PixelsPerUnitMultiplier": 1.0
+                      },
+                      "artwork": "sharedassets48-536"
+                    },
+                    {
+                      "id": 32323,
+                      "type": "UnityEngine.UI.Button",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1931
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 2847
+                        },
+                        "m_Name": "",
+                        "m_Navigation": {
+                          "m_Mode": 3,
+                          "m_WrapAround": 0,
+                          "m_SelectOnUp": {
+                            "m_FileID": 0,
+                            "m_PathID": 0
+                          },
+                          "m_SelectOnDown": {
+                            "m_FileID": 0,
+                            "m_PathID": 0
+                          },
+                          "m_SelectOnLeft": {
+                            "m_FileID": 0,
+                            "m_PathID": 0
+                          },
+                          "m_SelectOnRight": {
+                            "m_FileID": 0,
+                            "m_PathID": 32323
+                          }
+                        },
+                        "m_Transition": 2,
+                        "m_Colors": {
+                          "m_NormalColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "m_HighlightedColor": {
+                            "r": 0.9150943160057068,
+                            "g": 0.9150943160057068,
+                            "b": 0.9150943160057068,
+                            "a": 1.0
+                          },
+                          "m_PressedColor": {
+                            "r": 0.801886796951294,
+                            "g": 0.801886796951294,
+                            "b": 0.801886796951294,
+                            "a": 1.0
+                          },
+                          "m_SelectedColor": {
+                            "r": 0.800000011920929,
+                            "g": 0.800000011920929,
+                            "b": 0.800000011920929,
+                            "a": 1.0
+                          },
+                          "m_DisabledColor": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 0.800000011920929
+                          },
+                          "m_ColorMultiplier": 1.0,
+                          "m_FadeDuration": 0.10000000149011612
+                        },
+                        "m_SpriteState": {
+                          "m_HighlightedSprite": {
+                            "m_FileID": 6,
+                            "m_PathID": 288
+                          },
+                          "m_PressedSprite": {
+                            "m_FileID": 6,
+                            "m_PathID": 288
+                          },
+                          "m_SelectedSprite": {
+                            "m_FileID": 6,
+                            "m_PathID": 536
+                          },
+                          "m_DisabledSprite": {
+                            "m_FileID": 6,
+                            "m_PathID": 536
+                          }
+                        },
+                        "m_AnimationTriggers": {
+                          "m_NormalTrigger": "Normal",
+                          "m_HighlightedTrigger": "Highlighted",
+                          "m_PressedTrigger": "Pressed",
+                          "m_SelectedTrigger": "Highlighted",
+                          "m_DisabledTrigger": "Disabled"
+                        },
+                        "m_Interactable": 1,
+                        "m_TargetGraphic": {
+                          "m_FileID": 0,
+                          "m_PathID": 32322
+                        },
+                        "m_OnClick": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        }
+                      }
+                    },
+                    {
+                      "id": 30273,
+                      "type": "EFT.UI.ButtonShortcutInputNode",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1931
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 2280
+                        },
+                        "m_Name": "",
+                        "serializationData": {
+                          "SerializedFormat": 0,
+                          "SerializedBytes": [],
+                          "ReferencedUnityObjects": [],
+                          "SerializedBytesString": "",
+                          "Prefab": {
+                            "m_FileID": 0,
+                            "m_PathID": 0
+                          },
+                          "PrefabModificationsReferencedUnityObjects": [],
+                          "PrefabModifications": "",
+                          "SerializationNodes": []
+                        },
+                        "_children": [],
+                        "_button": {
+                          "m_FileID": 0,
+                          "m_PathID": 32323
+                        },
+                        "_command": 150,
+                        "_keyLabel": {
+                          "m_FileID": 0,
+                          "m_PathID": 29551
+                        },
+                        "_key": 128
+                      }
+                    },
+                    {
+                      "id": 30271,
+                      "type": "EFT.UI.ButtonFeedback",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1931
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 5609
+                        },
+                        "m_Name": "",
+                        "serializationData": {
+                          "SerializedFormat": 0,
+                          "SerializedBytes": [],
+                          "ReferencedUnityObjects": [],
+                          "SerializedBytesString": "",
+                          "Prefab": {
+                            "m_FileID": 0,
+                            "m_PathID": 0
+                          },
+                          "PrefabModificationsReferencedUnityObjects": [],
+                          "PrefabModifications": "",
+                          "SerializationNodes": []
+                        },
+                        "_unavailable": 0,
+                        "_onPointerEnterSound": 1,
+                        "_hoverSound": 4,
+                        "_onPointerClickSound": 1,
+                        "_clickSound": 65
+                      }
+                    },
+                    {
+                      "id": 34006,
+                      "type": "UnityEngine.UI.LayoutElement",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1931
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 1874
+                        },
+                        "m_Name": "",
+                        "m_IgnoreLayout": 0,
+                        "m_MinWidth": -1.0,
+                        "m_MinHeight": -1.0,
+                        "m_PreferredWidth": 40.0,
+                        "m_PreferredHeight": 40.0,
+                        "m_FlexibleWidth": -1.0,
+                        "m_FlexibleHeight": -1.0,
+                        "m_LayoutPriority": 1
+                      }
+                    }
+                  ],
+                  "children": [
+                    {
+                      "id": 2758,
+                      "name": "Arrow",
+                      "active": false,
+                      "components": [
+                        {
+                          "id": 35667,
+                          "type": "UnityEngine.UI.Image",
+                          "fields": {
+                            "m_GameObject": {
+                              "m_FileID": 0,
+                              "m_PathID": 2758
+                            },
+                            "m_Enabled": 1,
+                            "m_Script": {
+                              "m_FileID": 1,
+                              "m_PathID": 8670
+                            },
+                            "m_Name": "",
+                            "m_Material": {
+                              "m_FileID": 0,
+                              "m_PathID": 0
+                            },
+                            "m_Color": {
+                              "r": 1.0,
+                              "g": 1.0,
+                              "b": 1.0,
+                              "a": 1.0
+                            },
+                            "m_RaycastTarget": 1,
+                            "m_RaycastPadding": {
+                              "x": 0.0,
+                              "y": 0.0,
+                              "z": 0.0,
+                              "w": 0.0
+                            },
+                            "m_Maskable": 1,
+                            "m_OnCullStateChanged": {
+                              "m_PersistentCalls": {
+                                "m_Calls": []
+                              }
+                            },
+                            "m_Sprite": {
+                              "m_FileID": 2,
+                              "m_PathID": 5471
+                            },
+                            "m_Type": 0,
+                            "m_PreserveAspect": 1,
+                            "m_FillCenter": 1,
+                            "m_FillMethod": 4,
+                            "m_FillAmount": 1.0,
+                            "m_FillClockwise": 1,
+                            "m_FillOrigin": 0,
+                            "m_UseSpriteMesh": 0,
+                            "m_PixelsPerUnitMultiplier": 1.0
+                          },
+                          "artwork": "resources-5471"
+                        }
+                      ],
+                      "children": [],
+                      "rect": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 2758
+                        },
+                        "m_LocalRotation": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 1.0
+                        },
+                        "m_LocalPosition": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0
+                        },
+                        "m_LocalScale": {
+                          "x": 1.0,
+                          "y": 1.0,
+                          "z": 1.0
+                        },
+                        "m_Children": [],
+                        "m_Father": {
+                          "m_FileID": 0,
+                          "m_PathID": 20151
+                        },
+                        "m_AnchorMin": {
+                          "x": 0.0,
+                          "y": 0.0
+                        },
+                        "m_AnchorMax": {
+                          "x": 1.0,
+                          "y": 1.0
+                        },
+                        "m_AnchoredPosition": {
+                          "x": 0.0,
+                          "y": 0.0
+                        },
+                        "m_SizeDelta": {
+                          "x": -20.0,
+                          "y": -20.0
+                        },
+                        "m_Pivot": {
+                          "x": 0.5,
+                          "y": 0.5
+                        }
+                      }
+                    }
+                  ],
+                  "rect": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1931
+                    },
+                    "m_LocalRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "m_LocalPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "m_LocalScale": {
+                      "x": -1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "m_Children": [
+                      {
+                        "m_FileID": 0,
+                        "m_PathID": 20728
+                      }
+                    ],
+                    "m_Father": {
+                      "m_FileID": 0,
+                      "m_PathID": 20145
+                    },
+                    "m_AnchorMin": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_AnchorMax": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_AnchoredPosition": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_SizeDelta": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_Pivot": {
+                      "x": 0.5,
+                      "y": 0.5
+                    }
+                  }
+                },
+                {
+                  "id": 3201,
+                  "name": "Q",
+                  "active": true,
+                  "components": [
+                    {
+                      "id": 29394,
+                      "type": "TMPro.TextMeshProUGUI",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 3201
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 8328
+                        },
+                        "m_Name": "",
+                        "m_Material": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Color": {
+                          "r": 1.0,
+                          "g": 1.0,
+                          "b": 1.0,
+                          "a": 1.0
+                        },
+                        "m_RaycastTarget": 0,
+                        "m_RaycastPadding": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_Maskable": 1,
+                        "m_OnCullStateChanged": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        },
+                        "m_text": "Q",
+                        "m_isRightToLeft": 0,
+                        "m_fontAsset": {
+                          "m_FileID": 2,
+                          "m_PathID": 46394
+                        },
+                        "m_sharedMaterial": {
+                          "m_FileID": 2,
+                          "m_PathID": 283
+                        },
+                        "m_fontSharedMaterials": [],
+                        "m_fontMaterial": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_fontMaterials": [],
+                        "m_fontColor32": {
+                          "rgba": 1720028029
+                        },
+                        "m_fontColor": {
+                          "r": 0.4901960790157318,
+                          "g": 0.545098066329956,
+                          "b": 0.5215686559677124,
+                          "a": 0.4000000059604645
+                        },
+                        "m_enableVertexGradient": 0,
+                        "m_colorMode": 3,
+                        "m_fontColorGradient": {
+                          "topLeft": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "topRight": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "bottomLeft": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "bottomRight": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          }
+                        },
+                        "m_fontColorGradientPreset": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_spriteAsset": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_tintAllSprites": 0,
+                        "m_StyleSheet": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_TextStyleHashCode": -1183493901,
+                        "m_overrideHtmlColors": 0,
+                        "m_faceColor": {
+                          "rgba": 4294967295
+                        },
+                        "m_fontSize": 16.0,
+                        "m_fontSizeBase": 16.0,
+                        "m_fontWeight": 400,
+                        "m_enableAutoSizing": 0,
+                        "m_fontSizeMin": 18.0,
+                        "m_fontSizeMax": 72.0,
+                        "m_fontStyle": 0,
+                        "m_HorizontalAlignment": 2,
+                        "m_VerticalAlignment": 512,
+                        "m_textAlignment": 65535,
+                        "m_characterSpacing": 0.0,
+                        "m_wordSpacing": 0.0,
+                        "m_lineSpacing": 0.0,
+                        "m_lineSpacingMax": 0.0,
+                        "m_paragraphSpacing": 0.0,
+                        "m_charWidthMaxAdj": 0.0,
+                        "m_enableWordWrapping": 0,
+                        "m_wordWrappingRatios": 0.4000000059604645,
+                        "m_overflowMode": 0,
+                        "m_linkedTextComponent": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "parentLinkedComponent": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_enableKerning": 1,
+                        "m_enableExtraPadding": 0,
+                        "checkPaddingRequired": 0,
+                        "m_isRichText": 1,
+                        "m_parseCtrlCharacters": 1,
+                        "m_isOrthographic": 1,
+                        "m_isCullingEnabled": 0,
+                        "m_horizontalMapping": 0,
+                        "m_verticalMapping": 0,
+                        "m_uvLineOffset": 0.0,
+                        "m_geometrySortingOrder": 0,
+                        "m_IsTextObjectScaleStatic": 0,
+                        "m_VertexBufferAutoSizeReduction": 0,
+                        "m_useMaxVisibleDescender": 1,
+                        "m_pageToDisplay": 1,
+                        "m_margin": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_isUsingLegacyAnimationComponent": 0,
+                        "m_isVolumetricText": 0,
+                        "m_hasFontAssetChanged": 0,
+                        "m_baseMaterial": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_maskOffset": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        }
+                      }
+                    },
+                    {
+                      "id": 41074,
+                      "type": "UnityEngine.UI.LayoutElement",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 3201
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 1874
+                        },
+                        "m_Name": "",
+                        "m_IgnoreLayout": 1,
+                        "m_MinWidth": -1.0,
+                        "m_MinHeight": -1.0,
+                        "m_PreferredWidth": -1.0,
+                        "m_PreferredHeight": -1.0,
+                        "m_FlexibleWidth": -1.0,
+                        "m_FlexibleHeight": -1.0,
+                        "m_LayoutPriority": 1
+                      }
+                    }
+                  ],
+                  "children": [],
+                  "rect": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 3201
+                    },
+                    "m_LocalRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "m_LocalPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "m_LocalScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "m_Children": [],
+                    "m_Father": {
+                      "m_FileID": 0,
+                      "m_PathID": 20145
+                    },
+                    "m_AnchorMin": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_AnchorMax": {
+                      "x": 0.0,
+                      "y": 1.0
+                    },
+                    "m_AnchoredPosition": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_SizeDelta": {
+                      "x": 30.0,
+                      "y": 0.0
+                    },
+                    "m_Pivot": {
+                      "x": 0.0,
+                      "y": 0.5
+                    }
+                  }
+                },
+                {
+                  "id": 6066,
+                  "name": "E",
+                  "active": true,
+                  "components": [
+                    {
+                      "id": 29551,
+                      "type": "TMPro.TextMeshProUGUI",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 6066
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 8328
+                        },
+                        "m_Name": "",
+                        "m_Material": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Color": {
+                          "r": 1.0,
+                          "g": 1.0,
+                          "b": 1.0,
+                          "a": 1.0
+                        },
+                        "m_RaycastTarget": 0,
+                        "m_RaycastPadding": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_Maskable": 1,
+                        "m_OnCullStateChanged": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        },
+                        "m_text": "E",
+                        "m_isRightToLeft": 0,
+                        "m_fontAsset": {
+                          "m_FileID": 2,
+                          "m_PathID": 46394
+                        },
+                        "m_sharedMaterial": {
+                          "m_FileID": 2,
+                          "m_PathID": 283
+                        },
+                        "m_fontSharedMaterials": [],
+                        "m_fontMaterial": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_fontMaterials": [],
+                        "m_fontColor32": {
+                          "rgba": 1720028029
+                        },
+                        "m_fontColor": {
+                          "r": 0.4901960790157318,
+                          "g": 0.545098066329956,
+                          "b": 0.5215686559677124,
+                          "a": 0.4000000059604645
+                        },
+                        "m_enableVertexGradient": 0,
+                        "m_colorMode": 3,
+                        "m_fontColorGradient": {
+                          "topLeft": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "topRight": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "bottomLeft": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          },
+                          "bottomRight": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0,
+                            "a": 1.0
+                          }
+                        },
+                        "m_fontColorGradientPreset": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_spriteAsset": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_tintAllSprites": 0,
+                        "m_StyleSheet": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_TextStyleHashCode": -1183493901,
+                        "m_overrideHtmlColors": 0,
+                        "m_faceColor": {
+                          "rgba": 4294967295
+                        },
+                        "m_fontSize": 16.0,
+                        "m_fontSizeBase": 16.0,
+                        "m_fontWeight": 400,
+                        "m_enableAutoSizing": 0,
+                        "m_fontSizeMin": 18.0,
+                        "m_fontSizeMax": 72.0,
+                        "m_fontStyle": 0,
+                        "m_HorizontalAlignment": 2,
+                        "m_VerticalAlignment": 512,
+                        "m_textAlignment": 65535,
+                        "m_characterSpacing": 0.0,
+                        "m_wordSpacing": 0.0,
+                        "m_lineSpacing": 0.0,
+                        "m_lineSpacingMax": 0.0,
+                        "m_paragraphSpacing": 0.0,
+                        "m_charWidthMaxAdj": 0.0,
+                        "m_enableWordWrapping": 0,
+                        "m_wordWrappingRatios": 0.4000000059604645,
+                        "m_overflowMode": 0,
+                        "m_linkedTextComponent": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "parentLinkedComponent": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_enableKerning": 1,
+                        "m_enableExtraPadding": 0,
+                        "checkPaddingRequired": 0,
+                        "m_isRichText": 1,
+                        "m_parseCtrlCharacters": 1,
+                        "m_isOrthographic": 1,
+                        "m_isCullingEnabled": 0,
+                        "m_horizontalMapping": 0,
+                        "m_verticalMapping": 0,
+                        "m_uvLineOffset": 0.0,
+                        "m_geometrySortingOrder": 0,
+                        "m_IsTextObjectScaleStatic": 0,
+                        "m_VertexBufferAutoSizeReduction": 0,
+                        "m_useMaxVisibleDescender": 1,
+                        "m_pageToDisplay": 1,
+                        "m_margin": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_isUsingLegacyAnimationComponent": 0,
+                        "m_isVolumetricText": 0,
+                        "m_hasFontAssetChanged": 0,
+                        "m_baseMaterial": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_maskOffset": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        }
+                      }
+                    },
+                    {
+                      "id": 41115,
+                      "type": "UnityEngine.UI.LayoutElement",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 6066
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 1874
+                        },
+                        "m_Name": "",
+                        "m_IgnoreLayout": 1,
+                        "m_MinWidth": -1.0,
+                        "m_MinHeight": -1.0,
+                        "m_PreferredWidth": -1.0,
+                        "m_PreferredHeight": -1.0,
+                        "m_FlexibleWidth": -1.0,
+                        "m_FlexibleHeight": -1.0,
+                        "m_LayoutPriority": 1
+                      }
+                    }
+                  ],
+                  "children": [],
+                  "rect": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 6066
+                    },
+                    "m_LocalRotation": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 1.0
+                    },
+                    "m_LocalPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "m_LocalScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "m_Children": [],
+                    "m_Father": {
+                      "m_FileID": 0,
+                      "m_PathID": 20145
+                    },
+                    "m_AnchorMin": {
+                      "x": 1.0,
+                      "y": 0.0
+                    },
+                    "m_AnchorMax": {
+                      "x": 1.0,
+                      "y": 1.0
+                    },
+                    "m_AnchoredPosition": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_SizeDelta": {
+                      "x": 30.0,
+                      "y": 0.0
+                    },
+                    "m_Pivot": {
+                      "x": 1.0,
+                      "y": 0.5
+                    }
+                  }
+                }
+              ],
+              "rect": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 1928
+                },
+                "m_LocalRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "m_LocalPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "m_LocalScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "m_Children": [
+                  {
+                    "m_FileID": 0,
+                    "m_PathID": 18839
+                  },
+                  {
+                    "m_FileID": 0,
+                    "m_PathID": 20144
+                  },
+                  {
+                    "m_FileID": 0,
+                    "m_PathID": 20152
+                  },
+                  {
+                    "m_FileID": 0,
+                    "m_PathID": 20151
+                  },
+                  {
+                    "m_FileID": 0,
+                    "m_PathID": 23562
+                  },
+                  {
+                    "m_FileID": 0,
+                    "m_PathID": 26059
+                  }
+                ],
+                "m_Father": {
+                  "m_FileID": 0,
+                  "m_PathID": 20149
+                },
+                "m_AnchorMin": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_AnchorMax": {
+                  "x": 1.0,
+                  "y": 0.0
+                },
+                "m_AnchoredPosition": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_SizeDelta": {
+                  "x": 0.0,
+                  "y": 56.0
+                },
+                "m_Pivot": {
+                  "x": 0.5,
+                  "y": 0.0
+                }
+              }
+            },
+            {
+              "id": 8730,
+              "name": "Border",
+              "active": true,
+              "components": [
+                {
+                  "id": 43434,
+                  "type": "UnityEngine.UI.Image",
+                  "fields": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 8730
+                    },
+                    "m_Enabled": 1,
+                    "m_Script": {
+                      "m_FileID": 1,
+                      "m_PathID": 8670
+                    },
+                    "m_Name": "",
+                    "m_Material": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "m_Color": {
+                      "r": 0.12156862765550613,
+                      "g": 0.15294118225574493,
+                      "b": 0.1725490242242813,
+                      "a": 0.501960813999176
+                    },
+                    "m_RaycastTarget": 0,
+                    "m_RaycastPadding": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 0.0
+                    },
+                    "m_Maskable": 1,
+                    "m_OnCullStateChanged": {
+                      "m_PersistentCalls": {
+                        "m_Calls": []
+                      }
+                    },
+                    "m_Sprite": {
+                      "m_FileID": 2,
+                      "m_PathID": 5972
+                    },
+                    "m_Type": 1,
+                    "m_PreserveAspect": 0,
+                    "m_FillCenter": 1,
+                    "m_FillMethod": 4,
+                    "m_FillAmount": 1.0,
+                    "m_FillClockwise": 1,
+                    "m_FillOrigin": 0,
+                    "m_UseSpriteMesh": 0,
+                    "m_PixelsPerUnitMultiplier": 1.0
+                  },
+                  "artwork": "resources-5972"
+                },
+                {
+                  "id": 38993,
+                  "type": "EFT.UI.PixelPerfectSpriteScaler",
+                  "fields": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 8730
+                    },
+                    "m_Enabled": 1,
+                    "m_Script": {
+                      "m_FileID": 1,
+                      "m_PathID": 4271
+                    },
+                    "m_Name": "",
+                    "_sidesToScale": 15
+                  }
+                }
+              ],
+              "children": [],
+              "rect": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 8730
+                },
+                "m_LocalRotation": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 1.0
+                },
+                "m_LocalPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "m_LocalScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "m_Children": [],
+                "m_Father": {
+                  "m_FileID": 0,
+                  "m_PathID": 20149
+                },
+                "m_AnchorMin": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_AnchorMax": {
+                  "x": 1.0,
+                  "y": 1.0
+                },
+                "m_AnchoredPosition": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_SizeDelta": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_Pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            }
+          ],
+          "rect": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 1935
+            },
+            "m_LocalRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "m_LocalPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "m_LocalScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "m_Children": [
+              {
+                "m_FileID": 0,
+                "m_PathID": 20458
+              },
+              {
+                "m_FileID": 0,
+                "m_PathID": 20150
+              },
+              {
+                "m_FileID": 0,
+                "m_PathID": 20148
+              },
+              {
+                "m_FileID": 0,
+                "m_PathID": 20145
+              },
+              {
+                "m_FileID": 0,
+                "m_PathID": 21603
+              }
+            ],
+            "m_Father": {
+              "m_FileID": 0,
+              "m_PathID": 20143
+            },
+            "m_AnchorMin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_AnchorMax": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_AnchoredPosition": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_SizeDelta": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_Pivot": {
+              "x": 1.0,
+              "y": 0.5
+            }
+          }
+        }
+      ],
+      "rect": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 1934
+        },
+        "m_LocalRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_Children": [
+          {
+            "m_FileID": 0,
+            "m_PathID": 20149
+          }
+        ],
+        "m_Father": {
+          "m_FileID": 0,
+          "m_PathID": 22133
+        },
+        "m_AnchorMin": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_SizeDelta": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      }
+    },
+    {
+      "id": 1933,
+      "name": "CloseButton",
+      "active": true,
+      "components": [
+        {
+          "id": 32315,
+          "type": "EFT.UI.DefaultUIButton",
+          "fields": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 1933
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": 1068
+            },
+            "m_Name": "",
+            "serializationData": {
+              "SerializedFormat": 0,
+              "SerializedBytes": [],
+              "ReferencedUnityObjects": [],
+              "SerializedBytesString": "",
+              "Prefab": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "PrefabModificationsReferencedUnityObjects": [],
+              "PrefabModifications": "",
+              "SerializationNodes": []
+            },
+            "_unavailable": 0,
+            "_onPointerEnterSound": 1,
+            "_hoverSound": 4,
+            "_onPointerClickSound": 1,
+            "_clickSound": 3,
+            "_iconSprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "_iconIdleSprite": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "_text": "Close",
+            "_fontSize": 24,
+            "_minWidth": -1.0,
+            "_useEllipsis": 0,
+            "_enabledTooltip": "",
+            "_disabledTooltip": "",
+            "_headerLabel": {
+              "m_FileID": 0,
+              "m_PathID": 32317
+            },
+            "_sizeLabel": {
+              "m_FileID": 0,
+              "m_PathID": 38775
+            },
+            "_iconImage": {
+              "m_FileID": 0,
+              "m_PathID": 32316
+            },
+            "_iconIdleImage": {
+              "m_FileID": 0,
+              "m_PathID": 34117
+            },
+            "_iconContainer": {
+              "m_FileID": 0,
+              "m_PathID": 6004
+            },
+            "_button": {
+              "m_FileID": 0,
+              "m_PathID": 39751
+            },
+            "_layoutElement": {
+              "m_FileID": 0,
+              "m_PathID": 0
+            },
+            "_rawText": 0
+          }
+        },
+        {
+          "id": 34902,
+          "type": "EFT.UI.DefaultUIButtonAnimation",
+          "fields": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 1933
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": 3919
+            },
+            "m_Name": "",
+            "serializationData": {
+              "SerializedFormat": 0,
+              "SerializedBytes": [
+                1,
+                1,
+                17,
+                0,
+                0,
+                0,
+                95,
+                0,
+                115,
+                0,
+                116,
+                0,
+                97,
+                0,
+                116,
+                0,
+                101,
+                0,
+                65,
+                0,
+                116,
+                0,
+                116,
+                0,
+                97,
+                0,
+                99,
+                0,
+                104,
+                0,
+                109,
+                0,
+                101,
+                0,
+                110,
+                0,
+                116,
+                0,
+                115,
+                0,
+                47,
+                0,
+                0,
+                0,
+                0,
+                1,
+                147,
+                0,
+                0,
+                0,
+                83,
+                0,
+                121,
+                0,
+                115,
+                0,
+                116,
+                0,
+                101,
+                0,
+                109,
+                0,
+                46,
+                0,
+                67,
+                0,
+                111,
+                0,
+                108,
+                0,
+                108,
+                0,
+                101,
+                0,
+                99,
+                0,
+                116,
+                0,
+                105,
+                0,
+                111,
+                0,
+                110,
+                0,
+                115,
+                0,
+                46,
+                0,
+                71,
+                0,
+                101,
+                0,
+                110,
+                0,
+                101,
+                0,
+                114,
+                0,
+                105,
+                0,
+                99,
+                0,
+                46,
+                0,
+                68,
+                0,
+                105,
+                0,
+                99,
+                0,
+                116,
+                0,
+                105,
+                0,
+                111,
+                0,
+                110,
+                0,
+                97,
+                0,
+                114,
+                0,
+                121,
+                0,
+                96,
+                0,
+                50,
+                0,
+                91,
+                0,
+                91,
+                0,
+                69,
+                0,
+                70,
+                0,
+                84,
+                0,
+                46,
+                0,
+                85,
+                0,
+                73,
+                0,
+                46,
+                0,
+                69,
+                0,
+                66,
+                0,
+                117,
+                0,
+                116,
+                0,
+                116,
+                0,
+                111,
+                0,
+                110,
+                0,
+                65,
+                0,
+                110,
+                0,
+                105,
+                0,
+                109,
+                0,
+                97,
+                0,
+                116,
+                0,
+                105,
+                0,
+                111,
+                0,
+                110,
+                0,
+                83,
+                0,
+                116,
+                0,
+                97,
+                0,
+                116,
+                0,
+                101,
+                0,
+                44,
+                0,
+                32,
+                0,
+                65,
+                0,
+                115,
+                0,
+                115,
+                0,
+                101,
+                0,
+                109,
+                0,
+                98,
+                0,
+                108,
+                0,
+                121,
+                0,
+                45,
+                0,
+                67,
+                0,
+                83,
+                0,
+                104,
+                0,
+                97,
+                0,
+                114,
+                0,
+                112,
+                0,
+                93,
+                0,
+                44,
+                0,
+                91,
+                0,
+                85,
+                0,
+                110,
+                0,
+                105,
+                0,
+                116,
+                0,
+                121,
+                0,
+                69,
+                0,
+                110,
+                0,
+                103,
+                0,
+                105,
+                0,
+                110,
+                0,
+                101,
+                0,
+                46,
+                0,
+                71,
+                0,
+                97,
+                0,
+                109,
+                0,
+                101,
+                0,
+                79,
+                0,
+                98,
+                0,
+                106,
+                0,
+                101,
+                0,
+                99,
+                0,
+                116,
+                0,
+                44,
+                0,
+                32,
+                0,
+                85,
+                0,
+                110,
+                0,
+                105,
+                0,
+                116,
+                0,
+                121,
+                0,
+                69,
+                0,
+                110,
+                0,
+                103,
+                0,
+                105,
+                0,
+                110,
+                0,
+                101,
+                0,
+                46,
+                0,
+                67,
+                0,
+                111,
+                0,
+                114,
+                0,
+                101,
+                0,
+                77,
+                0,
+                111,
+                0,
+                100,
+                0,
+                117,
+                0,
+                108,
+                0,
+                101,
+                0,
+                93,
+                0,
+                93,
+                0,
+                44,
+                0,
+                32,
+                0,
+                109,
+                0,
+                115,
+                0,
+                99,
+                0,
+                111,
+                0,
+                114,
+                0,
+                108,
+                0,
+                105,
+                0,
+                98,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                8,
+                0,
+                0,
+                0,
+                99,
+                0,
+                111,
+                0,
+                109,
+                0,
+                112,
+                0,
+                97,
+                0,
+                114,
+                0,
+                101,
+                0,
+                114,
+                0,
+                47,
+                1,
+                0,
+                0,
+                0,
+                1,
+                108,
+                0,
+                0,
+                0,
+                83,
+                0,
+                121,
+                0,
+                115,
+                0,
+                116,
+                0,
+                101,
+                0,
+                109,
+                0,
+                46,
+                0,
+                67,
+                0,
+                111,
+                0,
+                108,
+                0,
+                108,
+                0,
+                101,
+                0,
+                99,
+                0,
+                116,
+                0,
+                105,
+                0,
+                111,
+                0,
+                110,
+                0,
+                115,
+                0,
+                46,
+                0,
+                71,
+                0,
+                101,
+                0,
+                110,
+                0,
+                101,
+                0,
+                114,
+                0,
+                105,
+                0,
+                99,
+                0,
+                46,
+                0,
+                69,
+                0,
+                110,
+                0,
+                117,
+                0,
+                109,
+                0,
+                69,
+                0,
+                113,
+                0,
+                117,
+                0,
+                97,
+                0,
+                108,
+                0,
+                105,
+                0,
+                116,
+                0,
+                121,
+                0,
+                67,
+                0,
+                111,
+                0,
+                109,
+                0,
+                112,
+                0,
+                97,
+                0,
+                114,
+                0,
+                101,
+                0,
+                114,
+                0,
+                96,
+                0,
+                49,
+                0,
+                91,
+                0,
+                91,
+                0,
+                69,
+                0,
+                70,
+                0,
+                84,
+                0,
+                46,
+                0,
+                85,
+                0,
+                73,
+                0,
+                46,
+                0,
+                69,
+                0,
+                66,
+                0,
+                117,
+                0,
+                116,
+                0,
+                116,
+                0,
+                111,
+                0,
+                110,
+                0,
+                65,
+                0,
+                110,
+                0,
+                105,
+                0,
+                109,
+                0,
+                97,
+                0,
+                116,
+                0,
+                105,
+                0,
+                111,
+                0,
+                110,
+                0,
+                83,
+                0,
+                116,
+                0,
+                97,
+                0,
+                116,
+                0,
+                101,
+                0,
+                44,
+                0,
+                32,
+                0,
+                65,
+                0,
+                115,
+                0,
+                115,
+                0,
+                101,
+                0,
+                109,
+                0,
+                98,
+                0,
+                108,
+                0,
+                121,
+                0,
+                45,
+                0,
+                67,
+                0,
+                83,
+                0,
+                104,
+                0,
+                97,
+                0,
+                114,
+                0,
+                112,
+                0,
+                93,
+                0,
+                93,
+                0,
+                44,
+                0,
+                32,
+                0,
+                109,
+                0,
+                115,
+                0,
+                99,
+                0,
+                111,
+                0,
+                114,
+                0,
+                108,
+                0,
+                105,
+                0,
+                98,
+                0,
+                1,
+                0,
+                0,
+                0,
+                6,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                7,
+                5,
+                6,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                4,
+                46,
+                29,
+                1,
+                2,
+                0,
+                0,
+                0,
+                36,
+                0,
+                107,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                11,
+                1,
+                2,
+                0,
+                0,
+                0,
+                36,
+                0,
+                118,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5,
+                4,
+                46,
+                29,
+                1,
+                2,
+                0,
+                0,
+                0,
+                36,
+                0,
+                107,
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                11,
+                1,
+                2,
+                0,
+                0,
+                0,
+                36,
+                0,
+                118,
+                0,
+                0,
+                0,
+                0,
+                0,
+                5,
+                7,
+                5
+              ],
+              "ReferencedUnityObjects": [
+                {
+                  "m_FileID": 0,
+                  "m_PathID": 7559
+                }
+              ],
+              "SerializedBytesString": "",
+              "Prefab": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "PrefabModificationsReferencedUnityObjects": [],
+              "PrefabModifications": "",
+              "SerializationNodes": []
+            },
+            "Background": {
+              "m_FileID": 0,
+              "m_PathID": 23012
+            },
+            "Image": {
+              "m_FileID": 0,
+              "m_PathID": 40467
+            },
+            "Icon": {
+              "m_FileID": 0,
+              "m_PathID": 32316
+            },
+            "Label": {
+              "m_FileID": 0,
+              "m_PathID": 32317
+            },
+            "_changeColors": 0,
+            "_normalLabelColor": {
+              "r": 0.9058823585510254,
+              "g": 0.8980392217636108,
+              "b": 0.8313725590705872,
+              "a": 1.0
+            },
+            "_highlightedLabelColor": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0,
+              "a": 1.0
+            },
+            "_backgorundNormalStateAplha": 0.0,
+            "_normalImageColor": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            },
+            "_highlightedImageColor": {
+              "r": 1.0,
+              "g": 1.0,
+              "b": 1.0,
+              "a": 1.0
+            }
+          }
+        },
+        {
+          "id": 39751,
+          "type": "EFT.UI.TweenAnimatedButton",
+          "fields": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 1933
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": 2231
+            },
+            "m_Name": "",
+            "serializationData": {
+              "SerializedFormat": 0,
+              "SerializedBytes": [
+                11,
+                1,
+                10,
+                0,
+                0,
+                0,
+                95,
+                0,
+                97,
+                0,
+                110,
+                0,
+                105,
+                0,
+                109,
+                0,
+                97,
+                0,
+                116,
+                0,
+                105,
+                0,
+                111,
+                0,
+                110,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "ReferencedUnityObjects": [
+                {
+                  "m_FileID": 0,
+                  "m_PathID": 34902
+                }
+              ],
+              "SerializedBytesString": "",
+              "Prefab": {
+                "m_FileID": 0,
+                "m_PathID": 0
+              },
+              "PrefabModificationsReferencedUnityObjects": [],
+              "PrefabModifications": "",
+              "SerializationNodes": []
+            },
+            "_interactable": 1
+          }
+        },
+        {
+          "id": 43503,
+          "type": "UnityEngine.UI.HorizontalLayoutGroup",
+          "fields": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 1933
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": 1872
+            },
+            "m_Name": "",
+            "m_Padding": {
+              "m_Left": 20,
+              "m_Right": 20,
+              "m_Top": 8,
+              "m_Bottom": 8
+            },
+            "m_ChildAlignment": 4,
+            "m_Spacing": 0.0,
+            "m_ChildForceExpandWidth": 0,
+            "m_ChildForceExpandHeight": 0,
+            "m_ChildControlWidth": 1,
+            "m_ChildControlHeight": 1,
+            "m_ChildScaleWidth": 0,
+            "m_ChildScaleHeight": 0,
+            "m_ReverseArrangement": 0
+          }
+        },
+        {
+          "id": 32826,
+          "type": "UnityEngine.UI.ContentSizeFitter",
+          "fields": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 1933
+            },
+            "m_Enabled": 1,
+            "m_Script": {
+              "m_FileID": 1,
+              "m_PathID": 1947
+            },
+            "m_Name": "",
+            "m_HorizontalFit": 2,
+            "m_VerticalFit": 2
+          }
+        }
+      ],
+      "children": [
+        {
+          "id": 2531,
+          "name": "RaycastTarget",
+          "active": true,
+          "components": [
+            {
+              "id": 38744,
+              "type": "EFT.UI.NonDrawingGraphic",
+              "fields": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 2531
+                },
+                "m_Enabled": 1,
+                "m_Script": {
+                  "m_FileID": 1,
+                  "m_PathID": 6197
+                },
+                "m_Name": "",
+                "m_Material": {
+                  "m_FileID": 0,
+                  "m_PathID": 0
+                },
+                "m_Color": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "m_RaycastTarget": 1,
+                "m_RaycastPadding": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.0
+                }
+              }
+            },
+            {
+              "id": 32287,
+              "type": "UnityEngine.UI.LayoutElement",
+              "fields": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 2531
+                },
+                "m_Enabled": 1,
+                "m_Script": {
+                  "m_FileID": 1,
+                  "m_PathID": 1874
+                },
+                "m_Name": "",
+                "m_IgnoreLayout": 1,
+                "m_MinWidth": -1.0,
+                "m_MinHeight": -1.0,
+                "m_PreferredWidth": -1.0,
+                "m_PreferredHeight": -1.0,
+                "m_FlexibleWidth": -1.0,
+                "m_FlexibleHeight": -1.0,
+                "m_LayoutPriority": 1
+              }
+            }
+          ],
+          "children": [],
+          "rect": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 2531
+            },
+            "m_LocalRotation": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0,
+              "w": 1.0
+            },
+            "m_LocalPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "m_LocalScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "m_Children": [],
+            "m_Father": {
+              "m_FileID": 0,
+              "m_PathID": 20154
+            },
+            "m_AnchorMin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_AnchorMax": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_AnchoredPosition": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_SizeDelta": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_Pivot": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          }
+        },
+        {
+          "id": 4466,
+          "name": "Background",
+          "active": true,
+          "components": [
+            {
+              "id": 37888,
+              "type": "UnityEngine.UI.Image",
+              "fields": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 4466
+                },
+                "m_Enabled": 1,
+                "m_Script": {
+                  "m_FileID": 1,
+                  "m_PathID": 8670
+                },
+                "m_Name": "",
+                "m_Material": {
+                  "m_FileID": 0,
+                  "m_PathID": 0
+                },
+                "m_Color": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "m_RaycastTarget": 0,
+                "m_RaycastPadding": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "m_Maskable": 1,
+                "m_OnCullStateChanged": {
+                  "m_PersistentCalls": {
+                    "m_Calls": []
+                  }
+                },
+                "m_Sprite": {
+                  "m_FileID": 2,
+                  "m_PathID": 5876
+                },
+                "m_Type": 2,
+                "m_PreserveAspect": 0,
+                "m_FillCenter": 1,
+                "m_FillMethod": 4,
+                "m_FillAmount": 1.0,
+                "m_FillClockwise": 1,
+                "m_FillOrigin": 0,
+                "m_UseSpriteMesh": 0,
+                "m_PixelsPerUnitMultiplier": 1.2999999523162842
+              },
+              "artwork": "resources-5876"
+            },
+            {
+              "id": 35378,
+              "type": "UnityEngine.UI.LayoutElement",
+              "fields": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 4466
+                },
+                "m_Enabled": 1,
+                "m_Script": {
+                  "m_FileID": 1,
+                  "m_PathID": 1874
+                },
+                "m_Name": "",
+                "m_IgnoreLayout": 1,
+                "m_MinWidth": -1.0,
+                "m_MinHeight": -1.0,
+                "m_PreferredWidth": -1.0,
+                "m_PreferredHeight": -1.0,
+                "m_FlexibleWidth": -1.0,
+                "m_FlexibleHeight": -1.0,
+                "m_LayoutPriority": 1
+              }
+            },
+            {
+              "id": 32873,
+              "type": "Coffee.UISoftMask.SoftMask",
+              "fields": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 4466
+                },
+                "m_Enabled": 1,
+                "m_Script": {
+                  "m_FileID": 1,
+                  "m_PathID": 2142
+                },
+                "m_Name": "",
+                "m_ShowMaskGraphic": 0,
+                "m_MaskingMode": 0,
+                "m_AlphaHitTest": 0,
+                "m_SoftnessRange": {
+                  "m_Min": 0.0,
+                  "m_Max": 0.8090000152587891
+                },
+                "m_DownSamplingRate": 1,
+                "m_AntiAliasingThreshold": 0.0,
+                "m_Alpha": 1.0,
+                "m_Softness": -1.0,
+                "m_PartOfParent": 0
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": 1165,
+              "name": "Background_inside",
+              "active": true,
+              "components": [
+                {
+                  "id": 40467,
+                  "type": "UnityEngine.UI.Image",
+                  "fields": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1165
+                    },
+                    "m_Enabled": 1,
+                    "m_Script": {
+                      "m_FileID": 1,
+                      "m_PathID": 8670
+                    },
+                    "m_Name": "",
+                    "m_Material": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "m_Color": {
+                      "r": 1.0,
+                      "g": 1.0,
+                      "b": 1.0,
+                      "a": 0.0
+                    },
+                    "m_RaycastTarget": 1,
+                    "m_RaycastPadding": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 0.0
+                    },
+                    "m_Maskable": 1,
+                    "m_OnCullStateChanged": {
+                      "m_PersistentCalls": {
+                        "m_Calls": []
+                      }
+                    },
+                    "m_Sprite": {
+                      "m_FileID": 2,
+                      "m_PathID": 6036
+                    },
+                    "m_Type": 1,
+                    "m_PreserveAspect": 0,
+                    "m_FillCenter": 1,
+                    "m_FillMethod": 4,
+                    "m_FillAmount": 1.0,
+                    "m_FillClockwise": 1,
+                    "m_FillOrigin": 0,
+                    "m_UseSpriteMesh": 0,
+                    "m_PixelsPerUnitMultiplier": 1.0
+                  },
+                  "artwork": "resources-6036"
+                },
+                {
+                  "id": 42396,
+                  "type": "Coffee.UISoftMask.SoftMaskable",
+                  "fields": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1165
+                    },
+                    "m_Enabled": 1,
+                    "m_Script": {
+                      "m_FileID": 1,
+                      "m_PathID": 5289
+                    },
+                    "m_Name": "",
+                    "m_IgnoreSelf": 0,
+                    "m_IgnoreChildren": 0,
+                    "m_Power": 1.0
+                  }
+                },
+                {
+                  "id": 42340,
+                  "type": "BattleUINoiseLevel",
+                  "fields": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1165
+                    },
+                    "m_Enabled": 1,
+                    "m_Script": {
+                      "m_FileID": 1,
+                      "m_PathID": 8472
+                    },
+                    "m_Name": "",
+                    "Image": {
+                      "m_FileID": 0,
+                      "m_PathID": 40467
+                    },
+                    "Sprites": [
+                      {
+                        "m_FileID": 2,
+                        "m_PathID": 4592
+                      }
+                    ]
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "id": 7559,
+                  "name": "Noise",
+                  "active": false,
+                  "components": [
+                    {
+                      "id": 32061,
+                      "type": "UnityEngine.UI.Image",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 7559
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 8670
+                        },
+                        "m_Name": "",
+                        "m_Material": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Color": {
+                          "r": 1.0,
+                          "g": 1.0,
+                          "b": 1.0,
+                          "a": 0.04313725605607033
+                        },
+                        "m_RaycastTarget": 0,
+                        "m_RaycastPadding": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_Maskable": 1,
+                        "m_OnCullStateChanged": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        },
+                        "m_Sprite": {
+                          "m_FileID": 2,
+                          "m_PathID": 4592
+                        },
+                        "m_Type": 2,
+                        "m_PreserveAspect": 0,
+                        "m_FillCenter": 1,
+                        "m_FillMethod": 4,
+                        "m_FillAmount": 1.0,
+                        "m_FillClockwise": 1,
+                        "m_FillOrigin": 0,
+                        "m_UseSpriteMesh": 0,
+                        "m_PixelsPerUnitMultiplier": 3.0
+                      },
+                      "artwork": "resources-4592"
+                    },
+                    {
+                      "id": 35914,
+                      "type": "Coffee.UISoftMask.SoftMaskable",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 7559
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 5289
+                        },
+                        "m_Name": "",
+                        "m_IgnoreSelf": 0,
+                        "m_IgnoreChildren": 0,
+                        "m_Power": 1.0
+                      }
+                    }
+                  ],
+                  "children": [],
+                  "rect": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 7559
+                    },
+                    "m_LocalRotation": {
+                      "x": -0.0,
+                      "y": -0.0,
+                      "z": -0.0,
+                      "w": 1.0
+                    },
+                    "m_LocalPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "m_LocalScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "m_Children": [],
+                    "m_Father": {
+                      "m_FileID": 0,
+                      "m_PathID": 23215
+                    },
+                    "m_AnchorMin": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_AnchorMax": {
+                      "x": 1.0,
+                      "y": 1.0
+                    },
+                    "m_AnchoredPosition": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_SizeDelta": {
+                      "x": -3.200000762939453,
+                      "y": -3.2000019550323486
+                    },
+                    "m_Pivot": {
+                      "x": 0.5,
+                      "y": 0.5
+                    }
+                  }
+                }
+              ],
+              "rect": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 1165
+                },
+                "m_LocalRotation": {
+                  "x": -0.0,
+                  "y": -0.0,
+                  "z": -0.0,
+                  "w": 1.0
+                },
+                "m_LocalPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "m_LocalScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "m_Children": [
+                  {
+                    "m_FileID": 0,
+                    "m_PathID": 27829
+                  }
+                ],
+                "m_Father": {
+                  "m_FileID": 0,
+                  "m_PathID": 23012
+                },
+                "m_AnchorMin": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_AnchorMax": {
+                  "x": 1.0,
+                  "y": 1.0
+                },
+                "m_AnchoredPosition": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_SizeDelta": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_Pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            }
+          ],
+          "rect": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 4466
+            },
+            "m_LocalRotation": {
+              "x": -0.0,
+              "y": -0.0,
+              "z": -0.0,
+              "w": 1.0
+            },
+            "m_LocalPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "m_LocalScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "m_Children": [
+              {
+                "m_FileID": 0,
+                "m_PathID": 23215
+              }
+            ],
+            "m_Father": {
+              "m_FileID": 0,
+              "m_PathID": 20154
+            },
+            "m_AnchorMin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_AnchorMax": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "m_AnchoredPosition": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_SizeDelta": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_Pivot": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          }
+        },
+        {
+          "id": 1049,
+          "name": "SizeLabel",
+          "active": true,
+          "components": [
+            {
+              "id": 38775,
+              "type": "CustomTextMeshProUGUI",
+              "fields": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 1049
+                },
+                "m_Enabled": 1,
+                "m_Script": {
+                  "m_FileID": 1,
+                  "m_PathID": 2086
+                },
+                "m_Name": "",
+                "m_Material": {
+                  "m_FileID": 0,
+                  "m_PathID": 0
+                },
+                "m_Color": {
+                  "r": 1.0,
+                  "g": 1.0,
+                  "b": 1.0,
+                  "a": 1.0
+                },
+                "m_RaycastTarget": 0,
+                "m_RaycastPadding": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "m_Maskable": 1,
+                "m_OnCullStateChanged": {
+                  "m_PersistentCalls": {
+                    "m_Calls": []
+                  }
+                },
+                "m_text": "CLOSE",
+                "m_isRightToLeft": 0,
+                "m_fontAsset": {
+                  "m_FileID": 2,
+                  "m_PathID": 46394
+                },
+                "m_sharedMaterial": {
+                  "m_FileID": 2,
+                  "m_PathID": 283
+                },
+                "m_fontSharedMaterials": [],
+                "m_fontMaterial": {
+                  "m_FileID": 0,
+                  "m_PathID": 0
+                },
+                "m_fontMaterials": [],
+                "m_fontColor32": {
+                  "rgba": 11715525
+                },
+                "m_fontColor": {
+                  "r": 0.772549033164978,
+                  "g": 0.7647058963775635,
+                  "b": 0.6980392336845398,
+                  "a": 0.0
+                },
+                "m_enableVertexGradient": 0,
+                "m_colorMode": 3,
+                "m_fontColorGradient": {
+                  "topLeft": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                  },
+                  "topRight": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                  },
+                  "bottomLeft": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                  },
+                  "bottomRight": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0,
+                    "a": 1.0
+                  }
+                },
+                "m_fontColorGradientPreset": {
+                  "m_FileID": 0,
+                  "m_PathID": 0
+                },
+                "m_spriteAsset": {
+                  "m_FileID": 0,
+                  "m_PathID": 0
+                },
+                "m_tintAllSprites": 0,
+                "m_StyleSheet": {
+                  "m_FileID": 0,
+                  "m_PathID": 0
+                },
+                "m_TextStyleHashCode": -1183493901,
+                "m_overrideHtmlColors": 0,
+                "m_faceColor": {
+                  "rgba": 4294967295
+                },
+                "m_fontSize": 24.0,
+                "m_fontSizeBase": 24.0,
+                "m_fontWeight": 400,
+                "m_enableAutoSizing": 0,
+                "m_fontSizeMin": 3.0,
+                "m_fontSizeMax": 40.0,
+                "m_fontStyle": 1,
+                "m_HorizontalAlignment": 2,
+                "m_VerticalAlignment": 512,
+                "m_textAlignment": 65535,
+                "m_characterSpacing": 0.0,
+                "m_wordSpacing": 0.0,
+                "m_lineSpacing": 1.0,
+                "m_lineSpacingMax": 0.0,
+                "m_paragraphSpacing": 0.0,
+                "m_charWidthMaxAdj": 0.0,
+                "m_enableWordWrapping": 0,
+                "m_wordWrappingRatios": 0.4000000059604645,
+                "m_overflowMode": 2,
+                "m_linkedTextComponent": {
+                  "m_FileID": 0,
+                  "m_PathID": 0
+                },
+                "parentLinkedComponent": {
+                  "m_FileID": 0,
+                  "m_PathID": 0
+                },
+                "m_enableKerning": 1,
+                "m_enableExtraPadding": 0,
+                "checkPaddingRequired": 0,
+                "m_isRichText": 0,
+                "m_parseCtrlCharacters": 1,
+                "m_isOrthographic": 1,
+                "m_isCullingEnabled": 0,
+                "m_horizontalMapping": 0,
+                "m_verticalMapping": 0,
+                "m_uvLineOffset": 0.0,
+                "m_geometrySortingOrder": 0,
+                "m_IsTextObjectScaleStatic": 0,
+                "m_VertexBufferAutoSizeReduction": 1,
+                "m_useMaxVisibleDescender": 1,
+                "m_pageToDisplay": 1,
+                "m_margin": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.0
+                },
+                "m_isUsingLegacyAnimationComponent": 0,
+                "m_isVolumetricText": 0,
+                "m_hasFontAssetChanged": 0,
+                "m_baseMaterial": {
+                  "m_FileID": 0,
+                  "m_PathID": 0
+                },
+                "m_maskOffset": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0,
+                  "w": 0.0
+                }
+              }
+            }
+          ],
+          "children": [
+            {
+              "id": 6004,
+              "name": "IconContainer",
+              "active": false,
+              "components": [
+                {
+                  "id": 36586,
+                  "type": "UnityEngine.UI.AspectRatioFitter",
+                  "fields": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 6004
+                    },
+                    "m_Enabled": 1,
+                    "m_Script": {
+                      "m_FileID": 1,
+                      "m_PathID": 4717
+                    },
+                    "m_Name": "",
+                    "m_AspectMode": 2,
+                    "m_AspectRatio": 1.0
+                  }
+                }
+              ],
+              "children": [
+                {
+                  "id": 5354,
+                  "name": "IconIdle",
+                  "active": true,
+                  "components": [
+                    {
+                      "id": 34117,
+                      "type": "UnityEngine.UI.Image",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 5354
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 8670
+                        },
+                        "m_Name": "",
+                        "m_Material": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Color": {
+                          "r": 1.0,
+                          "g": 1.0,
+                          "b": 1.0,
+                          "a": 0.0
+                        },
+                        "m_RaycastTarget": 0,
+                        "m_RaycastPadding": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_Maskable": 1,
+                        "m_OnCullStateChanged": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        },
+                        "m_Sprite": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Type": 0,
+                        "m_PreserveAspect": 1,
+                        "m_FillCenter": 1,
+                        "m_FillMethod": 4,
+                        "m_FillAmount": 1.0,
+                        "m_FillClockwise": 1,
+                        "m_FillOrigin": 0,
+                        "m_UseSpriteMesh": 0,
+                        "m_PixelsPerUnitMultiplier": 1.0
+                      },
+                      "artwork": null
+                    }
+                  ],
+                  "children": [],
+                  "rect": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 5354
+                    },
+                    "m_LocalRotation": {
+                      "x": -0.0,
+                      "y": -0.0,
+                      "z": -0.0,
+                      "w": 1.0
+                    },
+                    "m_LocalPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "m_LocalScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "m_Children": [],
+                    "m_Father": {
+                      "m_FileID": 0,
+                      "m_PathID": 19565
+                    },
+                    "m_AnchorMin": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_AnchorMax": {
+                      "x": 1.0,
+                      "y": 1.0
+                    },
+                    "m_AnchoredPosition": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_SizeDelta": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_Pivot": {
+                      "x": 0.5,
+                      "y": 0.5
+                    }
+                  }
+                },
+                {
+                  "id": 1937,
+                  "name": "Icon",
+                  "active": true,
+                  "components": [
+                    {
+                      "id": 32316,
+                      "type": "UnityEngine.UI.Image",
+                      "fields": {
+                        "m_GameObject": {
+                          "m_FileID": 0,
+                          "m_PathID": 1937
+                        },
+                        "m_Enabled": 1,
+                        "m_Script": {
+                          "m_FileID": 1,
+                          "m_PathID": 8670
+                        },
+                        "m_Name": "",
+                        "m_Material": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Color": {
+                          "r": 1.0,
+                          "g": 1.0,
+                          "b": 1.0,
+                          "a": 0.0
+                        },
+                        "m_RaycastTarget": 0,
+                        "m_RaycastPadding": {
+                          "x": 0.0,
+                          "y": 0.0,
+                          "z": 0.0,
+                          "w": 0.0
+                        },
+                        "m_Maskable": 1,
+                        "m_OnCullStateChanged": {
+                          "m_PersistentCalls": {
+                            "m_Calls": []
+                          }
+                        },
+                        "m_Sprite": {
+                          "m_FileID": 0,
+                          "m_PathID": 0
+                        },
+                        "m_Type": 0,
+                        "m_PreserveAspect": 1,
+                        "m_FillCenter": 1,
+                        "m_FillMethod": 4,
+                        "m_FillAmount": 1.0,
+                        "m_FillClockwise": 1,
+                        "m_FillOrigin": 0,
+                        "m_UseSpriteMesh": 0,
+                        "m_PixelsPerUnitMultiplier": 1.0
+                      },
+                      "artwork": null
+                    }
+                  ],
+                  "children": [],
+                  "rect": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1937
+                    },
+                    "m_LocalRotation": {
+                      "x": -0.0,
+                      "y": -0.0,
+                      "z": -0.0,
+                      "w": 1.0
+                    },
+                    "m_LocalPosition": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0
+                    },
+                    "m_LocalScale": {
+                      "x": 1.0,
+                      "y": 1.0,
+                      "z": 1.0
+                    },
+                    "m_Children": [],
+                    "m_Father": {
+                      "m_FileID": 0,
+                      "m_PathID": 19565
+                    },
+                    "m_AnchorMin": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_AnchorMax": {
+                      "x": 1.0,
+                      "y": 1.0
+                    },
+                    "m_AnchoredPosition": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_SizeDelta": {
+                      "x": 0.0,
+                      "y": 0.0
+                    },
+                    "m_Pivot": {
+                      "x": 0.5,
+                      "y": 0.5
+                    }
+                  }
+                }
+              ],
+              "rect": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 6004
+                },
+                "m_LocalRotation": {
+                  "x": -0.0,
+                  "y": -0.0,
+                  "z": -0.0,
+                  "w": 1.0
+                },
+                "m_LocalPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "m_LocalScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "m_Children": [
+                  {
+                    "m_FileID": 0,
+                    "m_PathID": 22822
+                  },
+                  {
+                    "m_FileID": 0,
+                    "m_PathID": 20153
+                  }
+                ],
+                "m_Father": {
+                  "m_FileID": 0,
+                  "m_PathID": 20806
+                },
+                "m_AnchorMin": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_AnchorMax": {
+                  "x": 1.0,
+                  "y": 1.0
+                },
+                "m_AnchoredPosition": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_SizeDelta": {
+                  "x": -50.48999786376953,
+                  "y": 0.0
+                },
+                "m_Pivot": {
+                  "x": 0.0,
+                  "y": 0.5
+                }
+              }
+            },
+            {
+              "id": 1936,
+              "name": "Label",
+              "active": true,
+              "components": [
+                {
+                  "id": 32317,
+                  "type": "CustomTextMeshProUGUI",
+                  "fields": {
+                    "m_GameObject": {
+                      "m_FileID": 0,
+                      "m_PathID": 1936
+                    },
+                    "m_Enabled": 1,
+                    "m_Script": {
+                      "m_FileID": 1,
+                      "m_PathID": 2086
+                    },
+                    "m_Name": "",
+                    "m_Material": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "m_Color": {
+                      "r": 1.0,
+                      "g": 1.0,
+                      "b": 1.0,
+                      "a": 1.0
+                    },
+                    "m_RaycastTarget": 0,
+                    "m_RaycastPadding": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 0.0
+                    },
+                    "m_Maskable": 1,
+                    "m_OnCullStateChanged": {
+                      "m_PersistentCalls": {
+                        "m_Calls": []
+                      }
+                    },
+                    "m_text": "CLOSE",
+                    "m_isRightToLeft": 0,
+                    "m_fontAsset": {
+                      "m_FileID": 2,
+                      "m_PathID": 46397
+                    },
+                    "m_sharedMaterial": {
+                      "m_FileID": 2,
+                      "m_PathID": 285
+                    },
+                    "m_fontSharedMaterials": [],
+                    "m_fontMaterial": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "m_fontMaterials": [],
+                    "m_fontColor32": {
+                      "rgba": 4292142567
+                    },
+                    "m_fontColor": {
+                      "r": 0.9058823585510254,
+                      "g": 0.8980392217636108,
+                      "b": 0.8313725590705872,
+                      "a": 1.0
+                    },
+                    "m_enableVertexGradient": 0,
+                    "m_colorMode": 3,
+                    "m_fontColorGradient": {
+                      "topLeft": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                      },
+                      "topRight": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                      },
+                      "bottomLeft": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                      },
+                      "bottomRight": {
+                        "r": 1.0,
+                        "g": 1.0,
+                        "b": 1.0,
+                        "a": 1.0
+                      }
+                    },
+                    "m_fontColorGradientPreset": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "m_spriteAsset": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "m_tintAllSprites": 0,
+                    "m_StyleSheet": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "m_TextStyleHashCode": -1183493901,
+                    "m_overrideHtmlColors": 0,
+                    "m_faceColor": {
+                      "rgba": 4294967295
+                    },
+                    "m_fontSize": 24.0,
+                    "m_fontSizeBase": 24.0,
+                    "m_fontWeight": 400,
+                    "m_enableAutoSizing": 0,
+                    "m_fontSizeMin": 3.0,
+                    "m_fontSizeMax": 40.0,
+                    "m_fontStyle": 0,
+                    "m_HorizontalAlignment": 2,
+                    "m_VerticalAlignment": 512,
+                    "m_textAlignment": 65535,
+                    "m_characterSpacing": 0.0,
+                    "m_wordSpacing": 0.0,
+                    "m_lineSpacing": 1.0,
+                    "m_lineSpacingMax": 0.0,
+                    "m_paragraphSpacing": 0.0,
+                    "m_charWidthMaxAdj": 0.0,
+                    "m_enableWordWrapping": 0,
+                    "m_wordWrappingRatios": 0.4000000059604645,
+                    "m_overflowMode": 2,
+                    "m_linkedTextComponent": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "parentLinkedComponent": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "m_enableKerning": 1,
+                    "m_enableExtraPadding": 0,
+                    "checkPaddingRequired": 0,
+                    "m_isRichText": 0,
+                    "m_parseCtrlCharacters": 1,
+                    "m_isOrthographic": 1,
+                    "m_isCullingEnabled": 0,
+                    "m_horizontalMapping": 0,
+                    "m_verticalMapping": 0,
+                    "m_uvLineOffset": 0.0,
+                    "m_geometrySortingOrder": 0,
+                    "m_IsTextObjectScaleStatic": 0,
+                    "m_VertexBufferAutoSizeReduction": 1,
+                    "m_useMaxVisibleDescender": 1,
+                    "m_pageToDisplay": 1,
+                    "m_margin": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 0.0
+                    },
+                    "m_isUsingLegacyAnimationComponent": 0,
+                    "m_isVolumetricText": 0,
+                    "m_hasFontAssetChanged": 0,
+                    "m_baseMaterial": {
+                      "m_FileID": 0,
+                      "m_PathID": 0
+                    },
+                    "m_maskOffset": {
+                      "x": 0.0,
+                      "y": 0.0,
+                      "z": 0.0,
+                      "w": 0.0
+                    }
+                  }
+                }
+              ],
+              "children": [],
+              "rect": {
+                "m_GameObject": {
+                  "m_FileID": 0,
+                  "m_PathID": 1936
+                },
+                "m_LocalRotation": {
+                  "x": -0.0,
+                  "y": -0.0,
+                  "z": -0.0,
+                  "w": 1.0
+                },
+                "m_LocalPosition": {
+                  "x": 0.0,
+                  "y": 0.0,
+                  "z": 0.0
+                },
+                "m_LocalScale": {
+                  "x": 1.0,
+                  "y": 1.0,
+                  "z": 1.0
+                },
+                "m_Children": [],
+                "m_Father": {
+                  "m_FileID": 0,
+                  "m_PathID": 20806
+                },
+                "m_AnchorMin": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_AnchorMax": {
+                  "x": 1.0,
+                  "y": 1.0
+                },
+                "m_AnchoredPosition": {
+                  "x": 0.0,
+                  "y": 0.0
+                },
+                "m_SizeDelta": {
+                  "x": 0.0,
+                  "y": 12.0
+                },
+                "m_Pivot": {
+                  "x": 0.5,
+                  "y": 0.5
+                }
+              }
+            }
+          ],
+          "rect": {
+            "m_GameObject": {
+              "m_FileID": 0,
+              "m_PathID": 1049
+            },
+            "m_LocalRotation": {
+              "x": -0.0,
+              "y": -0.0,
+              "z": -0.0,
+              "w": 1.0
+            },
+            "m_LocalPosition": {
+              "x": 0.0,
+              "y": 0.0,
+              "z": 0.0
+            },
+            "m_LocalScale": {
+              "x": 1.0,
+              "y": 1.0,
+              "z": 1.0
+            },
+            "m_Children": [
+              {
+                "m_FileID": 0,
+                "m_PathID": 19565
+              },
+              {
+                "m_FileID": 0,
+                "m_PathID": 20155
+              }
+            ],
+            "m_Father": {
+              "m_FileID": 0,
+              "m_PathID": 20154
+            },
+            "m_AnchorMin": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_AnchorMax": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_AnchoredPosition": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_SizeDelta": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "m_Pivot": {
+              "x": 0.5,
+              "y": 0.5
+            }
+          }
+        }
+      ],
+      "rect": {
+        "m_GameObject": {
+          "m_FileID": 0,
+          "m_PathID": 1933
+        },
+        "m_LocalRotation": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0,
+          "w": 1.0
+        },
+        "m_LocalPosition": {
+          "x": 0.0,
+          "y": 0.0,
+          "z": 0.0
+        },
+        "m_LocalScale": {
+          "x": 1.0,
+          "y": 1.0,
+          "z": 1.0
+        },
+        "m_Children": [
+          {
+            "m_FileID": 0,
+            "m_PathID": 28059
+          },
+          {
+            "m_FileID": 0,
+            "m_PathID": 23012
+          },
+          {
+            "m_FileID": 0,
+            "m_PathID": 20806
+          }
+        ],
+        "m_Father": {
+          "m_FileID": 0,
+          "m_PathID": 22133
+        },
+        "m_AnchorMin": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchorMax": {
+          "x": 1.0,
+          "y": 1.0
+        },
+        "m_AnchoredPosition": {
+          "x": -100.0,
+          "y": -40.0
+        },
+        "m_SizeDelta": {
+          "x": 0.0,
+          "y": 0.0
+        },
+        "m_Pivot": {
+          "x": 0.5,
+          "y": 0.5
+        }
+      }
+    }
+  ],
+  "rect": {
+    "m_GameObject": {
+      "m_FileID": 0,
+      "m_PathID": 8659
+    },
+    "m_LocalRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "w": 1.0
+    },
+    "m_LocalPosition": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "m_LocalScale": {
+      "x": 1.0,
+      "y": 1.0,
+      "z": 1.0
+    },
+    "m_Children": [
+      {
+        "m_FileID": 0,
+        "m_PathID": 22916
+      },
+      {
+        "m_FileID": 0,
+        "m_PathID": 20143
+      },
+      {
+        "m_FileID": 0,
+        "m_PathID": 20154
+      }
+    ],
+    "m_Father": {
+      "m_FileID": 0,
+      "m_PathID": 18416
+    },
+    "m_AnchorMin": {
+      "x": 0.5,
+      "y": 0.0
+    },
+    "m_AnchorMax": {
+      "x": 0.5,
+      "y": 1.0
+    },
+    "m_AnchoredPosition": {
+      "x": 0.0,
+      "y": 0.0
+    },
+    "m_SizeDelta": {
+      "x": 1920.0,
+      "y": 0.0
+    },
+    "m_Pivot": {
+      "x": 0.5,
+      "y": 0.0
+    }
+  }
+}

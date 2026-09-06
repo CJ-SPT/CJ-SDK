@@ -1,0 +1,54 @@
+{
+  "m_GameObject": {
+    "m_FileID": 0,
+    "m_PathID": 0
+  },
+  "m_Enabled": 1,
+  "m_Script": {
+    "m_FileID": 1,
+    "m_PathID": 2804
+  },
+  "m_Name": "SeasonCarouselData",
+  "_pages": [
+    {
+      "_text": "Season/Description/Page/1",
+      "_background": {
+        "m_FileID": 0,
+        "m_PathID": 389
+      },
+      "artwork": "sharedassets48-389"
+    },
+    {
+      "_text": "Season/Description/Page/2",
+      "_background": {
+        "m_FileID": 0,
+        "m_PathID": 480
+      },
+      "artwork": "sharedassets48-480"
+    },
+    {
+      "_text": "Season/Description/Page/3",
+      "_background": {
+        "m_FileID": 0,
+        "m_PathID": 324
+      },
+      "artwork": "sharedassets48-324"
+    },
+    {
+      "_text": "Season/Description/Page/4",
+      "_background": {
+        "m_FileID": 0,
+        "m_PathID": 500
+      },
+      "artwork": "sharedassets48-500"
+    },
+    {
+      "_text": "Season/Description/Page/5",
+      "_background": {
+        "m_FileID": 0,
+        "m_PathID": 493
+      },
+      "artwork": "sharedassets48-493"
+    }
+  ]
+}

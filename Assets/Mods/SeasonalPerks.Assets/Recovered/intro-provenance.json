@@ -1,0 +1,26 @@
+[
+  {
+    "source": "E:\\EscapeFromTarkov\\EscapeFromTarkov_Data\\level48",
+    "sha256": "8e09865815999414dc64e6db70b58cc2a77010a6b63b3ea012a930aaed47d8ff"
+  },
+  {
+    "source": "E:\\EscapeFromTarkov\\EscapeFromTarkov_Data\\level49",
+    "sha256": "5399de25ae2cea636dd281bee015c1689dfb6535b5b69ec6b6f7ee5f34f3b40b"
+  },
+  {
+    "source": "E:\\EscapeFromTarkov\\EscapeFromTarkov_Data\\level50",
+    "sha256": "0cec1c30c6021b06b504bc8458e83431579ffaaf870361cf798187390465a1d7"
+  },
+  {
+    "source": "E:\\EscapeFromTarkov\\GameAssembly.dll",
+    "sha256": "94ae9b20597624e9ee737ab2c64159dd3ef0680c71d6f106b02fe9ca3e362c8a"
+  },
+  {
+    "source": "F:\\SPT 4.1.x\\Development\\1.0 Metadata\\global-metadata.dat",
+    "sha256": "f69a695234381c43393cf7b66b887269e856819a0fda57412946125043a2d5c0"
+  },
+  {
+    "source": "F:\\SPT 4.1.x\\Development\\1.0 Metadata\\GameAssembly.pdb",
+    "sha256": "0567f630ba35d7ebbe16ec41041ca5206789c84404790efa2b7477bf37abc518"
+  }
+]
