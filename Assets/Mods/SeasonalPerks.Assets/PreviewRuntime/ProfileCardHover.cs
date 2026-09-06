@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace SeasonalPerks.UI
+namespace SeasonalPerks.UI.Profiles
 {
 
 public sealed class ProfileCardHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
@@ -34,7 +34,10 @@ public sealed class ProfileCardHover : MonoBehaviour, IPointerEnterHandler, IPoi
         Entered?.Invoke();
     }
 
-    public void OnPointerExit(PointerEventData data) => _hovered = false;
+    public void OnPointerExit(PointerEventData data)
+    {
+        _hovered = false;
+    }
 
     public void Apply(float blend)
     {

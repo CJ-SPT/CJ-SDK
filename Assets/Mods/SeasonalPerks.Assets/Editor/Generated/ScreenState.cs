@@ -2,7 +2,7 @@
 #nullable enable
 using System;
 
-namespace SeasonalPerks.UI
+namespace SeasonalPerks.UI.Models
 {
 
 public sealed class ScreenState

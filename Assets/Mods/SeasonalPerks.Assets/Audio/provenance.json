@@ -53,5 +53,39 @@
     "name": "modificator_reset_click_button",
     "duration": 0.4492517113685608,
     "sha256": "8500ba3c89b51c7eecc591379baf235d3457ea79307aba09f1df1bd919c55bec"
+  },
+  {
+    "file": "hub-click.wav",
+    "source": "resources.assets",
+    "sourceSha256": "f73a8c8d655d0112bad919016491278fc05f88ca8f610eba90638e5cbb3d206b",
+    "wrapperId": 46348,
+    "soundType": 74,
+    "objectId": 4248,
+    "name": "season_widget_click_button",
+    "duration": 2.1997733116149902,
+    "sha256": "fea34709ff279e09ca41c3c2b3505cfb62d46691f1ad7335fa7bf0a707c4e28c"
+  },
+  {
+    "file": "hub-hover.wav",
+    "source": "resources.assets",
+    "sourceSha256": "f73a8c8d655d0112bad919016491278fc05f88ca8f610eba90638e5cbb3d206b",
+    "wrapperId": 46348,
+    "soundType": 75,
+    "objectId": 4061,
+    "name": "season_widget_hover_button_cyber",
+    "duration": 1.2385714054107666,
+    "sha256": "224fe8ce4fb6bf2c883c910b2faacf8d78120d75e35b2ae57a07449dc360a824"
+  },
+  {
+    "file": "hub-hover-loop.wav",
+    "source": "sharedassets44.assets",
+    "objectId": 452,
+    "name": "season_kord_widget_hover_loop",
+    "duration": 2.3166892528533936,
+    "sourceSha256": "e3f273b20f1e593e061676cc76ab44aaaa6297f9fc947fa9d5bface7806190bb",
+    "sha256": "7292fcf9574ea6c2ce6185e1916a59f514c572b53d9c5866159bacd9a1ddc363",
+    "volume": 0.3,
+    "fadeIn": 0.1,
+    "fadeOut": 0.3
   }
 ]

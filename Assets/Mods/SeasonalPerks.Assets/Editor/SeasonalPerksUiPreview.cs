@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using SeasonalPerks.UI;
+using SeasonalPerks.UI.Models;
+using SeasonalPerks.UI.Modifiers;
+using SeasonalPerks.UI.Profiles;
+using SeasonalPerks.UI.Screens;
 using Unity.Plastic.Newtonsoft.Json.Linq;
 using UnityEditor;
 using UnityEngine;
@@ -43,7 +46,7 @@ public static class SeasonalPerksUiPreview
         var implemented = new HashSet<string>(
             Regex
                 .Matches(
-                    File.ReadAllText(Path.Combine(project, "Shared/EffectSupport.cs"))
+                    File.ReadAllText(Path.Combine(project, "Shared/Effects/EffectSupport.cs"))
                         .Split(new[] { "};" }, StringSplitOptions.None)[0],
                     "\"([a-z_]+)\""
                 )

@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using SeasonalPerks.UI;
+using SeasonalPerks.UI.Models;
+using SeasonalPerks.UI.Screens;
 using UnityEngine;
 using UnityEngine.UI;
 

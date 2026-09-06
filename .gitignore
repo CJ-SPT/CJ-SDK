@@ -111,3 +111,19 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# Seasonal hub recovery outputs remain local; regenerate with SeasonalPerks/tools.
+/Assets/Mods/SeasonalPerks.Assets/HubArtwork*
+/Assets/Mods/SeasonalPerks.Assets/HubImages*
+/Assets/Mods/SeasonalPerks.Assets/HubMedia*
+/Assets/Mods/SeasonalPerks.Assets/Audio/hub-*
+/Assets/Mods/SeasonalPerks.Assets/Recovered/hub-*
+/Assets/Mods/SeasonalPerks.Assets/Recovered/level48-8658.json*
+/Assets/Mods/SeasonalPerks.Assets/Recovered/level50-752.json*
+/Assets/Mods/SeasonalPerks.Assets/UI/level48-8658.prefab*
+/Assets/Mods/SeasonalPerks.Assets/UI/level50-752.prefab*
+/Assets/Mods/SeasonalPerks.Assets/Editor/Generated/Hub*.cs*
+/Assets/Mods/SeasonalPerks.Assets/Editor/Generated/SeasonsHubScreen*.cs*
+/Assets/Mods/SeasonalPerks.Assets/PreviewRuntime/HubPointer.cs*
+/Assets/Mods/SeasonalPerks.Assets/PreviewRuntime/SeasonBanner.cs*
+/Assets/Mods/SeasonalPerks.Assets/PreviewRuntime/UiElements.cs*

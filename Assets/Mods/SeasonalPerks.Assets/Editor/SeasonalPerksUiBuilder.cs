@@ -18,9 +18,12 @@ public static class SeasonalPerksUiBuilder
         _font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
         Directory.CreateDirectory(Root + "/UI");
         var artwork = JArray.Parse(File.ReadAllText(Root + "/SelectionArtwork/provenance.json"));
+        var hubArtwork = JArray.Parse(File.ReadAllText(Root + "/HubArtwork/provenance.json"));
+        foreach (JObject entry in artwork) entry["folder"] = "SelectionArtwork";
+        foreach (JObject entry in hubArtwork) { entry["folder"] = "HubArtwork"; artwork.Add(entry); }
         foreach (var entry in artwork)
         {
-            var path = Root + "/SelectionArtwork/" + (string)entry["file"];
+            var path = Root + "/" + (string)entry["folder"] + "/" + (string)entry["file"];
             var importer = (TextureImporter)AssetImporter.GetAtPath(path);
             importer.textureType = TextureImporterType.Sprite;
             importer.spriteImportMode = SpriteImportMode.Single;
@@ -83,8 +86,9 @@ public static class SeasonalPerksUiBuilder
                     materialPath,
                 }
             )
-            .Concat(artwork.Select(entry => Root + "/SelectionArtwork/" + (string)entry["file"]))
+            .Concat(artwork.Select(entry => Root + "/" + (string)entry["folder"] + "/" + (string)entry["file"]))
             .Concat(audio.Select(entry => Root + "/Audio/" + (string)entry["file"]))
+            .Concat(Directory.GetFiles(Root + "/HubMedia", "*.webm"))
             .ToArray();
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
@@ -152,6 +156,13 @@ public static class SeasonalPerksUiBuilder
                 case "UnityEngine.UI.Image":
                     var image = go.AddComponent<Image>();
                     image.color = ImageColor(go.name, C(f["m_Color"]));
+                    if (c["artwork"] != null && c["artwork"].Type == JTokenType.String)
+                    {
+                        image.sprite = AssetDatabase.LoadAssetAtPath<Sprite>(Root + "/HubArtwork/" + (string)c["artwork"] + ".png");
+                        image.color = C(f["m_Color"]);
+                        image.type = (Image.Type)((int?)f["m_Type"] ?? 0);
+                        image.preserveAspect = B(f, "m_PreserveAspect");
+                    }
                     image.raycastTarget = false;
                     // Image sprites are intentionally omitted. Icons are supplied per perk at runtime.
                     if (go.name == "NetworkImageView")

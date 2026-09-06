@@ -4,7 +4,7 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace SeasonalPerks.UI
+namespace SeasonalPerks.UI.Modifiers
 {
 
 public sealed class PerkCardHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
@@ -56,9 +56,15 @@ public sealed class PerkCardHover : MonoBehaviour, IPointerEnterHandler, IPointe
         }
     }
 
-    public void OnPointerExit(PointerEventData eventData) => ClearHover();
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        ClearHover();
+    }
 
-    private void OnDisable() => ClearHover();
+    private void OnDisable()
+    {
+        ClearHover();
+    }
 }
 
 }

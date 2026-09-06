@@ -1,7 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using SeasonalPerks.UI;
+using SeasonalPerks.UI.Audio;
+using SeasonalPerks.UI.Creation;
+using SeasonalPerks.UI.Models;
+using SeasonalPerks.UI.Modifiers;
+using SeasonalPerks.UI.Profiles;
+using SeasonalPerks.UI.Screens;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
