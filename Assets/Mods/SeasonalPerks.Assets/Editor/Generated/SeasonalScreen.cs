@@ -201,6 +201,7 @@ public sealed partial class SeasonalScreen : IDisposable
         {
             _panel.localScale = Vector3.one * scale;
             _profileSelection?.Fit(size / scale);
+            FitSeasonIntroduction(size / scale);
             if (_creationBackground)
             {
                 _creationBackground!.sizeDelta = size / scale;
@@ -306,7 +307,7 @@ public sealed partial class SeasonalScreen : IDisposable
                 (mode, target) => CharacterRequested?.Invoke(mode, target),
                 mode => WithDiscardConfirmation(() => SwitchRequested?.Invoke(mode)),
                 () => ShowPage(Created ? ScreenPage.Personal : ScreenPage.CreationIdentity),
-                () => ShowPage(ScreenPage.Global),
+                ShowSeasonIntroduction,
                 RequestClose,
                 StartupSelection,
                 GlowMaterial,
@@ -537,6 +538,7 @@ public sealed partial class SeasonalScreen : IDisposable
     public void Dispose()
     {
         _disposed = true;
+        DismissDialog();
         _identity?.Dispose();
         _identity = null;
         if (Root)

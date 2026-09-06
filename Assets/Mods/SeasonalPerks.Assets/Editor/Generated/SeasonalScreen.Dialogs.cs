@@ -148,6 +148,7 @@ public sealed partial class SeasonalScreen
 
     public void DismissDialog()
     {
+        CloseSeasonIntroduction();
         if (_dialog)
         {
             _dialog!.SetActive(false);
