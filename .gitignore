@@ -122,8 +122,26 @@ InitTestScene*.unity*
 /Assets/Mods/SeasonalPerks.Assets/Recovered/level50-752.json*
 /Assets/Mods/SeasonalPerks.Assets/UI/level48-8658.prefab*
 /Assets/Mods/SeasonalPerks.Assets/UI/level50-752.prefab*
-/Assets/Mods/SeasonalPerks.Assets/Editor/Generated/Hub*.cs*
-/Assets/Mods/SeasonalPerks.Assets/Editor/Generated/SeasonsHubScreen*.cs*
-/Assets/Mods/SeasonalPerks.Assets/PreviewRuntime/HubPointer.cs*
-/Assets/Mods/SeasonalPerks.Assets/PreviewRuntime/SeasonBanner.cs*
-/Assets/Mods/SeasonalPerks.Assets/PreviewRuntime/UiElements.cs*
+
+# Track synchronized UI sources and their .meta GUIDs: the editor previews need them.
+# Story recovery inputs and generated assets remain local; rebuild with SeasonalPerks/tools.
+/Assets/Mods/SeasonalPerks.Assets/StoryArtwork/
+/Assets/Mods/SeasonalPerks.Assets/StoryArtwork.meta
+/Assets/Mods/SeasonalPerks.Assets/StoryExamples/
+/Assets/Mods/SeasonalPerks.Assets/StoryExamples.meta
+/Assets/Mods/SeasonalPerks.Assets/StoryLiveShaders/
+/Assets/Mods/SeasonalPerks.Assets/StoryLiveShaders.meta
+/Assets/Mods/SeasonalPerks.Assets/StoryNativeShaders/
+/Assets/Mods/SeasonalPerks.Assets/StoryNativeShaders.meta
+/Assets/Mods/SeasonalPerks.Assets/StoryPeacekeeper/
+/Assets/Mods/SeasonalPerks.Assets/StoryPeacekeeper.meta
+/Assets/Mods/SeasonalPerks.Assets/StoryRecovered/
+/Assets/Mods/SeasonalPerks.Assets/StoryRecovered.meta
+/Assets/Mods/SeasonalPerks.Assets/StoryTraders/
+/Assets/Mods/SeasonalPerks.Assets/StoryTraders.meta
+
+# Generated bundles and their Unity sidecars.
+*.bundle
+*.bundle.meta
+*.manifest
+*.manifest.meta
